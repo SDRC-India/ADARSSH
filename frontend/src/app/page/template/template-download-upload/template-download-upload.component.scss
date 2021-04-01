@@ -1,0 +1,52 @@
+$upload-link: #007bff;
+$accepted-link: #35bd7e;
+$rejected-link:#f10726;
+
+.hyperlink
+{
+    color: $upload-link !important;
+}
+.hyperlink-accepted
+{
+    color: $accepted-link !important;
+}
+
+.hyperlink-rejected
+{
+    color: $rejected-link !important;
+}
+.legends{
+    margin-top:10px; 
+}
+.legend_list
+{
+    height: 30px;
+    list-style: none;
+}
+
+.legends .legnedblock {
+    height: 20px;
+    width: 20px;
+    margin: 3px 0px 3px 10px;
+    float: right;
+}
+
+.legnedblock{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.unchecked-legend {
+    fill: #007bff;
+    background-color: #007bff;
+}
+
+.checked-legend {
+    fill: #35bd7e;
+    background-color: #35bd7e;
+}
+
+.invalid-legend {
+    fill: #f10726;
+    background-color: #f10726;
+}

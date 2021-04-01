@@ -1,0 +1,3 @@
+interface Constants {
+  copyRightText: String;
+}

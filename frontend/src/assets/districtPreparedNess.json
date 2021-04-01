@@ -1,0 +1,201 @@
+[
+    {
+      "sectorId": 2,
+      "sectorName": "Supportive supervision in aspirational districts",
+      "subSectors": [
+        {
+          "subSectorId": 5,
+          "subSectorName": "India",
+          "indicators": null,
+          "kpiList": [
+            {
+              "key": "Number of aspirational district",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of aspirational district",
+              "isSelected": null,
+              "id": 16,
+              "keyValue": null,
+              "count": 117
+            },
+            {
+              "key": "Number of DTF where at least 1 meeting is held",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of DTF where at least 1 meeting is held",
+              "isSelected": null,
+              "id": 17,
+              "keyValue": null,
+              "count": 1
+            },
+            {
+              "key": "Number of facilities",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of facilities",
+              "isSelected": null,
+              "id": 18,
+              "keyValue": null,
+              "count": "31,496"
+            },
+            {
+              "key": "Number of BTF where at least 1 meeting is held",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of BTF where at least 1 meeting is held",
+              "isSelected": null,
+              "id": 19,
+              "keyValue": null,
+              "count": 0
+            },
+            {
+              "key": "No. of Health and wellness centers",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of Health and wellness centers",
+              "isSelected": null,
+              "id": 19,
+              "keyValue": null,
+              "count": "15,321"
+            }
+          ]
+        }
+        ,{
+          "subSectorId": 5,
+          "subSectorName": "District Preparedness",
+          "indicators": null,
+          "kpiList": [
+          
+          ],
+          "groupedIndList": [
+            {
+              "groupedIndName": "Districts with preparedness measures",
+              "indicatorName": null,
+              "css":"#d85c54",
+              "opacity":"",
+              "chartsAvailable": [
+                "horizontalbar"
+              ],
+              "chartData": [
+                  {
+                    "axis": "DH",
+                    "value": 79.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force",
+                    "indicatorName": "Percentage of districts (reported) having District Task Force constituted",
+                    "fill":"#A0C2BB"
+                  },
+                  {
+                    "axis": "MC",
+                    "value": 66.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force",
+                    "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                    "fill":"#A0C2BB"
+                  },
+                  {
+                    "axis": "SDH",
+                    "value": 82.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force ",
+                    "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                    "fill":"#A0C2BB"
+                  },
+                  {
+                    "axis": "CHC",
+                    "value": 60.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force ",
+                    "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                    "fill":"#A0C2BB"
+                  }
+              ]
+            },
+            {
+              "groupedIndName": "District with preparedness measures",
+              "indicatorName": null,
+              "chartsAvailable": [
+                "threeDbar"
+              ],
+              "chartData": [
+                [
+                  {
+                    "axis": "DH",
+                    "value": 23,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#A0C2BB"
+                  },
+                  {
+                    "axis": "MC",
+                    "value": 33,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#A0C2BB"
+                  },
+                  {
+                    "axis": "SDH",
+                    "value": 43,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#A0C2BB"
+                  }
+                ]
+              ]
+            },
+            {
+                "groupedIndName": "Facilities visited more than once",
+                "indicatorName": null,
+                "chartsAvailable": [
+                  "pie"
+                ],
+                "chartData": [
+                    [
+                      {
+                        "axis": "DH",
+                        "value": 28,
+                        "id": null,
+                        "key": "No GPS is fitted ambulance is available",
+                        "indicatorName": null,
+                        "legendLebel":"No GPS is fitted ambulance is available"
+                      },
+                      {
+                        "axis": "SC",
+                        "value": 34,
+                        "id": null,
+                        "key": "No GPS is fitted ambulance is available",
+                        "indicatorName": null,
+                        "legendLebel":"No GPS is fitted ambulance is available"
+                      },
+                      {
+                        "axis": "MC",
+                        "value": 20,
+                        "id": null,
+                        "key": "At least 1 GPS fitted ambulance is available",
+                        "indicatorName": null,
+                        "legendLebel":"At least 1 GPS fitted ambulance is available"
+                      },
+                      {
+                        "axis": "PHC",
+                        "value": 18,
+                        "id": null,
+                        "key": "At least 1 GPS fitted ambulance is available",
+                        "indicatorName": null,
+                        "legendLebel":"At least 1 GPS fitted ambulance is available"
+                      }
+                    ]
+                  ]
+              }
+          ]
+        }
+      ]
+    }
+  ]

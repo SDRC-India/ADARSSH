@@ -1,0 +1,189 @@
+
+
+.create-user-block {
+    margin-top: 30px;
+}
+.heading-info-of-new-user{
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+    font-weight: 400;
+    padding: 10px;
+    font-size: 18px;
+    font-family: inherit;
+    color: #3f51b5;
+    margin-bottom: 30px;
+}
+.main-content{ margin-bottom: 20px !important}
+.mat-card {
+    font-family: inherit !important;
+}
+.mat-datepicker-toggle {
+    color: rgba(0,0,0,.54);
+    padding: 6px 1px 7px 0;
+    border: 1px solid;
+}
+.upload-btn {
+    padding: 0;
+    margin-top: -5px;
+}
+.upload-error {
+    font-size: 13px;
+    margin-top: -20px;
+}
+.preview-btn { text-align: center;}
+.reset-btn {padding: 6px 18px 6px 20px;}
+.file-upload-btn { padding: 4px 8px 4px 8px;}
+.mat-checkbox-label { margin-right: 20px !important;}
+
+
+.waves-light, .waves-light:hover, .waves-light:focus{
+    background-color: #1f497b !important;
+  }
+  .user-label{
+    max-width: 18.666667% !important;
+  }
+  // .data-error, .modal .err-btn {
+  //   background-color: #af1926 !important;
+  // }
+  .mat-form-field {
+    display: block !important;
+  }
+ 
+.user-heading {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid #1f4a7c;
+  color: #1f4a7c;
+  margin-bottom: 20px;
+  padding-bottom: 7px;
+}
+.btn.user-submit {
+  background-color: #234a7c;
+  border-radius: 0;
+  width: 120px;
+  color: #FFF;
+}
+.previewForm-modal {
+    max-width: 100%;
+    margin: 5px;
+}
+.modal-close-btn { padding: 0 12px 0 0;}
+.preview-modal-view { width: 100%;}
+
+// success modal
+
+
+
+#oldPassNotMatch .modal-header, #successMatch .modal-header{
+  height: 39px;
+  padding: 3px 14px;
+}
+p.heading.lead {
+  font-weight: bold;
+  color: #234a7c;
+}
+.user-man-btn{
+  margin-top: 10px;
+}
+.modal-btn {
+  border-radius: 0;
+  background-color: #234a7c;
+}
+input.nospinner[type=number]::-webkit-inner-spin-button, 
+input.nospinner[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.password-matched-error{
+  margin-top: -13px;
+  font-size: 13px;
+}
+#wrongOPTBlockError {
+  font-size: 20px;
+    color: red;
+    margin-top: 6px;
+}
+.validate-otp { margin-top: 7px;}
+.success-otp { 
+  color: #26a726;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 0;
+}
+.wrong-otp, .success-otp-verified { 
+  font-size: 13px;
+  margin-left: 6px;
+}
+.error-otp {
+  color: #f44336;
+  font-size: 13px;
+}
+#timer {
+   margin-top: 35px;
+  }
+.time-left { margin-top: 34px; }
+.time-left-block { padding-left: 0;}
+.designation-add { padding-right: 0 !important;}
+.padding-right-zero { padding-right: 0;}
+.gender-error {
+  margin: -15px 0 0 2px;
+    font-size: 12px;
+}
+.font-weight-five-hundred { font-weight: 600;}
+.radio-section { 
+  margin-bottom: 0 !important;
+  margin-top: -8px;
+}
+.duplicateUser {
+  color: #f44336;
+  font-size: 13px;
+ }
+ .user-name-duplicate {
+  margin-top: -15px;
+ }
+.radio-section-gender {margin-left: -10px;}
+.fa-plus {
+  padding: 7px;
+  font-size: 21px;
+  color: #ffffff;
+  background: #3b4654;
+  margin-left: -12px;
+  margin-top: 0px;
+  cursor: pointer;
+}
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+// checkbox multiple
+.mat-pseudo-checkbox { display: none !important;}
+/** media query starts here **/
+@media(max-width: 1024px){
+  .mat-checkbox-layout { 
+    white-space: normal !important;
+    margin-right: 0 !important;
+  }
+}
+@media(max-width: 767px){
+  .left-list{
+    width: 50%;
+    z-index: 100;
+    padding-top: 40px;
+  }
+}
+
+
+
+
+::ng-deep .cdk-overlay-container {
+  z-index: 1060;
+}

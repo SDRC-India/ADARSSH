@@ -1,0 +1,14 @@
+<div class="margin">
+    <h5 class="menu-section">Menu</h5>
+    <ul class="data-heads">
+        <li class="data-head-list"  *ngFor="let menu of leftmenu">
+          <span class="list-span"><a >{{menu.leftmenuName}}</a></span>
+          <ul class="sub-menu">
+            <li class="sub-menu-list" *ngFor="let submnu of menu.leftsubmenu" [ngClass]="{'active':selectedSection.leftsubmenuName == submnu.leftsubmenuName}"  (click)="getPageContentData(submnu,menu)" style="cursor: pointer;">
+              <span class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><a >{{submnu.leftsubmenuName}}</a>
+            </li>
+          
+          </ul>
+        </li>          
+  </ul>
+</div>

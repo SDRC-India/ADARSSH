@@ -1,0 +1,59 @@
+<div class="container-fluid main-content analytics">
+  <mat-vertical-stepper [linear]="isLinear" #stepper>
+
+    <mat-step [stepControl]="descriptiveForm">
+      <ng-template matStepLabel>Descriptive statistics
+          <br *ngIf="discriptiveResult"> <span *ngIf="discriptiveResult">Input File : </span> <a *ngIf="discriptiveResult" class="hyperlink" (click)="downloadOutputFile(discriptiveResult)"><u>{{discriptiveResult.inputName}} </u></a>
+          <br *ngIf="discriptiveResult"> <span *ngIf="discriptiveResult">Output File : </span> <a *ngIf="discriptiveResult" class="hyperlink" (click)="downloadFile(discriptiveResult)"><u>{{discriptiveResult.fileName}} </u></a>
+      </ng-template>
+      <rmncha-descriptive-statistics (discriptiveData)="discriptiveData($event)" (discriptiveFile)="discriptiveFile($event)"></rmncha-descriptive-statistics>
+    </mat-step>
+    <mat-step [stepControl]="outlayerForm">
+      <ng-template matStepLabel>Outlier detection 
+          <br *ngIf="outlayerResult"><span *ngIf="outlayerResult">Input File : </span> <a *ngIf="outlayerResult" class="hyperlink" (click)="downloadOutputFile(outlayerResult)"><u>{{outlayerResult.inputName}}</u></a>
+        <br *ngIf="outlayerResult"><span *ngIf="outlayerResult">Output File : </span> <a *ngIf="outlayerResult" class="hyperlink" (click)="downloadFile(outlayerResult)"><u>{{outlayerResult.fileName}}</u></a>
+      </ng-template>
+      <rmncha-outlayer [discriptiveFileData]="discriptiveFileData" (outLayerData)="outLayerData($event)" (outLayerFile)="outLayerFile($event)"></rmncha-outlayer>
+    </mat-step>
+
+    <mat-step [stepControl]="missingValueForm">
+      <ng-template matStepLabel>Missing values treatment 
+          <br *ngIf="missingResult"> <span *ngIf="missingResult">Input File : </span> <a *ngIf="missingResult" class="hyperlink" (click)="downloadOutputFile(missingResult)"><u>{{missingResult.inputName}}</u></a>
+        <br *ngIf="missingResult"> <span *ngIf="missingResult">Output File :  </span> <a *ngIf="missingResult" class="hyperlink" (click)="downloadFile(missingResult)"><u>{{missingResult.fileName}}</u></a>
+      </ng-template>
+      <rmncha-missing-values [discriptiveFileData]="discriptiveFileData" [outlayerFileData]="outlayerFileData"
+        (missingValueFile)="missingValueFile($event)" (missingValueData)="missingValueData($event)"></rmncha-missing-values>
+    </mat-step>
+
+    <mat-step [stepControl]="regrationForm">
+      <ng-template matStepLabel>Independent linear regression 
+          <br *ngIf="regrationResult"><span *ngIf="regrationResult">Input File : </span>  <a *ngIf="regrationResult" class="hyperlink" (click)="downloadOutputFile(regrationResult)"><u>{{regrationResult.inputName}}</u></a>         
+        <br *ngIf="regrationResult"><span *ngIf="regrationResult">Output File : </span> <a *ngIf="regrationResult" class="hyperlink" (click)="downloadFile(regrationResult)"><u>{{regrationResult.fileName}}</u></a>
+      </ng-template>
+      <rmncha-regration [discriptiveFileData]="discriptiveFileData" [outlayerFileData]="outlayerFileData"
+        [missingValueFileData]="missingValueFileData" (regrationFile)="regrationFile($event)" (regrationData)="regrationData($event)">
+      </rmncha-regration>
+    </mat-step>
+
+
+  </mat-vertical-stepper>
+</div>
+
+<div id="divError" class="confrirmation-modal modal fade" role="dialog" data-backdrop="static" data-keyboard="false"
+  tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body warnbody text-center">
+        <div class="infohead"> Error </div>
+        <div class="modal-body">
+          <div class="text-center">
+            <i class="fa fa-close fa-4x animated rotateIn"></i>
+            <p>{{errorMessage}}</p>
+          </div>
+          <button type="button" class="btn btn-default" (click)="modalClose()">Ok</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

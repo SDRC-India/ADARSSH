@@ -1,0 +1,232 @@
+.data-heads{
+    list-style: none;
+  }
+  .left-menu-overflow{
+    overflow-y: scroll;
+    height:600px;
+  }
+  .background{ 
+    background:#485769;
+    text-align: center;
+    color: #fff;
+  }
+
+  .data-head-list{
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    counter-increment: step-counter;
+    margin-left: -35px;
+    position: relative;
+    height: 50px;
+    padding: 0 0px;
+    background-color: #3b4654;
+    margin-top: 0px;
+    cursor: pointer;
+  }
+  .data-head-list .list-span > a{    
+    color:#fff;  
+    cursor: pointer;    
+  }
+  .data-head-list > a{
+    color: #fff;
+  }
+  .table-val {
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    padding-right: 10px;
+  }
+  // .active{
+  //   background: #1f4a7c !important;
+  //   color: #fff !important;
+  //   text-decoration:  underline !important;
+  // }
+  .list-span{
+    top: 50%;
+    display: block;
+    margin-left: 25px;
+    position: absolute;
+    transform: translateY(-50%);
+  }   
+  .sectionActivated {
+    background-color: #A82315;
+    color: white;
+  } 
+  .submissionDetails-btn{
+    // position: fixed; 
+    bottom: 0px; 
+    text-align: center;
+    padding: 5px;
+  }
+  .approve-btn {background: #5d8c5f !important}
+  .content{
+    text-align: justify;
+    padding-left: 36px;
+  }
+  .imgDisplay{
+    display: inline-block;
+    padding-right: 15px;   
+  }
+  .imgDisplay img{
+    width: 100px;
+    height: 100px;
+  }
+  .beginRepeatData{
+    border: 1px solid #999;
+    padding: 7px;
+    margin-bottom: 5px;
+  }
+  .submissionModal-header{
+    border-bottom: 1px solid #333;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .table td{
+    padding: 5px 0 5px 10px!important;
+    border-top: 1px solid #aaa !important;
+    font-size: 13px;
+    border: 1px solid #aaa;
+  }
+  table .table-td{ border-left: 0 !important}
+  .table-subheading{ border-right: 0 !important}
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #eee !important;
+  }
+  .previewImage{
+    cursor: pointer;
+    color: #007bff !important;
+  }
+  .previewImage:hover{
+    text-decoration: underline !important;
+  } 
+  .modal-btn {
+    border-radius: 0;
+    color: #FFF;
+    background-color: #333 ;
+} 
+.modal-close{
+    position: absolute;
+    right: 0;
+    padding: 0 5px 0 0;
+    margin-top: -18px;
+}
+.submission-modal{
+  margin: 0 !important;
+  width: 100% !important;
+}
+.pointer{
+  cursor: pointer;
+  padding: 5px;
+}
+// .pointer:hover {
+//   background: #ffffff;
+//   color: #3b4654;
+// }
+.table td{
+  min-width: 210px;
+}
+.data-heads {
+  list-style: none;
+}
+.text-table {margin-bottom: 0 !important}
+
+li.data-head-list.active {
+  background-color: #fff !important;
+}
+li.data-head-list.active>span>a {
+  color: #3b4654 !important;
+}
+li.data-head-list.active::before{
+  background-color: #80a7e0;
+}
+.list-span {
+  top: 50%;
+  display: block;
+  // margin-left: 45px;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.data-head-list .list-span>a {
+  color: #fff;
+  cursor: pointer;
+}
+.left-menu { margin-top: 15px;}
+.height-image { height: 590px !important;}
+ embed>img {
+  width: 1245px !important;
+  height: 588px !important;
+}
+.image-preview  {margin: 10px;}
+.submission-preview-image {
+  width: 1325px;
+  height: 635px;
+}
+.left-list {
+  height: 100%;
+  width: 30%;
+  background-color: #3b4654;
+  padding-top: 38px;
+  position: fixed;
+  left:-1px;
+  z-index: 20;
+}
+@media(max-width: 1024px){
+  .submission-data {
+    height: 766px !important;
+  }
+  .submission-preview-image {
+    width: 1000px !important;
+    height: 760px !important;
+}
+}
+@media(max-width: 991px){
+  .data-head-list{
+      height: 75px;
+      font-size: 16px;
+  }
+  .data-heads{
+      padding-left:20px;
+  }
+  .submission-preview-image {
+    width: 970px !important;
+  }
+}
+@media(max-width: 768px){
+  .data-head-list {
+    margin-left: -20px;
+}
+.list-span {
+  margin-left: 5px;
+}
+.left-list {
+  overflow-y: scroll;
+}
+.data-head-list .list-span > a {
+  font-size: 14px;
+}
+.submission-preview-image {
+  width: 800px !important;
+}
+.submission-data {
+  height: 800px !important;
+}
+}
+@media(max-width:560px){
+  .submission-preview-image {
+    width: 536px !important;
+}
+
+}
+
+@media(max-width: 480px){
+.data-head-list{
+  font-size: 14px;
+}
+.left-list {
+  width: 50%;
+}
+.submission-preview-image {
+  width: 461px !important;
+}
+}

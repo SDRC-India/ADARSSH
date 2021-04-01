@@ -1,0 +1,2418 @@
+
+[
+  {
+    "id": 1,
+    "name": "District Assessment Checklist",
+    "sections": [
+          {
+            "id": "11",
+            "name": "Infrastructure, Human resourcse & Training",
+            "subSectors": [
+              {
+                  "subSectorName": "Coverage",
+                  "indicators": [
+                      {
+                          "indicatorName": "Number of districts assessed",
+                          "indicatorId": 600,
+                          "indicatorValue": "96/117",
+                          "indicatorGroupName": "Gr1",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "card"
+                          ],
+                          "align": "col-md-4",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "trendChartData": null,
+                          "boxChartData": null,
+                          "spiderChartData": null
+                      },
+                      {
+                          "indicatorName": "Number of assessments done",
+                          "indicatorId": 601,
+                          "indicatorValue": "176",
+                          "indicatorGroupName": "Gr2",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "card"
+                          ],
+                          "align": "col-md-4",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "trendChartData": null,
+                          "boxChartData": null,
+                          "spiderChartData": null
+                      },
+                      {
+                          "indicatorName": "District visited more than once",
+                          "indicatorId": 117,
+                          "indicatorValue": "21",
+                          "indicatorGroupName": "Gr1",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "card"
+                          ],
+                          "align": "col-md-4",
+                          "cardType": "static",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "trendChartData": null,
+                          "boxChartData": null,
+                          "spiderChartData": null
+                      }
+                  ]
+              },
+              {
+                  "subSectorName": "Infrastructure, Human resourcse & Training",
+                  "indicators": [
+                      {
+                          "indicatorName": "",
+                          "indicatorId": null,
+                          "indicatorValue": null,
+                          "indicatorGroupName": "Gr6",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "bar"
+                          ],
+                          "align": "col-md-6",
+                          "cardType": "",
+                          "barChartData": [
+                              {
+                                "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    [
+                                      {
+                                        "axis": "DH",
+                                        "value": 79.0,
+                                        "id": null,
+                                        "key": "Percentage of districts (reported) having District Task Force",
+                                        "indicatorName": "Percentage of districts (reported) having District Task Force constituted",
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "MC",
+                                        "value": 66.0,
+                                        "id": null,
+                                        "key": "Percentage of districts (reported) having District Task Force",
+                                        "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "SDH",
+                                        "value": 82.0,
+                                        "id": null,
+                                        "key": "Percentage of districts (reported) having District Task Force ",
+                                        "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "CHC",
+                                        "value": 60.0,
+                                        "id": null,
+                                        "key": "Percentage of districts (reported) having District Task Force ",
+                                        "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "PHC",
+                                        "value": 50.0,
+                                        "id": null,
+                                        "key": "Percentage of districts (reported) having District Task Force ",
+                                        "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "SC",
+                                        "value": 40.0,
+                                        "id": null,
+                                        "key": "Percentage of districts (reported) having District Task Force ",
+                                        "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                                        "fill":"##A0C2BB"
+                                      },
+                                      {
+                                        "axis": "AH",
+                                        "value": 34.0,
+                                        "id": null,
+                                        "key": "Percentage of districts (reported) having District Task Force ",
+                                        "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                                        "fill":"##A0C2BB"
+                                      }
+                                    ]
+                                  ]  
+                              }
+                          ],
+                          "pieChartData": null,
+                          "groupBarChartData": null,
+                          "threeDBarChartData": null,
+                          "horizontalBarChartdata": null
+                      },
+                      {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "bar"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": [
+                            {
+                                "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    [
+                                      {
+                                        "axis": "DH",
+                                        "value": 23,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "MC",
+                                        "value": 33,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "SDH",
+                                        "value": 43,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "CHC",
+                                        "value": 53,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "PHC",
+                                        "value": 43,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "SC",
+                                        "value": 68,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#A0C2BB"
+                                      },
+                                      {
+                                        "axis": "AH",
+                                        "value": 88,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#A0C2BB"
+                                      }
+                                    ]
+                                  ]
+                            }
+                        ],
+                        "pieChartData": null,
+                        "groupBarChartData": null,
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": null
+                    },
+                    {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "horizontalBar"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": null,
+                        "groupBarChartData": null,
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": [
+                            {
+                                "headerIndicatorName": "Facilities functional out of sanctioned",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    {
+                                      "axis": "DEIC",
+                                      "value": 62,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null,
+                                      "fill":"#f4c667"
+                                    },
+                                    {
+                                        "axis": "AFHC",
+                                        "value": 81,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#f4c667"
+                                    }
+                                ]  
+                            }
+                        ]
+                    },
+                    {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "threeDBar"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": null,
+                        "groupBarChartData": null,
+                        "threeDBarChartData": [
+                            {
+                                "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    [
+                                      {
+                                        "axis": "NRC",
+                                        "value": 79,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#F4A775"
+                                      },
+                                      {
+                                        "axis": "Blood Bank",
+                                        "value": 95,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#F4A775"
+                                      },
+                                      {
+                                        "axis": "Blood Storage Unit(BSU)",
+                                        "value": 58,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#F4A775"
+                                      },
+                                      {
+                                        "axis": "Skills Lab",
+                                        "value": 71,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#F4A775"
+                                      }
+                                  ]
+                                  ]  
+                            }
+                        ],
+                        "horizontalBarChartdata": null
+                    },
+                    {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "groupBar"
+                        ],
+                        "align": "col-md-12",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": null,
+                        "groupBarChartData": [
+                            {
+                                "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    [
+                                      {
+                                        "axis": "DH",
+                                        "value": 90,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#c26b61",
+                                        "opacity":"0.26",
+                                        "legendlabel":"Without 24x7 power backup"
+                                      },
+                                      {
+                                        "axis": "SDH",
+                                        "value": 40,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "FRU CHC",
+                                        "value": 34,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Non FRU CHC",
+                                        "value": 13,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "24x7 PHC",
+                                        "value": 93,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Normal PHC",
+                                        "value": 73,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Sub Health Center",
+                                        "value":33,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Urban Health Center",
+                                        "value": 43,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      }
+                                    ],
+                                    [
+                                      {
+                                        "axis": "DH",
+                                        "value": 30,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#f37361",
+                                        "opacity":"0.26",
+                                        "legendlabel":"Functional"
+                                      },
+                                      {
+                                        "axis": "SDH",
+                                        "value": 70,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "FRU CHC",
+                                        "value": 54,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Non FRU CHC",
+                                        "value": 23,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "24x7 PHC",
+                                        "value": 73,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Normal PHC",
+                                        "value": 83,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Sub Health Center",
+                                        "value": 23,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Urban Health Center",
+                                        "value": 33,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      }
+                                    ],
+                                    [
+                                        {
+                                          "axis": "DH",
+                                          "value": 20,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#f4A775",
+                                          "opacity":"0.26",
+                                          "legendlabel":"Without water supply"
+                                        },
+                                        {
+                                          "axis": "SDH",
+                                          "value": 60,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "FRU CHC",
+                                          "value": 44,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Non FRU CHC",
+                                          "value": 13,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "24x7 PHC",
+                                          "value": 83,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Normal PHC",
+                                          "value": 63,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Sub Health Center",
+                                          "value": 83,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Urban Health Center",
+                                          "value": 23,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "axis": "DH",
+                                          "value": 24,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#f4C667",
+                                          "opacity":"0.26",
+                                          "legendlabel":"Without 24x7 electricity"
+                                        },
+                                        {
+                                          "axis": "SDH",
+                                          "value": 50,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "FRU CHC",
+                                          "value": 74,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Non FRU CHC",
+                                          "value": 43,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "24x7 PHC",
+                                          "value": 23,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Normal PHC",
+                                          "value": 43,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Sub Health Center",
+                                          "value": 63,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Urban Health Center",
+                                          "value": 83,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        }
+                                      ]
+                                      
+                                  ]
+                            }
+                        ],
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": null
+                    }
+                      
+                  ]
+              }
+          ]
+          },
+          {
+            "id": "12",
+            "name": "District Preparedness",
+             "subSectors": [
+              {
+                  "subSectorName": "Coverage",
+                  "indicators": [
+                      {
+                          "indicatorName": "Number of districts assessed",
+                          "indicatorId": 600,
+                          "indicatorValue": "96/117",
+                          "indicatorGroupName": "Gr1",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "card"
+                          ],
+                          "align": "col-md-4",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "trendChartData": null,
+                          "boxChartData": null,
+                          "spiderChartData": null
+                      },
+                      {
+                          "indicatorName": "Number of assessments done",
+                          "indicatorId": 601,
+                          "indicatorValue": "176",
+                          "indicatorGroupName": "Gr2",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "card"
+                          ],
+                          "align": "col-md-4",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "trendChartData": null,
+                          "boxChartData": null,
+                          "spiderChartData": null
+                      },
+                      {
+                          "indicatorName": "District visited more than once",
+                          "indicatorId": 117,
+                          "indicatorValue": "21",
+                          "indicatorGroupName": "Gr1",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "card"
+                          ],
+                          "align": "col-md-4",
+                          "cardType": "static",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "trendChartData": null,
+                          "boxChartData": null,
+                          "spiderChartData": null
+                      }
+                  ]
+              },
+              {
+                  "subSectorName": "District Preparedness",
+                  "indicators": [
+                    {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "horizontalBar"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": null,
+                        "groupBarChartData": null,
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": [
+                            {
+                                "headerIndicatorName": "Facilities functional out of sanctioned",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    {
+                                      "axis": "DEIC",
+                                      "value": 62,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null,
+                                      "fill":"#f4c667"
+                                    },
+                                    {
+                                        "axis": "AFHC",
+                                        "value": 81,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#f4c667"
+                                    }
+                                ]  
+                            }
+                        ]
+                    },
+                    {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "threeDBar"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": null,
+                        "groupBarChartData": null,
+                        "threeDBarChartData": [
+                            {
+                                "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    [
+                                      {
+                                        "axis": "NRC",
+                                        "value": 79,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#F4A775"
+                                      },
+                                      {
+                                        "axis": "Blood Bank",
+                                        "value": 95,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#F4A775"
+                                      },
+                                      {
+                                        "axis": "Blood Storage Unit(BSU)",
+                                        "value": 58,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#F4A775"
+                                      },
+                                      {
+                                        "axis": "Skills Lab",
+                                        "value": 71,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#F4A775"
+                                      }
+                                  ]
+                                  ]  
+                            }
+                        ],
+                        "horizontalBarChartdata": null
+                    },
+                    {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "pie"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": [
+                            {
+                                "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    [
+                                      {
+                                        "axis": "DH",
+                                        "value": 28,
+                                        "id": null,
+                                        "key": "No GPS is fitted ambulance is available",
+                                        "indicatorName": null,
+                                        "legendLebel":"No GPS is fitted ambulance is available"
+                                      },
+                                      {
+                                        "axis": "SC",
+                                        "value": 34,
+                                        "id": null,
+                                        "key": "No GPS is fitted ambulance is available",
+                                        "indicatorName": null,
+                                        "legendLebel":"No GPS is fitted ambulance is available"
+                                      },
+                                      {
+                                        "axis": "MC",
+                                        "value": 20,
+                                        "id": null,
+                                        "key": "At least 1 GPS fitted ambulance is available",
+                                        "indicatorName": null,
+                                        "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                      },
+                                      {
+                                        "axis": "PHC",
+                                        "value": 18,
+                                        "id": null,
+                                        "key": "At least 1 GPS fitted ambulance is available",
+                                        "indicatorName": null,
+                                        "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                      }
+                                    ]
+                                  ]
+                        }
+                    ],
+                        "groupBarChartData": null,
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": null
+                    }
+                      
+                  ]
+              }
+          ]
+          },
+          {
+            "id": "13",
+            "name": "Quality Assurance",
+            "subSectors": [
+                {
+                    "subSectorName": "Coverage",
+                    "indicators": [
+                        {
+                            "indicatorName": "Number of districts assessed",
+                            "indicatorId": 600,
+                            "indicatorValue": "96/117",
+                            "indicatorGroupName": "Gr1",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        },
+                        {
+                            "indicatorName": "Number of assessments done",
+                            "indicatorId": 601,
+                            "indicatorValue": "176",
+                            "indicatorGroupName": "Gr2",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        },
+                        {
+                            "indicatorName": "District visited more than once",
+                            "indicatorId": 117,
+                            "indicatorValue": "21",
+                            "indicatorGroupName": "Gr1",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "static",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        }
+                    ]
+                },
+                {
+                    "subSectorName": "Quality Assurance",
+                    "indicators": [
+                      {
+                          "indicatorName": "",
+                          "indicatorId": null,
+                          "indicatorValue": null,
+                          "indicatorGroupName": "Gr6",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "horizontalBar"
+                          ],
+                          "align": "col-md-6",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "groupBarChartData": null,
+                          "threeDBarChartData": null,
+                          "horizontalBarChartdata": [
+                              {
+                                  "headerIndicatorName": "Facilities functional out of sanctioned",
+                                  "headerIndicatorValue": null,
+                                  "chartDataValue":[
+                                      {
+                                        "axis": "DEIC",
+                                        "value": 62,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#f4c667"
+                                      },
+                                      {
+                                          "axis": "AFHC",
+                                          "value": 81,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#f4c667"
+                                      }
+                                  ]  
+                              }
+                          ]
+                      },
+                      {
+                          "indicatorName": "",
+                          "indicatorId": null,
+                          "indicatorValue": null,
+                          "indicatorGroupName": "Gr6",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "pie"
+                          ],
+                          "align": "col-md-6",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": [
+                              {
+                                  "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                  "headerIndicatorValue": null,
+                                  "chartDataValue":[
+                                      [
+                                        {
+                                          "axis": "DH",
+                                          "value": 28,
+                                          "id": null,
+                                          "key": "No GPS is fitted ambulance is available",
+                                          "indicatorName": null,
+                                          "legendLebel":"No GPS is fitted ambulance is available"
+                                        },
+                                        {
+                                          "axis": "SC",
+                                          "value": 34,
+                                          "id": null,
+                                          "key": "No GPS is fitted ambulance is available",
+                                          "indicatorName": null,
+                                          "legendLebel":"No GPS is fitted ambulance is available"
+                                        },
+                                        {
+                                          "axis": "MC",
+                                          "value": 20,
+                                          "id": null,
+                                          "key": "At least 1 GPS fitted ambulance is available",
+                                          "indicatorName": null,
+                                          "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                        },
+                                        {
+                                          "axis": "PHC",
+                                          "value": 18,
+                                          "id": null,
+                                          "key": "At least 1 GPS fitted ambulance is available",
+                                          "indicatorName": null,
+                                          "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                        }
+                                      ]
+                                    ]
+                          }
+                      ],
+                          "groupBarChartData": null,
+                          "threeDBarChartData": null,
+                          "horizontalBarChartdata": null
+                      }
+                        
+                    ]
+                }
+            ]
+          },
+          {
+            "id": "14",
+            "name": "Finance",
+            "subSectors": [
+                {
+                    "subSectorName": "Coverage",
+                    "indicators": [
+                        {
+                            "indicatorName": "Number of districts assessed",
+                            "indicatorId": 600,
+                            "indicatorValue": "96/117",
+                            "indicatorGroupName": "Gr1",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        },
+                        {
+                            "indicatorName": "Number of assessments done",
+                            "indicatorId": 601,
+                            "indicatorValue": "176",
+                            "indicatorGroupName": "Gr2",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        },
+                        {
+                            "indicatorName": "District visited more than once",
+                            "indicatorId": 117,
+                            "indicatorValue": "21",
+                            "indicatorGroupName": "Gr1",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "static",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        }
+                    ]
+                },
+                {
+                    "subSectorName": "Finance",
+                    "indicators": [
+                      {
+                          "indicatorName": "",
+                          "indicatorId": null,
+                          "indicatorValue": null,
+                          "indicatorGroupName": "Gr6",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "pie"
+                          ],
+                          "align": "col-md-6",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": [
+                              {
+                                  "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                  "headerIndicatorValue": null,
+                                  "chartDataValue":[
+                                      [
+                                        {
+                                          "axis": "DH",
+                                          "value": 28,
+                                          "id": null,
+                                          "key": "No GPS is fitted ambulance is available",
+                                          "indicatorName": null,
+                                          "legendLebel":"No GPS is fitted ambulance is available"
+                                        },
+                                        {
+                                          "axis": "SC",
+                                          "value": 34,
+                                          "id": null,
+                                          "key": "No GPS is fitted ambulance is available",
+                                          "indicatorName": null,
+                                          "legendLebel":"No GPS is fitted ambulance is available"
+                                        },
+                                        {
+                                          "axis": "MC",
+                                          "value": 20,
+                                          "id": null,
+                                          "key": "At least 1 GPS fitted ambulance is available",
+                                          "indicatorName": null,
+                                          "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                        },
+                                        {
+                                          "axis": "PHC",
+                                          "value": 18,
+                                          "id": null,
+                                          "key": "At least 1 GPS fitted ambulance is available",
+                                          "indicatorName": null,
+                                          "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                        }
+                                      ]
+                                    ]
+                          }
+                      ],
+                          "groupBarChartData": null,
+                          "threeDBarChartData": null,
+                          "horizontalBarChartdata": null
+                      }
+                        
+                    ]
+                }
+            ]
+          },
+          {
+            "id": "15",
+            "name": "Family Planning",
+            "subSectors": [
+                {
+                    "subSectorName": "Coverage",
+                    "indicators": [
+                        {
+                            "indicatorName": "Number of districts assessed",
+                            "indicatorId": 600,
+                            "indicatorValue": "96/117",
+                            "indicatorGroupName": "Gr1",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        },
+                        {
+                            "indicatorName": "Number of assessments done",
+                            "indicatorId": 601,
+                            "indicatorValue": "176",
+                            "indicatorGroupName": "Gr2",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        },
+                        {
+                            "indicatorName": "District visited more than once",
+                            "indicatorId": 117,
+                            "indicatorValue": "21",
+                            "indicatorGroupName": "Gr1",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "static",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        }
+                    ]
+                },
+                {
+                    "subSectorName": "Family Planning",
+                    "indicators": [
+                      {
+                          "indicatorName": "",
+                          "indicatorId": null,
+                          "indicatorValue": null,
+                          "indicatorGroupName": "Gr6",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "horizontalBar"
+                          ],
+                          "align": "col-md-6",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "groupBarChartData": null,
+                          "threeDBarChartData": null,
+                          "horizontalBarChartdata": [
+                              {
+                                  "headerIndicatorName": "Facilities functional out of sanctioned",
+                                  "headerIndicatorValue": null,
+                                  "chartDataValue":[
+                                      {
+                                        "axis": "DEIC",
+                                        "value": 62,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#f4c667"
+                                      },
+                                      {
+                                          "axis": "AFHC",
+                                          "value": 81,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#f4c667"
+                                      }
+                                  ]  
+                              }
+                          ]
+                      },
+                      {
+                          "indicatorName": "",
+                          "indicatorId": null,
+                          "indicatorValue": null,
+                          "indicatorGroupName": "Gr6",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "threeDBar"
+                          ],
+                          "align": "col-md-6",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "groupBarChartData": null,
+                          "threeDBarChartData": [
+                              {
+                                  "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                  "headerIndicatorValue": null,
+                                  "chartDataValue":[
+                                      [
+                                        {
+                                          "axis": "NRC",
+                                          "value": 79,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#F4A775"
+                                        },
+                                        {
+                                          "axis": "Blood Bank",
+                                          "value": 95,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#F4A775"
+                                        },
+                                        {
+                                          "axis": "Blood Storage Unit(BSU)",
+                                          "value": 58,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#F4A775"
+                                        },
+                                        {
+                                          "axis": "Skills Lab",
+                                          "value": 71,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#F4A775"
+                                        }
+                                    ]
+                                    ]  
+                              }
+                          ],
+                          "horizontalBarChartdata": null
+                      }
+                        
+                    ]
+                }
+            ]
+          },
+          {
+            "id": "s6",
+            "name": "Maternal Health"
+          },
+          {
+            "id": "s7",
+            "name": "Child Health & Immunisation"
+          },
+          {
+            "id": "s8",
+            "name": "Adolescent Health"
+          },
+          {
+            "id": "s9",
+            "name": "RNTCP"
+          },
+          {
+            "id": "110",
+            "name": "HWC & Universal screening of NCD",
+            "subSectors": [
+                {
+                    "subSectorName": "Coverage",
+                    "indicators": [
+                        {
+                            "indicatorName": "Number of districts assessed",
+                            "indicatorId": 600,
+                            "indicatorValue": "96/117",
+                            "indicatorGroupName": "Gr1",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        },
+                        {
+                            "indicatorName": "Number of assessments done",
+                            "indicatorId": 601,
+                            "indicatorValue": "176",
+                            "indicatorGroupName": "Gr2",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        },
+                        {
+                            "indicatorName": "District visited more than once",
+                            "indicatorId": 117,
+                            "indicatorValue": "21",
+                            "indicatorGroupName": "Gr1",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "card"
+                            ],
+                            "align": "col-md-4",
+                            "cardType": "static",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "trendChartData": null,
+                            "boxChartData": null,
+                            "spiderChartData": null
+                        }
+                    ]
+                },
+                {
+                    "subSectorName": "HWC and Universal Screening of NCD",
+                    "indicators": [
+                        {
+                            "indicatorName": "",
+                            "indicatorId": null,
+                            "indicatorValue": null,
+                            "indicatorGroupName": "Gr6",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "pie"
+                            ],
+                            "align": "col-md-6",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": [
+                                {
+                                    "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                    "headerIndicatorValue": null,
+                                    "chartDataValue":[
+                                        [
+                                          {
+                                            "axis": "DH",
+                                            "value": 28,
+                                            "id": null,
+                                            "key": "No GPS is fitted ambulance is available",
+                                            "indicatorName": null,
+                                            "legendLebel":"No GPS is fitted ambulance is available"
+                                          },
+                                          {
+                                            "axis": "SC",
+                                            "value": 34,
+                                            "id": null,
+                                            "key": "No GPS is fitted ambulance is available",
+                                            "indicatorName": null,
+                                            "legendLebel":"No GPS is fitted ambulance is available"
+                                          },
+                                          {
+                                            "axis": "MC",
+                                            "value": 20,
+                                            "id": null,
+                                            "key": "At least 1 GPS fitted ambulance is available",
+                                            "indicatorName": null,
+                                            "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                          },
+                                          {
+                                            "axis": "PHC",
+                                            "value": 18,
+                                            "id": null,
+                                            "key": "At least 1 GPS fitted ambulance is available",
+                                            "indicatorName": null,
+                                            "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                          }
+                                        ]
+                                      ]
+                            }
+                        ],
+                            "groupBarChartData": null,
+                            "threeDBarChartData": null,
+                            "horizontalBarChartdata": null
+                        },
+                        {
+                            "indicatorName": "",
+                            "indicatorId": null,
+                            "indicatorValue": null,
+                            "indicatorGroupName": "Gr6",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "horizontalBar"
+                            ],
+                            "align": "col-md-6",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "groupBarChartData": null,
+                            "threeDBarChartData": null,
+                            "horizontalBarChartdata": [
+                                {
+                                    "headerIndicatorName": "Facilities functional out of sanctioned",
+                                    "headerIndicatorValue": null,
+                                    "chartDataValue":[
+                                        {
+                                          "axis": "DEIC",
+                                          "value": 62,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#f4c667"
+                                        },
+                                        {
+                                            "axis": "AFHC",
+                                            "value": 81,
+                                            "id": null,
+                                            "key": "Cases registered under POCSO Act, where girls are victims",
+                                            "indicatorName": null,
+                                            "fill":"#f4c667"
+                                        }
+                                    ]  
+                                }
+                            ]
+                        },
+                        {
+                            "indicatorName": "",
+                            "indicatorId": null,
+                            "indicatorValue": null,
+                            "indicatorGroupName": "Gr6",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "horizontalBar"
+                            ],
+                            "align": "col-md-6",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "groupBarChartData": null,
+                            "threeDBarChartData": null,
+                            "horizontalBarChartdata": [
+                                {
+                                    "headerIndicatorName": "Facilities functional out of sanctioned",
+                                    "headerIndicatorValue": null,
+                                    "chartDataValue":[
+                                        {
+                                          "axis": "DEIC",
+                                          "value": 62,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#f4c667"
+                                        },
+                                        {
+                                            "axis": "AFHC",
+                                            "value": 81,
+                                            "id": null,
+                                            "key": "Cases registered under POCSO Act, where girls are victims",
+                                            "indicatorName": null,
+                                            "fill":"#f4c667"
+                                        }
+                                    ]  
+                                }
+                            ]
+                        },
+                        {
+                            "indicatorName": "",
+                            "indicatorId": null,
+                            "indicatorValue": null,
+                            "indicatorGroupName": "Gr6",
+                            "timeperiod": null,
+                            "periodicity": null,
+                            "timeperiodId": null,
+                            "chartsAvailable": [
+                                "horizontalBar"
+                            ],
+                            "align": "col-md-6",
+                            "cardType": "",
+                            "barChartData": null,
+                            "pieChartData": null,
+                            "groupBarChartData": null,
+                            "threeDBarChartData": null,
+                            "horizontalBarChartdata": [
+                                {
+                                    "headerIndicatorName": "Facilities functional out of sanctioned",
+                                    "headerIndicatorValue": null,
+                                    "chartDataValue":[
+                                        {
+                                          "axis": "DEIC",
+                                          "value": 62,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#f4c667"
+                                        },
+                                        {
+                                            "axis": "AFHC",
+                                            "value": 81,
+                                            "id": null,
+                                            "key": "Cases registered under POCSO Act, where girls are victims",
+                                            "indicatorName": null,
+                                            "fill":"#f4c667"
+                                        }
+                                    ]  
+                                }
+                            ]
+                        },
+                      {
+                          "indicatorName": "",
+                          "indicatorId": null,
+                          "indicatorValue": null,
+                          "indicatorGroupName": "Gr6",
+                          "timeperiod": null,
+                          "periodicity": null,
+                          "timeperiodId": null,
+                          "chartsAvailable": [
+                              "groupBar"
+                          ],
+                          "align": "col-md-6",
+                          "cardType": "",
+                          "barChartData": null,
+                          "pieChartData": null,
+                          "groupBarChartData": [
+                              {
+                                  "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                  "headerIndicatorValue": null,
+                                  "chartDataValue":[
+                                      [
+                                        {
+                                          "axis": "DH",
+                                          "value": 90,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#c26b61",
+                                          "opacity":"0.26",
+                                          "legendlabel":"Without 24x7 power backup"
+                                        },
+                                        {
+                                          "axis": "SDH",
+                                          "value": 40,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "FRU CHC",
+                                          "value": 34,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Non FRU CHC",
+                                          "value": 13,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "24x7 PHC",
+                                          "value": 93,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "axis": "DH",
+                                          "value": 30,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null,
+                                          "fill":"#f37361",
+                                          "opacity":"0.26",
+                                          "legendlabel":"Functional"
+                                        },
+                                        {
+                                          "axis": "SDH",
+                                          "value": 70,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "FRU CHC",
+                                          "value": 54,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "Non FRU CHC",
+                                          "value": 23,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        },
+                                        {
+                                          "axis": "24x7 PHC",
+                                          "value": 73,
+                                          "id": null,
+                                          "key": "Cases registered under POCSO Act, where girls are victims",
+                                          "indicatorName": null
+                                        }
+                                      ]
+                                    ]
+                              }
+                          ],
+                          "threeDBarChartData": null,
+                          "horizontalBarChartdata": null
+                      },
+                      {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "groupBar"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": null,
+                        "groupBarChartData": [
+                            {
+                                "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    [
+                                      {
+                                        "axis": "DH",
+                                        "value": 90,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#c26b61",
+                                        "opacity":"0.26",
+                                        "legendlabel":"Without 24x7 power backup"
+                                      },
+                                      {
+                                        "axis": "SDH",
+                                        "value": 40,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "FRU CHC",
+                                        "value": 34,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Non FRU CHC",
+                                        "value": 13,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "24x7 PHC",
+                                        "value": 93,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      }
+                                    ],
+                                    [
+                                      {
+                                        "axis": "DH",
+                                        "value": 30,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#f37361",
+                                        "opacity":"0.26",
+                                        "legendlabel":"Functional"
+                                      },
+                                      {
+                                        "axis": "SDH",
+                                        "value": 70,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "FRU CHC",
+                                        "value": 54,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "Non FRU CHC",
+                                        "value": 23,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      },
+                                      {
+                                        "axis": "24x7 PHC",
+                                        "value": 73,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null
+                                      }
+                                    ]
+                                  ]
+                            }
+                        ],
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": null
+                    },
+                      {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "pie"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": [
+                            {
+                                "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    [
+                                      {
+                                        "axis": "DH",
+                                        "value": 28,
+                                        "id": null,
+                                        "key": "No GPS is fitted ambulance is available",
+                                        "indicatorName": null,
+                                        "legendLebel":"No GPS is fitted ambulance is available"
+                                      },
+                                      {
+                                        "axis": "SC",
+                                        "value": 34,
+                                        "id": null,
+                                        "key": "No GPS is fitted ambulance is available",
+                                        "indicatorName": null,
+                                        "legendLebel":"No GPS is fitted ambulance is available"
+                                      },
+                                      {
+                                        "axis": "MC",
+                                        "value": 20,
+                                        "id": null,
+                                        "key": "At least 1 GPS fitted ambulance is available",
+                                        "indicatorName": null,
+                                        "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                      },
+                                      {
+                                        "axis": "PHC",
+                                        "value": 18,
+                                        "id": null,
+                                        "key": "At least 1 GPS fitted ambulance is available",
+                                        "indicatorName": null,
+                                        "legendLebel":"At least 1 GPS fitted ambulance is available"
+                                      }
+                                    ]
+                                  ]
+                        }
+                    ],
+                        "groupBarChartData": null,
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": null
+                    },{
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "horizontalBar"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": null,
+                        "groupBarChartData": null,
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": [
+                            {
+                                "headerIndicatorName": "Facilities functional out of sanctioned",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    {
+                                      "axis": "DEIC",
+                                      "value": 62,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null,
+                                      "fill":"#f4c667"
+                                    },
+                                    {
+                                        "axis": "AFHC",
+                                        "value": 81,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#f4c667"
+                                    }
+                                ]  
+                            }
+                        ]
+                    },
+                    {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "horizontalBar"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": null,
+                        "groupBarChartData": null,
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": [
+                            {
+                                "headerIndicatorName": "Facilities functional out of sanctioned",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    {
+                                      "axis": "DEIC",
+                                      "value": 62,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null,
+                                      "fill":"#f4c667"
+                                    },
+                                    {
+                                        "axis": "AFHC",
+                                        "value": 81,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#f4c667"
+                                    }
+                                ]  
+                            }
+                        ]
+                    },
+                    {
+                        "indicatorName": "",
+                        "indicatorId": null,
+                        "indicatorValue": null,
+                        "indicatorGroupName": "Gr6",
+                        "timeperiod": null,
+                        "periodicity": null,
+                        "timeperiodId": null,
+                        "chartsAvailable": [
+                            "horizontalBar"
+                        ],
+                        "align": "col-md-6",
+                        "cardType": "",
+                        "barChartData": null,
+                        "pieChartData": null,
+                        "groupBarChartData": null,
+                        "threeDBarChartData": null,
+                        "horizontalBarChartdata": [
+                            {
+                                "headerIndicatorName": "Facilities functional out of sanctioned",
+                                "headerIndicatorValue": null,
+                                "chartDataValue":[
+                                    {
+                                      "axis": "DEIC",
+                                      "value": 62,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null,
+                                      "fill":"#f4c667"
+                                    },
+                                    {
+                                        "axis": "AFHC",
+                                        "value": 81,
+                                        "id": null,
+                                        "key": "Cases registered under POCSO Act, where girls are victims",
+                                        "indicatorName": null,
+                                        "fill":"#f4c667"
+                                    }
+                                ]  
+                            }
+                        ]
+                    },
+                  {
+                      "indicatorName": "",
+                      "indicatorId": null,
+                      "indicatorValue": null,
+                      "indicatorGroupName": "Gr6",
+                      "timeperiod": null,
+                      "periodicity": null,
+                      "timeperiodId": null,
+                      "chartsAvailable": [
+                          "groupBar"
+                      ],
+                      "align": "col-md-6",
+                      "cardType": "",
+                      "barChartData": null,
+                      "pieChartData": null,
+                      "groupBarChartData": [
+                          {
+                              "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                              "headerIndicatorValue": null,
+                              "chartDataValue":[
+                                  [
+                                    {
+                                      "axis": "DH",
+                                      "value": 90,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null,
+                                      "fill":"#c26b61",
+                                      "opacity":"0.26",
+                                      "legendlabel":"Without 24x7 power backup"
+                                    },
+                                    {
+                                      "axis": "SDH",
+                                      "value": 40,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null
+                                    },
+                                    {
+                                      "axis": "FRU CHC",
+                                      "value": 34,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null
+                                    },
+                                    {
+                                      "axis": "Non FRU CHC",
+                                      "value": 13,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null
+                                    },
+                                    {
+                                      "axis": "24x7 PHC",
+                                      "value": 93,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "axis": "DH",
+                                      "value": 30,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null,
+                                      "fill":"#f37361",
+                                      "opacity":"0.26",
+                                      "legendlabel":"Functional"
+                                    },
+                                    {
+                                      "axis": "SDH",
+                                      "value": 70,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null
+                                    },
+                                    {
+                                      "axis": "FRU CHC",
+                                      "value": 54,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null
+                                    },
+                                    {
+                                      "axis": "Non FRU CHC",
+                                      "value": 23,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null
+                                    },
+                                    {
+                                      "axis": "24x7 PHC",
+                                      "value": 73,
+                                      "id": null,
+                                      "key": "Cases registered under POCSO Act, where girls are victims",
+                                      "indicatorName": null
+                                    }
+                                  ]
+                                ]
+                          }
+                      ],
+                      "threeDBarChartData": null,
+                      "horizontalBarChartdata": null
+                  },
+                  {
+                    "indicatorName": "",
+                    "indicatorId": null,
+                    "indicatorValue": null,
+                    "indicatorGroupName": "Gr6",
+                    "timeperiod": null,
+                    "periodicity": null,
+                    "timeperiodId": null,
+                    "chartsAvailable": [
+                        "groupBar"
+                    ],
+                    "align": "col-md-6",
+                    "cardType": "",
+                    "barChartData": null,
+                    "pieChartData": null,
+                    "groupBarChartData": [
+                        {
+                            "headerIndicatorName": "Facilities assessed out of 31492 facilities",
+                            "headerIndicatorValue": null,
+                            "chartDataValue":[
+                                [
+                                  {
+                                    "axis": "DH",
+                                    "value": 90,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null,
+                                    "fill":"#c26b61",
+                                    "opacity":"0.26",
+                                    "legendlabel":"Without 24x7 power backup"
+                                  },
+                                  {
+                                    "axis": "SDH",
+                                    "value": 40,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null
+                                  },
+                                  {
+                                    "axis": "FRU CHC",
+                                    "value": 34,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null
+                                  },
+                                  {
+                                    "axis": "Non FRU CHC",
+                                    "value": 13,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null
+                                  },
+                                  {
+                                    "axis": "24x7 PHC",
+                                    "value": 93,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null
+                                  }
+                                ],
+                                [
+                                  {
+                                    "axis": "DH",
+                                    "value": 30,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null,
+                                    "fill":"#f37361",
+                                    "opacity":"0.26",
+                                    "legendlabel":"Functional"
+                                  },
+                                  {
+                                    "axis": "SDH",
+                                    "value": 70,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null
+                                  },
+                                  {
+                                    "axis": "FRU CHC",
+                                    "value": 54,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null
+                                  },
+                                  {
+                                    "axis": "Non FRU CHC",
+                                    "value": 23,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null
+                                  },
+                                  {
+                                    "axis": "24x7 PHC",
+                                    "value": 73,
+                                    "id": null,
+                                    "key": "Cases registered under POCSO Act, where girls are victims",
+                                    "indicatorName": null
+                                  }
+                                ]
+                              ]
+                        }
+                    ],
+                    "threeDBarChartData": null,
+                    "horizontalBarChartdata": null
+                }
+                        
+                    ]
+                }
+            ]
+          },
+          {
+            "id": "s11",
+            "name": "Service Delivery"
+          },
+          {
+            "id": "s12",
+            "name": "Community"
+          },
+          {
+            "id": "sa",
+            "name": "All"
+          }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Facility Assessment Checklist",
+    "sections": [
+      {
+        "id": 1,
+        "name": "14"
+      },
+      {
+        "id": 2,
+        "name": "15"
+      },
+      {
+        "id": 3,
+        "name": "16"
+      },
+      {
+        "id": 4,
+        "name": "Quality Assurance"
+      },
+      {
+        "id": 5,
+        "name": "Finance"
+      },
+      {
+        "id": 6,
+        "name": "Family Planning"
+      },
+      {
+        "id": 7,
+        "name": "Maternal Health"
+      },
+      {
+        "id": 8,
+        "name": "Child Health & Immunisation"
+      },
+      {
+        "id": 9,
+        "name": "Adolescent Health"
+      },
+      {
+        "id": 10,
+        "name": "RNTCP"
+      },
+      {
+        "id": 11,
+        "name": "HWC & Universal screening of NCD"
+      },
+      {
+        "id": 12,
+        "name": "Service Delivery"
+      },
+      {
+        "id": 13,
+        "name": "Community"
+      }
+]
+  },
+  {
+    "id": 3,
+    "name": "Health and Wellness Centre Assessment Checklist",
+    "sections": [
+      {
+        "id": 1,
+        "name": "17"
+      },
+      {
+        "id": 2,
+        "name": "Infrastructure, Human resourcse & Training"
+      },
+      {
+        "id": 3,
+        "name": "District Preparedness"
+      },
+      {
+        "id": 4,
+        "name": "Quality Assurance"
+      },
+      {
+        "id": 5,
+        "name": "Finance"
+      },
+      {
+        "id": 6,
+        "name": "Family Planning"
+      },
+      {
+        "id": 7,
+        "name": "Maternal Health"
+      },
+      {
+        "id": 8,
+        "name": "Child Health & Immunisation"
+      },
+      {
+        "id": 9,
+        "name": "Adolescent Health"
+      },
+      {
+        "id": 10,
+        "name": "RNTCP"
+      },
+      {
+        "id": 11,
+        "name": "HWC & Universal screening of NCD"
+      },
+      {
+        "id": 12,
+        "name": "Service Delivery"
+      },
+      {
+        "id": 13,
+        "name": "Community"
+      }
+]
+        
+  },
+  {
+    "id": 4,
+    "name": "CommunityAssessment Checklist",
+    "sections": [
+      {
+        "id": 1,
+        "name": "18"
+      },
+      {
+        "id": 2,
+        "name": "Infrastructure, Human resourcse & Training"
+      },
+      {
+        "id": 3,
+        "name": "District Preparedness"
+      },
+      {
+        "id": 4,
+        "name": "Quality Assurance"
+      },
+      {
+        "id": 5,
+        "name": "Finance"
+      },
+      {
+        "id": 6,
+        "name": "Family Planning"
+      },
+      {
+        "id": 7,
+        "name": "Maternal Health"
+      },
+      {
+        "id": 8,
+        "name": "Child Health & Immunisation"
+      },
+      {
+        "id": 9,
+        "name": "Adolescent Health"
+      },
+      {
+        "id": 10,
+        "name": "RNTCP"
+      },
+      {
+        "id": 11,
+        "name": "HWC & Universal screening of NCD"
+      },
+      {
+        "id": 12,
+        "name": "Service Delivery"
+      },
+      {
+        "id": 13,
+        "name": "Community"
+      }
+]
+  }
+]

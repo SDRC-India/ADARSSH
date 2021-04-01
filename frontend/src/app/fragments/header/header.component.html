@@ -1,0 +1,291 @@
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">
+    <!-- SideNav slide-out button -->
+    <div>
+        <div class="col-md-3 head-info">
+            <ul class="left-logo">
+                <li><a routerLink="">
+                        <img title="" class="govt-logo img-responsive" src="assets/images/emb_nhm.png" alt="gov-logo">
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Breadcrumb-->
+    <div class="breadcrumb-dn mr-auto">
+        <span class="heading-title">ADARSSH</span>
+    </div>
+    <span class="welcome-name in-burger-menu-view" *ngIf="viewportWidth < 1000" [hidden]="!app.checkLoggedIn()"> Hello,
+        <strong>{{app.getUserDetails().user_name}}</strong></span>
+    <button *ngIf="viewportWidth > 560" type="button" class="navbar-toggler" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <!-- <i class="material-icons"> menu</i> -->
+        <!-- <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> -->
+        <img class="img-responsive" src="assets/icons/burgerMenu.png" width="30px" height="30px" />
+    </button>
+    <!-- side menu for mobile resolution -->
+    <div id="mySidenav" class="sidenav" *ngIf="viewportWidth <= 560">
+        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+        <ul class="navbar-nav mobile-view-side-nav">
+            <li routerLink="" [ngClass]="{'active': router.url=='/'}" (click)="closeNav()">
+                <a class="nav-link main-menu"><i class="fa fa-home" aria-hidden="true"></i> <span
+                        class="clearfix  d-sm-inline-block">Home</span></a>
+            </li>
+            <li [ngClass]="{'active': router.url == '/data-entry'}" (click)="closeNav()"
+                *ngIf="app.checkUserAuthorization(['Data Entry & Visualization'])">
+                <a href="https://adarssh.in/dataentry/" target="_blank" class="nav-link main-menu"><i
+                        class="fa fa-edit"></i> <span class="clearfix  d-sm-inline-block">Data
+                        Entry</span></a>
+            </li>
+            <li (click)="closeNav()" routerLink="pages/report"
+                *ngIf="app.checkUserAuthorization(['Data Entry & Visualization']) ||app.checkUserAuthorization(['Visualization'])"
+                [ngClass]="{'active': router.url=='/pages/report'}">
+                <a class="nav-link main-menu"><i class="fa fa-database"></i> <span
+                        class="clearfix  d-sm-inline-block">Report</span></a>
+            </li>
+
+             <li [ngClass]="{'active': router.url=='/pages/user-manual' || router.url=='/pages/photo'
+            || router.url=='/pages/video' || router.url=='/pages/tools'}" href="#resource"
+                class="list-group-item list-group-item-success" data-toggle="collapse"><i class="fa fa-file"></i>Resource <i
+                    class="fa fa-caret-down"></i></li>
+            <div class="collapse mobile" id="resource">
+                <a routerLink="pages/user-manual" (click)="closeNav()" class="list-group-item"><i class="fa fa-book"></i>
+                    User Manual</a>
+            </div>
+            <div class="collapse mobile" id="resource">
+                <a routerLink="pages/tools" (click)="closeNav()" class="list-group-item"><i
+                        class="fa fa-wrench"></i>
+                        Tools</a>
+            </div>
+            <div class="collapse mobile" id="resource">
+                <a routerLink="pages/photo" (click)="closeNav()" class="list-group-item"><i
+                        class="fa fa-camera-retro"></i>
+                    Photo</a>
+            </div>
+            <div class="collapse mobile" id="resource">
+                <a routerLink="pages/video" (click)="closeNav()" class="list-group-item"><i
+                        class="fa fa-youtube"></i>
+                        Video</a>
+            </div>
+            <li (click)="closeNav()" class="nav-item" routerLink="pages/review-submission"
+                *ngIf="app.checkUserAuthorization(['Submission Management'])"
+                [ngClass]="{'active': router.url=='/pages/review-submission'}">
+                <a class="nav-link main-menu"><i class="fa fa-table"></i> <span
+                        class="clearfix  d-sm-inline-block">Submission Management</span></a>
+            </li>
+            <li *ngIf="app.checkUserAuthorization(['Data Entry & Visualization']) || app.checkUserAuthorization(['Visualization'])"
+                [ngClass]="{'active': router.url=='/dashboard/coverage-dashboard' || router.url=='/dashboard/snapshot-view'}"
+                href="#dashboard" class="list-group-item list-group-item-success" data-toggle="collapse">
+                <i class="fa fa-dashboard"></i>Dashboard <i
+                    class="fa fa-caret-down"></i></li>
+            <div class="collapse mobile" id="dashboard">
+                <a routerLink="dashboard/coverage-dashboard" (click)="closeNav()" class="list-group-item"><i
+                        class="fa fa-line-chart"></i>
+                    Coverage dashboard</a>
+                <a routerLink="dashboard/snapshot-view" (click)="closeNav()" class="list-group-item"><i
+                        class="fa fa-picture-o"></i> Snapshot
+                    View</a>
+            </div>
+            <li *ngIf="app.checkUserAuthorization(['USER_MGMT_ALL_API'])" [ngClass]="{'active': router.url=='/reset-password' || router.url=='/manage-user' || router.url =='/bulk-user-registration'
+                      || router.url == '/user-management' || router.url == '/dashboard/aggregate-legacy'}"
+                href="#admin" class="list-group-item list-group-item-success" data-toggle="collapse">
+                <i class="fa fa-user"></i>Admin <i
+                    class="fa fa-caret-down"></i></li>
+            <div class="collapse mobile" id="admin">
+                <a routerLink="data-upload" (click)="closeNav()" class="list-group-item"><i class="fa fa-upload"
+                        aria-hidden="true"></i> Data
+                    Upload (for e-mitra mobile app)</a>
+                <a routerLink="user-management" (click)="closeNav()" class="list-group-item"><i class="fa fa-tasks"
+                        aria-hidden="true"></i>
+                    User Management</a>
+                <a routerLink="dashboard/aggregate-legacy" (click)="closeNav()" class="list-group-item"><i
+                        class="fa fa-database" aria-hidden="true"></i>
+                    Aggregate Legacy Data</a>
+                <a routerLink="cms" (click)="closeNav()" class="list-group-item"><i
+                        class="fa fa-list-alt" aria-hidden="true"></i>
+                    CMS</a>
+            </div>
+            <li (click)="closeNav()" class="nav-item" routerLink="login" [ngClass]="{'active': router.url=='/login'}"
+                *ngIf="!app.checkLoggedIn()">
+                <a class="nav-link main-menu"><i class="fa fa-sign-in" aria-hidden="true"></i> <span
+                        class="clearfix  d-sm-inline-block">Login</span></a>
+            </li>
+            <li *ngIf="!!app.checkLoggedIn()"
+                [ngClass]="{'active': router.url=='/pages/change-password' || router.url=='/pages/update-user-profile'}"
+                href="#setting" class="list-group-item list-group-item-success" data-toggle="collapse"><i class="fa"
+                    style="color: #fff;"><span class="clearfix  d-sm-inline-block">&#xf013;</span></i> &nbsp;<i
+                    class="fa fa-caret-down"></i></li>
+            <div class="collapse mobile" id="setting">
+                <a routerLink="login" (click)="logout();closeNav()" class="list-group-item"><i class="fa fa-sign-out"
+                        aria-hidden="true"></i>Logout</a>
+                <a routerLink="update-user-profile" (click)="closeNav()" class="list-group-item"><i
+                        class="fa fa-user"></i>
+                    Update User Profile</a>
+                <a routerLink="pages/change-password" (click)="closeNav()" class="list-group-item"><i aria-hidden="true"
+                        class="fa fa-key"></i>
+                    Change Password</a>
+            </div>
+        </ul>
+    </div>
+    <span *ngIf="viewportWidth <= 560" style="font-size:30px;cursor:pointer" (click)="openNav()">
+        <img src="assets/icons/burgerMenu.png" class="burger-menu-png img-responsive" /> </span>
+    <!-- end side menu -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav nav-flex-icons ml-auto">
+            <li class="nav-item" routerLink="" [ngClass]="{'active': router.url=='/'}">
+                <a class="nav-link main-menu"><i class="fa fa-home" aria-hidden="true"></i> <span
+                        class="clearfix  d-sm-inline-block">Home</span></a>
+            </li>
+
+            <li class="nav-item" [ngClass]="{'active': router.url == '/data-entry'}"
+                *ngIf="app.checkUserAuthorization(['Data Entry & Visualization'])">
+                <a href="https://adarssh.in/dataentry/" target="_blank" class="nav-link main-menu"><i
+                        class="fa fa-edit"></i> <span class="clearfix  d-sm-inline-block">Data
+                        Entry</span></a>
+            </li>
+            <li class="nav-item" routerLink="pages/report"
+                *ngIf="app.checkUserAuthorization(['Data Entry & Visualization']) || app.checkUserAuthorization(['Visualization'])"
+                [ngClass]="{'active': router.url=='/pages/report'}">
+                <a class="nav-link main-menu"><i class="fa fa-database"></i> <span
+                        class="clearfix  d-sm-inline-block">Report</span></a>
+            </li>
+            <li class="nav-item dropdown"
+            [ngClass]="{'active': router.url=='/pages/user-manual' || router.url == '/pages/photo'
+             || router.url=='/pages/video' || router.url=='/pages/tools'}">
+            <a class="dropdown-toggle setting-icon-link nav-link" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" href="#"><i class="fa fa-file"></i><span
+                    class="clearfix  d-sm-inline-block">Resource</span></a>
+            <ul class="dropdown-menu setting-menu admin-menu">
+                <li class="setting-icon-lists" routerLink="pages/user-manual">
+                    <a class="dropdown-item"><i class="fa fa-book"></i> <span
+                            class="clearfix d-sm-inline-block sub-menu">User Manual</span></a>
+                </li>
+                <li class="setting-icon-lists" routerLink="pages/tools">
+                    <a class="dropdown-item"><i class="fa fa-wrench"></i> <span
+                            class="clearfix d-sm-inline-block sub-menu">Tools</span></a>
+                </li>
+                <li class="setting-icon-lists" routerLink="pages/photo">
+                    <a class="dropdown-item"><i class="fa fa-camera-retro"></i> <span
+                            class="clearfix d-sm-inline-block sub-menu">Photo</span></a>
+                </li>
+                <li class="setting-icon-lists" routerLink="pages/video">
+                    <a class="dropdown-item"><i class="fa fa-youtube"></i> <span
+                            class="clearfix d-sm-inline-block sub-menu">Video</span></a>
+                </li>
+
+            </ul>
+        </li>
+            <li class="nav-item" routerLink="pages/review-submission"
+                *ngIf="app.checkUserAuthorization(['Submission Management'])"
+                [ngClass]="{'active': router.url=='/pages/review-submission'}">
+                <a class="nav-link main-menu"><i class="fa fa-table"></i> <span
+                        class="clearfix  d-sm-inline-block">Submission Management</span></a>
+            </li>
+            <!-- <li *ngIf="app.checkUserAuthorization(['USER_MGMT_ALL_API'])"
+             class="nav-item" routerLink="cms" [ngClass]="{'active': router.url=='/cms'}">
+                <a class="nav-link main-menu"><i class="fa fa-list-alt"></i> <span
+                        class="clearfix  d-sm-inline-block">CMS</span></a>
+            </li>  -->
+            <li class="nav-item dropdown"
+                *ngIf="app.checkUserAuthorization(['Data Entry & Visualization']) || app.checkUserAuthorization(['Visualization'])"
+                [ngClass]="{'active': router.url=='/dashboard/coverage-dashboard' || router.url=='/dashboard/snapshot-view'}">
+                <a class="dropdown-toggle setting-icon-link nav-link" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" href="#"><i class="fa fa-dashboard"></i><span
+                        class="clearfix  d-sm-inline-block">Dashboard</span></a>
+                <ul class="dropdown-menu setting-menu admin-menu">
+                    <!-- <div class="triangle-up-setting"></div> -->
+                    <!-- <li class="dropdown-content"> -->
+                    <li class="setting-icon-lists" routerLink="dashboard/coverage-dashboard">
+                        <a class="dropdown-item"><i class="fa fa-line-chart"></i> <span
+                                class="clearfix d-sm-inline-block sub-menu">Coverage Dashboard</span></a>
+                    </li>
+                    <li class="setting-icon-lists" routerLink="dashboard/snapshot-view">
+                        <a class="dropdown-item"><i class="fa fa-picture-o"></i><span
+                                class="clearfix  d-sm-inline-block sub-menu">Snapshot View</span></a>
+                    </li>
+                    <!-- </li> -->
+                </ul>
+            </li>
+            <li class="nav-item dropdown" *ngIf="app.checkUserAuthorization(['USER_MGMT_ALL_API'])" [ngClass]="{'active': router.url=='/reset-password' || router.url=='/manage-user' || router.url =='/bulk-user-registration'
+                        || router.url == '/user-management'  || router.url == '/dashboard/aggregate-legacy'}">
+                <a class="dropdown-toggle setting-icon-link nav-link" data-toggle="dropdown" href="#"
+                    aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i><span
+                        class="clearfix  d-sm-inline-block">Admin</span></a>
+                <ul class="dropdown-menu setting-menu admin-menu">
+                    <!-- <div class="triangle-up-setting"></div> -->
+                    <!-- <div class="dropdown-content"> -->
+                    <li class="setting-icon-lists" routerLink="data-upload">
+                        <a class="dropdown-item"><i class="fa fa-upload" aria-hidden="true"></i> <span
+                                class="clearfix  d-sm-inline-block sub-menu">Data Upload (for e-mitra mobile
+                                app)</span></a>
+                    </li>
+                    <li class="setting-icon-lists" routerLink="user-management"
+                        *ngIf="app.checkUserAuthorization(['USER_MGMT_ALL_API'])">
+                        <a class="dropdown-item"><i class="fa fa-tasks" aria-hidden="true"></i><span
+                                class="clearfix  d-sm-inline-block sub-menu">User
+                                Management</span></a>
+                    </li>
+                    <li class="setting-icon-lists" routerLink="dashboard/aggregate-legacy"
+                        *ngIf="app.checkUserAuthorization(['USER_MGMT_ALL_API'])">
+                        <a class="dropdown-item"><i class="fa fa-database" aria-hidden="true"></i><span
+                                class="clearfix  d-sm-inline-block sub-menu">Aggregate Legacy Data</span></a>
+                    </li>
+                    <li class="setting-icon-lists"  routerLink="cms"
+                    *ngIf="app.checkUserAuthorization(['USER_MGMT_ALL_API'])">
+                    <a class="dropdown-item"><i class="fa fa-list-alt"></i> <span
+                        class="clearfix  d-sm-inline-block sub-menu">CMS</span></a>
+                </li>
+
+                    <!-- <li class="setting-icon-lists" routerLink="analytic"
+                    *ngIf="app.checkUserAuthorization(['USER_MGMT_ALL_API'])">
+                    <a class="dropdown-item"><i class="fa fa-tasks" aria-hidden="true"></i><span
+                            class="clearfix  d-sm-inline-block sub-menu">Analytics</span></a>
+                </li> -->
+                    <!-- </div> -->
+                </ul>
+            </li>
+            <li class="dropdown user-name" *ngIf="!!app.checkLoggedIn()">
+                <span class="welcome-name"> Hello, <strong>{{app.getUserDetails().user_name}}</strong></span>
+            </li>
+            <li class="nav-item" routerLink="login" [ngClass]="{'active': router.url=='/login'}"
+                *ngIf="!app.checkLoggedIn()">
+                <a class="nav-link main-menu"><i class="fa fa-sign-in" aria-hidden="true"></i><span
+                        class="clearfix d-sm-inline-block">Login</span></a>
+            </li>
+            <li class="nav-item dropdown setting-icon" *ngIf="!!app.checkLoggedIn()"
+                [ngClass]="{'active': router.url=='/pages/change-password' || router.url=='/pages/update-user-profile'}">
+                <a class="dropdown-toggle setting-icon-link nav-link" data-toggle="dropdown" href="#"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa" style="color: #fff;"><span class="clearfix  d-sm-inline-block">&#xf013;</span></i>
+                </a>
+                <ul class="dropdown-menu setting-menu admin-menu setting-dropdown" *ngIf="!!app.checkLoggedIn()">
+                    <li class="setting-icon-lists" routerLink="login" (click)="logout()">
+                        <a class="dropdown-item"><i class="fa fa-sign-out" aria-hidden="true"></i><span
+                                class="clearfix  d-sm-inline-block sub-menu">Logout</span></a>
+                    </li>
+                    <li class="setting-icon-lists" routerLink="update-user-profile">
+                        <a class="dropdown-item"><i class="fa fa-user"></i> <span
+                                class="clearfix  d-sm-inline-block sub-menu">Update
+                                User Profile</span></a>
+                    </li>
+                    <li class="setting-icon-lists" routerLink="pages/change-password">
+                        <a class="dropdown-item"><i aria-hidden="true" class="fa fa-key"></i><span
+                                class="clearfix  d-sm-inline-block sub-menu">Change Password</span></a>
+                    </li>
+                    <!-- </div> -->
+                </ul>
+            </li>
+
+        </ul>
+        <!-- <ul class="setting-menu-icon">
+
+    </ul> -->
+    </div>
+</nav>
+<!-- /.Navbar -->
+
+<div class="alert alert-primary text-center logged logged-out-success" *ngIf="app.logoutSuccess">
+    <span class="loggedout-msg"><strong>Successfully logged out!</strong></span>
+</div>

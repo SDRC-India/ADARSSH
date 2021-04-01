@@ -1,0 +1,64 @@
+[
+    [
+        {
+            "axis": "Routine Immunization",
+            "value": "27.5",
+            "id": 10,
+            "legend": "Routine Immunization",
+            "cssClass": null,
+            "unit": "Percentage",
+            "numerator": "3",
+            "denominator": "8"
+        },
+        {
+            "axis": "Family planning services and counselling",
+            "value": "22.9",
+            "id": 20,
+            "legend": "Family planning services and counselling",
+            "cssClass": null,
+            "unit": "Percentage",
+            "numerator": "3",
+            "denominator": "7"
+        },
+        {
+            "axis": "Ante-natal care (Essential diagnostics+ counselling)",
+            "value": "28.6",
+            "id": 30,
+            "legend": "Ante-natal care (Essential diagnostics+ counselling)",
+            "cssClass": null,
+            "unit": "Percentage",
+            "numerator": "2",
+            "denominator": "7"
+        },
+        {
+            "axis": "Post-natal care (Essential diagnostics+ counselling)",
+            "value": "41.4",
+            "id": 21,
+            "legend": "Post-natal care (Essential diagnostics+ counselling)",
+            "cssClass": null,
+            "unit": "Percentage",
+            "numerator": "5",
+            "denominator": "7"
+        },
+        {
+            "axis": "Nutrition and Health promotion for children and Adolescents",
+            "value": "10.0",
+            "id": 20,
+            "legend": "Nutrition and Health promotion for children and Adolescents",
+            "cssClass": null,
+            "unit": "Percentage",
+            "numerator": "3",
+            "denominator": "6"
+        },
+        {
+            "axis": "Growth monitoring done",
+            "value": "36.7",
+            "id": 22,
+            "legend": "Growth monitoring done",
+            "cssClass": null,
+            "unit": "Percentage",
+            "numerator": "4",
+            "denominator": "6"
+        }
+    ]
+]

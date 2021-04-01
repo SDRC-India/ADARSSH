@@ -1,0 +1,25 @@
+<ion-split-pane [enabled]="splitEnabled">
+  <ion-menu [content]="content">
+    <ion-header color="primary">
+    </ion-header>
+
+    <ion-content class="bg-color">
+
+      <ion-item class="smenu-custom">
+          <img src="assets/imgs/logo.png" class="icon-size" width="75px" height="40px">
+        <h2 padding-top>Welcome: {{userdata}}</h2>
+      </ion-item>
+      <ion-list>
+        <ion-item no-lines class="bg-color">
+          <p menuToggle class="ksp-pointer-side-menu" (click)="updateForms()">Update Forms</p>
+          <p menuToggle class="ksp-pointer-side-menu" (click)="sync()">Sync</p>
+          <p menuToggle class="ksp-pointer-side-menu" (click)="logout()">Logout</p>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" main #content swipeBackEnabled="false"></ion-nav>
+  </ion-split-pane>

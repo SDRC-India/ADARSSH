@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka
+  jmx:
+    default-domain: eureka-release-1
+    
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  instance:
+    prefer-ip-address: true

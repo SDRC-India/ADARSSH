@@ -1,0 +1,1001 @@
+[
+    {
+      "sectorId": 2,
+      "sectorName": "Supportive supervision in aspirational districts",
+      "subSectors": [
+        {
+          "subSectorId": 5,
+          "subSectorName": "India",
+          "indicators": null,
+          "kpiList": [
+            {
+              "key": "Number of aspirational district",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of aspirational district",
+              "isSelected": null,
+              "id": 16,
+              "keyValue": null,
+              "count": 117
+            },
+            {
+              "key": "Number of DTF where at least 1 meeting is held",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of DTF where at least 1 meeting is held",
+              "isSelected": null,
+              "id": 17,
+              "keyValue": null,
+              "count": 1
+            },
+            {
+              "key": "Number of facilities",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of facilities",
+              "isSelected": null,
+              "id": 18,
+              "keyValue": null,
+              "count": "31,496"
+            },
+            {
+              "key": "Number of BTF where at least 1 meeting is held",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of BTF where at least 1 meeting is held",
+              "isSelected": null,
+              "id": 19,
+              "keyValue": null,
+              "count": 0
+            },
+            {
+              "key": "No. of Health and wellness centers",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of Health and wellness centers",
+              "isSelected": null,
+              "id": 19,
+              "keyValue": null,
+              "count": "15,321"
+            }
+          ]
+        },
+        {
+          "subSectorId": 7,
+          "subSectorName": "District Assessment Checklist",
+          "indicators": null,
+          "kpiList": [
+            {
+              "key": "Number of district assessed",
+              "value": "96/117",
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of district assessed",
+              "isSelected": null,
+              "id": 22,
+              "keyValue": null,
+              "count": "96/117",
+              "css":"#795343"
+            },
+            {
+              "key": "Number of visits done",
+              "value": 65,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of DCPCs constituted ",
+              "isSelected": null,
+              "id": 23,
+              "keyValue": null,
+              "count": "1,32,103",
+              "css":"#b04b44"
+            },
+            {
+              "key": "Number of assessment done",
+              "value": 178,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of assessment done",
+              "isSelected": null,
+              "id": 24,
+              "keyValue": null,
+              "count": 178,
+              "css":"#b04b44"
+            },
+            {
+              "key": "Number of villages/panchayat in which child protection committee constituted in the district",
+              "value": 90,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of villages/panchayat in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": 0,
+              "css":"#d85c54"
+            },
+            {
+              "key": "Districts visited more than twice",
+              "value": 59,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "Districts visited more than twice",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": 59,
+              "css":"#d85c54"
+            },
+            {
+              "key": "VHND sites visited",
+              "value": 90,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of villages/panchayat in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": 9,
+              "css":"#d8453c"
+            }
+          ],
+          "groupedIndList": [
+            {
+              "groupedIndName": "District assessed out of 117 districts",
+              "indicatorName": "Percentage of cases registered under POCSO Act, where girls are victims",
+              "chartsAvailable": [
+                "trend"
+              ],
+              "chartData": [
+                [
+                  {
+                    "axis": "Apr,2018",
+                    "value": 12,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4A775",
+                    "opacity":"0.26"
+                  },
+                  {
+                    "axis": "May,2018",
+                    "value": 8,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jun,2018",
+                    "value": 14,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jul,2018",
+                    "value": 6,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Aug,2018",
+                    "value": 4,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Sep,2018",
+                    "value": 23,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Oct,2018",
+                    "value": 8,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Nov,2018",
+                    "value": 7,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Dec,2018",
+                    "value": 7,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jan,2018",
+                    "value": 1,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Feb,2018",
+                    "value": 2,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Mar,2018",
+                    "value": 4,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+        ,{
+          "subSectorId": 5,
+          "subSectorName": "Facility Assessment Checklist",
+          "indicators": null,
+          "kpiList": [
+            {
+              "key": "Number of facilities assessed out of total number of facilities",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of facilities assessed out of total number of facilities",
+              "isSelected": null,
+              "id": 16,
+              "keyValue": null,
+              "count": "23,456/31,496"
+            },
+            {
+              "key": "Number of DTF where at least 1 meeting is held",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of DTF where at least 1 meeting is held",
+              "isSelected": null,
+              "id": 17,
+              "keyValue": null,
+              "count": 1
+            },
+            {
+              "key": "Number of assessments done",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of assessments done",
+              "isSelected": null,
+              "id": 18,
+              "keyValue": null,
+              "count": "62,859"
+            },
+            {
+              "key": "Number of BTF where at least 1 meeting is held",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of BTF where at least 1 meeting is held",
+              "isSelected": null,
+              "id": 19,
+              "keyValue": null,
+              "count": 0
+            },
+            {
+              "key": "No. of facilities visited more than once",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of facilities visited more than once",
+              "isSelected": null,
+              "id": 19,
+              "keyValue": null,
+              "count": "7,853"
+            }
+          ],
+          "groupedIndList": [
+            {
+              "groupedIndName": "Facilities assessed out of total facilities",
+              "indicatorName": null,
+              "css":"#d85c54",
+              "opacity":"",
+              "chartsAvailable": [
+                "spider"
+              ],
+              "chartData": [
+                [
+                  {
+                    "axis": "DH",
+                    "value": 79.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force",
+                    "indicatorName": "Percentage of districts (reported) having District Task Force constituted",
+                    "fill":"#f4A775"
+                  },
+                  {
+                    "axis": "SDH",
+                    "value": 82.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force ",
+                    "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                    "fill":"#f4A775"
+                  },
+                  {
+                    "axis": "CHC",
+                    "value": 60.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force ",
+                    "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                    "fill":"#f4A775"
+                  },
+                  {
+                    "axis": "PHC",
+                    "value": 50.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force ",
+                    "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                    "fill":"#f4A775"
+                  },
+                  {
+                    "axis": "SC",
+                    "value": 40.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force ",
+                    "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                    "fill":"#f4A775"
+                  },
+                  {
+                    "axis": "MC",
+                    "value": 66.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force",
+                    "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                    "fill":"#f4A775"
+                  },
+                  {
+                    "axis": "AH",
+                    "value": 34.0,
+                    "id": null,
+                    "key": "Percentage of districts (reported) having District Task Force ",
+                    "indicatorName": "Percentage of Districts (reported) where District task force meetings held",
+                    "fill":"#f4A775"
+                  }
+                ]
+              ]
+            },
+            {
+              "groupedIndName": "Facilities visited more than once",
+              "indicatorName": null,
+              "chartsAvailable": [
+                "box1"
+              ],
+              "chartData": [
+                
+                  {
+                    "axis": "DH",
+                    "value": 23,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4c667"
+                  },
+                   {
+                    "axis": "SDH",
+                    "value": 43,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4c667"
+                  },
+                  {
+                    "axis": "CHC",
+                    "value": 53,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4c667"
+                  },
+                  {
+                    "axis": "PHC",
+                    "value": 43,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4c667"
+                  },
+                  {
+                    "axis": "SC",
+                    "value": 68,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4c667"
+                  },
+                  {
+                    "axis": "MC",
+                    "value": 33,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4c667"
+                  },
+                  {
+                    "axis": "AH",
+                    "value": 88,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4c667"
+                  }
+              ]
+            },
+            {
+              "groupedIndName": "Facilities assessed out of 31,496 facilities",
+              "indicatorName": null,
+              "chartsAvailable": [
+                "trend"
+              ],
+              "chartData": [
+                [
+                  {
+                    "axis": "Apr,2018",
+                    "value": 5678,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4A775",
+                    "opacity":"0.26"
+                  },
+                  {
+                    "axis": "May,2018",
+                    "value": 6500,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jun,2018",
+                    "value": 3425,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jul,2018",
+                    "value": 900,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Aug,2018",
+                    "value": 1200,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Sep,2018",
+                    "value": 753,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Oct,2018",
+                    "value": 1276,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Nov,2018",
+                    "value":193,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Dec,2018",
+                    "value": 347,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jan,2018",
+                    "value": 611,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Feb,2018",
+                    "value":1266,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Mar,2018",
+                    "value":1307,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "subSectorId": 5,
+          "subSectorName": "Health and Wellnes Center checklist",
+          "indicators": null,
+          "kpiList": [
+            {
+              "key": "Number of HWCs assessed out of total number of HWCs",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of HWCs assessed out of total number of HWCs",
+              "isSelected": null,
+              "id": 16,
+              "keyValue": null,
+              "count": "5,698/15,321",
+              "css":"#795343"
+            },
+            {
+              "key": "Number of DTF where at least 1 meeting is held",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of DTF where at least 1 meeting is held",
+              "isSelected": null,
+              "id": 17,
+              "keyValue": null,
+              "count": 1,
+              "css":"#795343"
+            },
+            {
+              "key": "Number of assessments done",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of assessments done",
+              "isSelected": null,
+              "id": 18,
+              "keyValue": null,
+              "count": "7,231",
+              "css":"#b04b44"
+            },
+            {
+              "key": "Number of BTF where at least 1 meeting is held",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of BTF where at least 1 meeting is held",
+              "isSelected": null,
+              "id": 19,
+              "keyValue": null,
+              "count": 0,
+              "css":"#b04b44"
+            },
+            {
+              "key": "HWCs visited more than once",
+              "value": null,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of HWCs visited more than once",
+              "isSelected": null,
+              "id": 19,
+              "keyValue": null,
+              "count": "1,177",
+              "css":"#d85c54"
+            }
+          ],
+          "groupedIndList": [
+            {
+              "groupedIndName": "HWCs assessed out of total HWCs",
+              "indicatorName": null,
+              "chartsAvailable": [
+                "box1"
+              ],
+              "chartData": [
+                {
+                  "axis": "UPHC",
+                  "value": 40.0,
+                  "id": null,
+                  "key": "UPHC",
+                  "indicatorName": "UPHC",
+                  "fill":"#f4c667"
+                },
+                {
+                  "axis": "PHC",
+                  "value": 78.0,
+                  "id": null,
+                  "key": "PHC",
+                  "indicatorName": "PHC",
+                  "fill":"#f4c667"
+                },
+                {
+                  "axis": "SC",
+                  "value": 66,
+                  "id": null,
+                  "key": "SC",
+                  "indicatorName": "SC",
+                  "fill":"#f4c667"
+                }
+              ]
+            },
+            {
+              "groupedIndName": "HWCs visited more than once",
+              "indicatorName": null,
+              "chartsAvailable": [
+                "box2"
+              ],
+              "chartData":[
+                {
+                  "axis": "UPHC",
+                  "value": 66.0,
+                  "id": null,
+                  "key": "UPHC",
+                  "indicatorName": "UPHC"
+                },
+                {
+                  "axis": "PHC",
+                  "value": 60.0,
+                  "id": null,
+                  "key": "PHC",
+                  "indicatorName": "PHC"
+                },
+                  {
+                    "axis": "SC",
+                    "value": 50.0,
+                    "id": null,
+                    "key": "SC",
+                    "indicatorName": "SC",
+                    "fill":"#A0C2BB"
+                  }
+              ]
+            },
+            {
+              "groupedIndName": "HWCs assessed out of total 15,321 HWCs",
+              "indicatorName": null,
+              "chartsAvailable": [
+                "trend"
+              ],
+              "chartData": [
+                [
+                  {
+                    "axis": "Apr,2018",
+                    "value": 431,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4A775",
+                    "opacity":"0.26"
+                  },
+                  {
+                    "axis": "May,2018",
+                    "value": 689,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jun,2018",
+                    "value": 712,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jul,2018",
+                    "value": 125,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Aug,2018",
+                    "value": 1400,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Sep,2018",
+                    "value": 548,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Oct,2018",
+                    "value": 444,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Nov,2018",
+                    "value":439,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Dec,2018",
+                    "value": 250,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jan,2018",
+                    "value": 150,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Feb,2018",
+                    "value":100,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Mar,2018",
+                    "value":150,
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "subSectorId": 7,
+          "subSectorName": "Community assessment checklist",
+          "indicators": null,
+          "kpiList": [
+            {
+              "key": "Number of communities visited",
+              "value": 45,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of cases registered (Girls) under POCSO Act",
+              "isSelected": null,
+              "id": 21,
+              "keyValue": null,
+              "count": "1,00,567"
+            },
+            {
+              "key": "Number of DCPUs constituted",
+              "value": 78,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of DCPUs constituted ",
+              "isSelected": null,
+              "id": 22,
+              "keyValue": null,
+              "count": 7
+            },
+            {
+              "key": "Number of visits done",
+              "value": 65,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of DCPCs constituted ",
+              "isSelected": null,
+              "id": 23,
+              "keyValue": null,
+              "count": "1,32,103"
+            },
+            {
+              "key": "Number of blocks in which Child Protection Committee constituted in the district",
+              "value": 15,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of blocks in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 24,
+              "keyValue": null,
+              "count": 0
+            },
+            {
+              "key": "VHND sites visited",
+              "value": 90,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of villages/panchayat in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": "2,342"
+            },
+            {
+              "key": "VHND sites visited",
+              "value": 90,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of villages/panchayat in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": "23,568"
+            },
+            {
+              "key": "VHND sites visited",
+              "value": 90,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of villages/panchayat in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": 9
+            },
+            {
+              "key": "VHND sites visited",
+              "value": 90,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of villages/panchayat in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": 9
+            },
+            {
+              "key": "ANMs interviewed",
+              "value": 90,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of villages/panchayat in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": "6,874"
+            },
+            {
+              "key": "ANMs interviewed",
+              "value": 90,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of villages/panchayat in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": 9
+            },
+            {
+              "key": "ASHAs interviewed",
+              "value": 90,
+              "description": null,
+              "groupName": null,
+              "shortNmae": "No. of villages/panchayat in which CPC constituted in the district",
+              "isSelected": null,
+              "id": 25,
+              "keyValue": null,
+              "count": "2,356"
+            }
+          ],
+          "groupedIndList": [
+            {
+              "groupedIndName": "Total number of communities visited",
+              "indicatorName": "Percentage of cases registered under POCSO Act, where girls are victims",
+              "chartsAvailable": [
+                "trend"
+              ],
+              "chartData": [
+                [
+                  {
+                    "axis": "Apr,2018",
+                    "value": "15689",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null,
+                    "fill":"#f4A775",
+                    "opacity":"0.26"
+                  },
+                  {
+                    "axis": "May,2018",
+                    "value": "24361",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jun,2018",
+                    "value": "16777",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jul,2018",
+                    "value": "12854",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Aug,2018",
+                    "value": "9472",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Sep,2018",
+                    "value": "7331",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Oct,2018",
+                    "value": "5917",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Nov,2018",
+                    "value": "1300",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Dec,2018",
+                    "value": "2671",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Jan,2018",
+                    "value": "1801",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Feb,2018",
+                    "value": "1266",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  },
+                  {
+                    "axis": "Mar,2018",
+                    "value": "1128",
+                    "id": null,
+                    "key": "Cases registered under POCSO Act, where girls are victims",
+                    "indicatorName": null
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]

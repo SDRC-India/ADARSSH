@@ -1,0 +1,165 @@
+mobile-form {
+
+  h3{
+    margin-top: 25px !important;
+    margin-bottom: -20px !important;
+  }
+  .d-none {
+    display: none;
+  }
+
+  .web-menu {
+    background-color: red
+  }
+
+  .web-question {
+    background-color: blue
+  }
+
+  .borders {
+    border: 1px solid !important;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 40px;
+    list-style: none !important;
+    list-style-type: none;
+  }
+
+  li {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  li+li {
+    margin-top: 2em;
+  }
+
+  .subsectorSelect {
+    width: 100%;
+    background-color: color($colors, lprimary, base);
+    color: color($colors, light, base);
+    padding-left: 5px;
+  }
+
+  ion-option {
+    max-width: 100% !important;
+  }
+
+  .border {
+    border: 1px solid black;
+    padding-right: 20px;
+    margin: 15px;
+  }
+
+  .border-list {
+    border: 1px solid black;
+    margin: 15px;
+  }
+
+  .repeat-list {
+    height: 40px;
+    padding-top: 5px;
+    background-color: #EDEDED;
+    color: black;
+    font-size: 16px;
+  }
+
+  ion-select {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  ion-icon {
+    font-size: 30px; //Preferred size here
+    margin-right: 5px;
+  }
+
+  .underline {
+    text-decoration: underline
+  }
+
+  .leftMargin {
+    margin-left: 20px;
+  }
+
+  //   ion-input {
+  //     margin-top: 5px;
+  //     margin-bottom: 5px;
+  //     border-radius: 3px !important;
+  //     padding-left: 5px;
+  //     border: 1px solid #000000;
+  //   }
+  //   ion-select {
+  //     margin-top: 5px;
+  //     margin-bottom: 5px;
+  //     border-radius: 3px !important;
+  //     padding-left: 5px !important ;
+  //     border: 1px solid #000000;
+  //   }
+  //   ion-datetime{
+  //     margin-top: 5px;
+  //     border-radius: 3px !important;
+  //     padding-left: 5px !important ;
+  //     border: 1px solid #000000;
+  //   }
+
+  // .item-md.item-block .item-inner,
+  // .item-md.item-input.input-has-focus .item-inner,
+  // .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
+  // .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner,
+  // .list-md .item-input.input-has-focus:last-child,
+  // .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child,
+  // .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+  //     border-bottom: none;
+  //     box-shadow: none;
+  // }
+  // .list-md .item-input.input-has-focus:last-child .item-inner,
+  // .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner,
+  // .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child .item-inner {
+  //     box-shadow: none;
+  // }
+
+
+  .geo-loc-input {
+    padding-right: 0px !important;
+  }
+
+  .geo-loc {
+    padding: 0px !important;
+  }
+
+  .button-loc {
+    height: 3.6rem !important;
+    padding: 7px !important;
+  }
+
+  .geo-loc-img {
+    padding-left: 1px !important;
+    border: 1px solid !important;
+  }
+
+  .geo-loc-img {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+ion-select {
+  .select-icon {
+    .select-icon-inner {
+      color: black !important;
+    }
+  }
+}
+
+.text-input[disabled] {
+  opacity: 0.5;
+}
+
+.select-disabled,
+.item-select-disabled ion-label {
+  opacity: 0.5;
+}

@@ -1,0 +1,56 @@
+<div class="container-fluid main-content">
+    <div class="login-form-container">
+        <header class="col-lg-12 login-header" style="text-align:center;"><strong>Log In to Your Account</strong></header>
+        <div class="container-body">
+            <form (ngSubmit)="login()" [noValidate]="false">
+                <div class="row">
+                    <div class="col login-pwd">
+                        <!-- <label for="usr">Username:</label> -->
+                        <mat-form-field>
+                            <input matInput [(ngModel)]="credentials.username" autocomplete="off"
+                            name='username' placeholder="Username" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row" style="top:10px">
+                    <div class="col login-pwd">
+                        <!-- <label for="pwd">Password:</label> -->
+                        <mat-form-field>
+                            <input matInput type="password" id="password-login" name="password" placeholder="Password" [(ngModel)]="credentials.password" required>
+                            <span toggle="#password-login" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <button mat-button class="btn btn-default login-submit" type="submit">Log In</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row new-signup-forgotPass-section">
+                    <div class="col-md-6 col-sm-6 forget-pass-block">
+                        <a class="forgot-pass-link" routerLink="/pages/forgot-password">Forgot Password ?</a>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <a class="create-user-link" routerLink="/create-new-user">Create an account</a>
+                    </div>
+                </div>
+            <div class="row error-message" *ngIf="app.validationMsg">
+                <div class="col">
+                    <b>{{app.validationMsg}}</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container-body">
+    <div class="row new-signup-forgotPass-section">
+        <div class="col-md-6 forget-pass-block">
+            <button class="forgot-pass-link" routerLink="/pages/forgot-password">Forgot Password ?</button>
+        </div>
+        <div class="col-md-6">
+            <button class="create-user-link" routerLink="/create-new-user">Create an account</button>
+        </div>
+    </div>
+</div> -->
+

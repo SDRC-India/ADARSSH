@@ -1,0 +1,13 @@
+{
+  "name": "Rmncha",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": ""
+    }
+  ]
+}

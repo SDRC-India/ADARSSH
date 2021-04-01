@@ -1,0 +1,192 @@
+<div class="container-fluid padding-zero">
+  <div class="row" style="margin-right:0">
+    <div class="mob-left-list" (click)="showLists();">Menu</div>
+    <div class="col-md-3 left-list">
+      <div>
+        <ul class="data-heads" [ngClass]="sectionNames.length>13?'left-menu-overflow':''">
+          <li *ngFor="let sectionHeader of sectionNames; let i = index" class="pointer data-head-list"
+            (click)="sectionSelected(sectionHeader)" [ngClass]="sectionHeader == sectionHeading? 'active':''">
+            <span class="list-span"><a>{{sectionHeader}}</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-9 offset-md-3" >
+      <div class="col-md-12">
+        <div *ngIf="subSections">
+          <div *ngFor="let subSectionMap of dataSharingService.getKeys(subSections[0]); ">
+            <div class="row">
+              <div class="col-md-12 submissionModal-header">
+                <h4 style="color: #1f4a7c"
+                [ngClass]="[checkQuestionSizeBasedOnSubsectionRelevance(subSections[0][subSectionMap]) ? '' : 'd-none']"
+                > {{subSectionMap.split('@')[1] != undefined?subSectionMap.split('@')[1]:subSectionMap}} </h4>
+                <h4 [ngClass]="[!checkQuestionSizeBasedOnSectionRelevance(subSections[0]) ? '' : 'd-none']">Relevant
+                  Question are hidden in this section</h4>
+              </div>
+            </div>
+            <div  *ngFor="let question of subSections[0][subSectionMap]; let i = index;" >
+            <div [ngSwitch]="question.controlType">
+            <table class="table text-table" style="width: 100%;" *ngIf="question.controlType != 'heading' 
+            && question.controlType != 'beginrepeat' && question.controlType != 'tableWithRowWiseArithmetic'">
+              <tbody>
+                <tr>
+                  <!-- Label starts here-->
+                  <td class="table-subheading" 
+                  [hidden]="question.defaultSettings && question.defaultSettings.includes('hidden')"
+                    >
+                    <div class="table-val"> {{question.label}}
+                    </div>
+                  </td>
+                  <!-- Data starts here-->
+                  <td class="table-value table-td" 
+                  [hidden]="question.defaultSettings && question.defaultSettings.includes('hidden')"
+                    *ngIf="question.controlType != 'heading'
+                     && question.controlType != 'beginrepeat'
+                      && question.controlType != 'tableWithRowWiseArithmetic'">
+                    <div class="text-right">
+                      <div *ngSwitchCase="'textbox'" class="table-val text-right">{{question.value}}</div>
+                      <div *ngSwitchCase="'textarea'" class="table-val text-right">{{question.value}}</div>
+                      <div *ngSwitchCase="'Time Widget'" class="table-val text-right">{{(question.value)}}</div>
+                      <div *ngSwitchCase="'geolocation'" class="table-val text-right">{{(question.value)}}</div>
+                      <!-- <div *ngSwitchCase="'checklist-score-keeper'" class="table-val text-right">{{(question.value)}}</div> -->
+                      <div *ngSwitchCase="'Date Widget'" class="table-val text-right">{{getDateValue(question.value)}}</div>
+                      <div *ngSwitchCase="'dropdown'" class="table-val text-right">
+                        {{getDropdownValue(question.options, question.value)}}
+                      </div>
+                      <div *ngSwitchCase="'segment'" class="table-val text-right">
+                        {{getDropdownValue(question.options, question.value)}}</div>
+                      <div *ngSwitchCase="'camera'" style="display: inline-flex;">
+                        <div class="imgDisplay text-right" *ngFor="let imgSrc of question.attachmentsInBase64, let i = index;">
+                          <!-- <img [src]="question.attachmentsInBase64[i]" /> -->
+                          <a class="previewImage" (click)="previewImage(question.attachmentsInBase64[i])">Preview image
+                            {{i+1}}</a>
+                        </div>
+                      </div>
+                      <div *ngSwitchCase="'Month Widget'" class="table-val text-right">{{(question.value)}}</div>
+                      <div *ngSwitchDefault class="table-val text-right">{{(question.value)}}</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="table-subheading" *ngFor="let question of subSections[0][subSectionMap]; let i = index"
+              [ngSwitch]="question.controlType">
+              <strong *ngIf="question.controlType == 'beginrepeat'">{{question.label}}</strong>
+            </div>
+
+            <table class="table table-striped" style="width: 100%;">
+              <tbody>
+                <tr>
+                  <!-- Label starts here-->
+                  <td class="table-value"
+                    *ngIf="question.controlType == 'beginrepeat'">
+                    <div *ngSwitchCase="'beginrepeat'">
+                      <div *ngFor="let accordion of question.beginRepeat; let z=index;">
+                        <!-- <div *ngIf="question.beginRepeat.length > 1">{{z+1}}.</div> -->
+                        <div class="beginRepeatData">
+                          <div *ngFor="let bgquestion of accordion; let j =index">
+                            <div [ngSwitch]="bgquestion.controlType" class="row">
+                              <div class="col-md-7">
+                                <strong *ngIf="bgquestion.controlType == 'heading'">{{bgquestion.label}}</strong>
+                                <span *ngIf="bgquestion.controlType != 'heading'">{{bgquestion.label}}</span>
+                              </div>
+                              <div class="col-md-5 content">
+                                <div *ngSwitchCase="'textbox'" class="table-val">{{bgquestion.value}}</div>
+                                <div *ngSwitchCase="'textarea'" class="table-val">{{bgquestion.value}}</div>
+                                <div *ngSwitchCase="'geolocation'" class="table-val">{{(question.value)}}</div>
+                                <div *ngSwitchCase="'Time Widget'">{{bgquestion.value}}</div>
+                                <div *ngSwitchCase="'Date Widget'" class="table-val">{{getDateValue(bgquestion.value)}}
+                                </div>
+                                <div *ngSwitchCase="'dropdown'" class="table-val">
+                                  {{getDropdownValue(bgquestion.options, bgquestion.value)}}
+                                </div>
+                                <div *ngSwitchCase="'segment'" class="table-val">
+                                  {{getDropdownValue(bgquestion.options, bgquestion.value)}}
+                                </div>
+                                <div *ngSwitchCase="'camera'" style="display: inline-flex;">
+                                  <div class="imgDisplay"
+                                    *ngFor="let imgSrc of bgquestion.attachmentsInBase64, let i = index;">
+                                    <!-- <img [src]="bgquestion.attachmentsInBase64[i]" /> -->
+                                    <a (click)="previewImage(question.attachmentsInBase64[i])">Preview image {{i+1}}</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- table for high risk pregnancies -->
+
+           
+              <div class="table-responsive" *ngSwitchCase="'tableWithRowWiseArithmetic' || 'table'">
+                <table class="table table-striped tbale-bordered">
+                  <div class="padding-zero">
+                    <tbody>
+                        <tr class="text-wrap" *ngFor="let rows of question.tableModel;let rowIndex = index"
+                         [hidden]="rowIndex != 0">
+                            <td *ngFor="let cell of  dataSharingService.getKeys(rows);" class="table-value background">
+                              <label class="table-val">
+                                <span style="color: #fff">{{cell}}{{cell.mandatory}}
+                                  <span *ngIf="question.mandatory == 'yes'" style="color:red">*</span>
+                                </span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr class="text-wrap" *ngFor="let rows of question.tableModel;let i = index">
+                            <td class="width-cell"
+                              *ngFor="let cell of  dataSharingService.getKeys(rows);let columnIndex = index">
+                              <label *ngIf="columnIndex==0" class="table-val">
+                                <span >{{rows[cell]}}{{cell.mandatory}}
+                                  <span *ngIf="question.mandatory == 'yes'" style="color:red">*</span>
+                                </span>
+                              </label>
+                              <div class="text-center">{{rows[cell].value}}</div>
+                            </td>
+                          </tr>
+                    </tbody>
+                  </div>
+                </table>
+              </div>
+</div>
+        </div>
+          </div>
+        </div>
+      </div>
+      <!-- Buttons starts here -->
+      <div class="col-md-12 submissionDetails-btn">
+        <!-- <button type="button" class="btn user-submit approve-btn" style="background: rgb(144, 214, 52) !important;"
+          *ngIf="staticService.seletedSubmissionDetails.tableRow.extraKeys.status=='PENDING'"
+          (click)="staticService.submissionIdsForApprove(staticService.seletedSubmissionDetails)">Approve</button> -->
+        <button color="warn" style="background: #F37361 !important" mat-flat-button type="button" class="btn user-submit warn"
+          *ngIf="staticService.seletedSubmissionDetails.tableRow.extraKeys.status=='APPROVED'"
+          (click)="staticService.submissionIdsForReject(staticService.seletedSubmissionDetails)">Reject</button>
+        <button type="submit" class="btn user-submit" style="margin-left: 10px;"
+          (click)="staticService.destroyModalData()">Cancel</button>
+      </div>
+      <!-- Buttons ends here -->
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="previewModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+  >
+  <div class="modal-dialog modal-notify modal-error image-preview" role="document">
+    <div class="modal-content submission-preview-image">
+      <div class="modal-body">
+        <button type="button" class="close modal-close" (click)="destroyModalData()">&times;</button>
+        <div class="col-md-12 height-image text-center" *ngIf="srcFile">
+          <img [src]="srcFile" frameborder="1" width="auto" height="100%" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

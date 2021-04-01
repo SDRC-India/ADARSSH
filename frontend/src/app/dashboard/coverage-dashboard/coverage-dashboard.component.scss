@@ -1,0 +1,171 @@
+$color-text:#485769;
+$indicator-box:#231f20;
+body{
+    color: #3f51b5;
+}
+// .container-fluid {padding: 0 30px 0 30px !important;}
+
+.indicator-value {
+    // box-shadow: 1px 0px 4px 2px #ddd !important;
+    color: #fff;
+    border-radius: 0;
+    // padding: 45px;
+}
+i.fa.fa-picture-o {
+    color: #000;
+    cursor: pointer;
+}
+.chart-block {
+    box-shadow: 0 0 0 0 #000 !important;
+    // border: 1px solid #d4a1a1;
+    color:#000;
+    border-radius: 0;
+    height: 350px;
+}
+.chart-div {
+    height: 350px;
+}
+.bar-block{
+    box-shadow: 0 0 0 0 #000 !important;
+    // border: 1px solid #d4a1a1;
+    color:#000;
+    border-radius: 0;
+    height: 300px;
+}
+a.download-chart {
+    float: right;
+}
+.trend-height{
+    box-shadow: 0 0 0 0 #000 !important;
+    // border: 1px solid #d4a1a1;
+    color:#000;
+    border-radius: 0;
+    height: 300px;
+}
+.box-height-length-3{height: 100px}
+.box-height{height:190px;}
+.box-height2{height: 257px;}
+.indx-value-mat{ 
+    height:105px;
+    box-shadow: 0 0 0 0 #000 !important;
+    // border: 1px solid $indicator-box;
+    color: #000;
+    background: #f5c022;
+    // padding: 0;
+}
+.main-content { margin-bottom: 15px;}
+.subsector-index{font-size: 17px;}
+
+.box-in-score{
+    float: left;
+    width: 28%;
+    margin: 10px;
+    border-radius: 0;
+    height: 80px;
+    background: #A0C2BB;
+    text-align: center;
+    box-shadow: none !important;
+}
+.mat-form-field {
+    width: 225px;
+}
+.score-in-digit {
+    font-size: 25px;
+    margin-bottom: 0;
+}
+.pie-chart {
+     margin-top: 15px;
+    }
+.chart-bottom {
+    margin-bottom: 10px;
+}
+.trend-chart{ margin-top: 20px;}
+#date{
+    margin-bottom: 0;
+    font-size: larger;
+    margin-top: 26px;
+    font-weight: 600;
+    color: $color-text;
+    padding: 15px 0;
+}
+#time{
+    margin-bottom: 0;
+    font-weight: 600;
+    color: $color-text;
+}
+.content-header { border-bottom: none !important;}
+
+.area-block { border-bottom: 1px solid #4586a5;}
+.selected-area-block { 
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.indicator-name{
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    background: #3b4654;
+    color: #fff;
+}
+.indicator {
+    font-size: 17px;
+    font-weight: 400;
+    padding: 5px 0 0px 0;
+}
+
+.selectedAreaName {
+    font-size: 21px;
+    color: $color-text;
+}
+i.fa.fa-file-pdf-o, i.fa.fa-file-excel-o {
+    float: right;
+    font-size: 23px;
+    color: $color-text;
+    padding: 3px;
+    cursor: pointer;
+}
+.background {
+    background: #dddddd9e;
+    margin-bottom: 12px;
+    }
+    .height{
+        height:80px;
+    }
+// .coverage-dashboard-data {
+//     padding-right: 60px;
+//     padding-left: 60px;
+// }
+.coverage-score{
+    text-align: center;
+    margin-top: 10px;
+}
+
+// chart view
+.chart-head {
+    text-align: center;
+    padding-top: 3px;
+}
+.ind-group{
+    float: left;
+    font-size: 13px;
+    height: 23px;
+    padding: 0 10px;
+    text-align: left;
+    color: #000;
+    font-weight: bold;
+}
+.chart-selection-btn {
+    width: 70px;
+    float: left;
+    padding: 0 5px;
+    text-align: right;
+}
+.chart-selection-btn i{
+    cursor: pointer;
+    margin: 3px;
+}
+
+.nodata-available{
+    text-align: center;
+    background-color: #A0C2BB;
+}

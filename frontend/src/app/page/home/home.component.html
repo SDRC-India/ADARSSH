@@ -1,0 +1,89 @@
+<div class="container-fluid main-content">
+  <!-- slider section start -->
+  <!-- <div class="black-block"></div> -->
+  <div class="slider-block">
+    <!-- <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'"> -->
+        <mdb-carousel class="carousel slide carousel-fade" >
+      <mdb-carousel-item>
+       <div class="view ">
+          <!--  <img class="d-block img-responsive" src="assets\images\banner-new.jpg" alt="First slide">
+        </div>
+        <div class="view "  [ngClass]="i==0?'active':''" *ngFor="let banner of homeData.Banner ;let i =index">-->
+          <img  class="d-block img-responsive"
+           [src]=" apigateway+'anynomus/getFile?fileName='+homeData.Banner[0].q1[0].filePath " alt="{{homeData.Banner[0].q2}}">
+           <!-- <img  class="d-block img-responsive"
+           src="assets/images/banner-new.jpg" alt="{{homeData.Banner[0].q2}}"> -->
+        </div>
+      </mdb-carousel-item>
+      <!-- <mdb-carousel-item>
+        <div class="view ">
+          <img class="d-block img-responsive" src="assets\images\banner-new.jpg" alt="Second slide">
+          <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+        </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <div class="view img-responsive">
+          <img class="d-block" src="assets\images\banner-new.jpg" alt="Third slide">
+          <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+        </div>
+      </mdb-carousel-item> -->
+    </mdb-carousel>
+  </div>
+  <!-- slider section end -->
+  <!-- <div class="black-block"></div> -->
+  <div class="container padding-zero" id="about">
+    <div class="col-md-12 about-12">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h3 class="about-center">ABOUT US</h3>
+        <div class="col-md-12 col-sm-12 abouts-text-block" *ngIf="homeData['About Us']">
+            <p class="about-content black-text mb-0 para-first" [innerHTML]="homeData['About Us'][0].q1"></p>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="contactColor container-fluid" id="contactus">
+  <div class="contactus1">
+    <div class="container ">
+      <!-- <div class="col-md-12 "></div> -->
+      <h3 class="contactus-font">CONTACT US</h3>
+      <div class="row contacts-details">
+        <div class="col-md-6 txtCenter contact-head">
+          <br>
+
+          <!-- <h5 class="contactus-font1">Ministry of Health and Family Welfare</h5> -->
+          <span class="contactus-font2"  [innerHTML]="homeData['Contact Us'][0].q1">   </span>
+              <div class="contactus-font2">
+              Website:&nbsp;<a [href]="'http://'+homeData['Contact Us'][0].q2" target="_blank">
+                {{homeData['Contact Us'][0].q2}}
+            </a><br>
+            Phone No:&nbsp;<a class="contact-info-text number" [href]="'callto:'+homeData['Contact Us'][0].q3 | safehome">
+              {{homeData['Contact Us'][0].q3}}
+            </a>
+            <hr>
+            <b>For any queries related to this application, contact :</b>
+            <!-- <br> Siddha Development Research and Consultancy Pvt. Ltd.<br> -->
+            <br> {{homeData['Contact Us'][0].q5}}<br>
+            <!-- Website: <a href="https://sdrc.co.in/" target="_blank">sdrc.co.in</a><br> -->
+            Website:&nbsp;<a href="'https://'+homeData['Contact Us'][0].q6" target="_blank">{{homeData['Contact Us'][0].q6}}</a><br>
+            Email:&nbsp;<a  href="mailto:{{homeData['Contact Us'][0].q7}}">
+              {{homeData['Contact Us'][0].q7}}
+              </a>
+            </div>
+        </div>
+        <div class="col-md-6 text-center marginMap">
+          <div class="box contact-form-wrapper">
+            <div style="height:270px; border:2px solid #eee; overflow:hidden;">
+              <!-- <img style="position:relative; top:-47px; border:none;" src="assets/images/ministry.png" width="100%"
+                height="340"> -->
+                <iframe [src]="homeData['Contact Us'][0].q4 | safehome" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

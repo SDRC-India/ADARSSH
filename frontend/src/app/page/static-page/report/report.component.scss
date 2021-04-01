@@ -1,0 +1,87 @@
+.facility-section { 
+    width: 620px !important;
+}
+.hide-block { display: none;}
+// .report-block {
+//     border: 1px solid #3f51b5 !important;
+//     width: 280px !important;
+// }
+// .mat-form-field-infix {
+//     border: 1px solid #3f51b5 !important;
+//     width: 280px !important;
+//   }
+
+// .mat-select {
+//     border: 1px solid #3f51b5 !important;
+//     padding: 10px !important;
+//     width: 280px !important;
+// }
+// .mat-form-field-underline {
+//     height: 1px !important;
+// }
+.areas { max-width: 198px !important;}
+.mat-datepicker-toggle{ margin-left: -27px;}
+.month-picker {
+    width: 280px !important;
+}
+.disabled, :disabled {
+  pointer-events: auto !important;
+}
+.error-text, .info-text{
+  color:#fff;
+  font-weight: 600;
+  font-family: 'Questrial', sans-serif;
+}
+.fa-info-circle{color:#fff}
+button:disabled{
+  cursor: no-drop !important;
+    background: #9E9E9E;
+}
+.example-month-picker .mat-calendar-period-button {
+    pointer-events: none;
+  }
+  
+  .example-month-picker .mat-calendar-arrow {
+    display: none;
+  }
+ 
+  // media query start
+   /* IE10+ CSS styles go here */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .all-fields{
+      width: 100%;
+    }
+
+}  @media(max-width: 1024px){
+    .month-picker {
+      width: 253px !important;
+  }
+  .mat-form-field {
+    width: 253px;
+}
+  }
+  @media(max-width: 768px){
+    .month-picker {
+      width: 180px !important;
+  }
+  .mat-form-field {
+    width: 180px;
+}
+  }
+  @media(max-width:608px){
+    .month-picker {
+      width: 576px !important;
+    }
+  }
+  @media(max-width:560px){
+    .month-picker {
+      width: 528px !important;
+  }
+  }
+  @media(max-width:480px){
+    .month-picker {
+      width: 100% !important;
+  }
+  }
+
+ 

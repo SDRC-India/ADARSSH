@@ -1,0 +1,37 @@
+1.  set max result size to 500000 as default size is 10 docs for an index
+
+		curl -XPUT "http://localhost:9200/index_name/_settings" -d '{ "index" : { "max_result_window" : 500000 } }'
+		
+		{ "index" : { "max_result_window" : 50000000 } }
+		
+		As our application has an indexes 'rmncha-index'  for rmncha-data-index
+		
+		we set,
+		
+		curl -XPUT "http://localhost:9200/rmncha-index/_settings" -d '{ "index" : { "max_result_window" : 500000 } }'
+
+
+2.  To generate mapping for the elasticsearch rmncha-index.Do a PUT request to elasticsearch cluster, using following url:
+
+		curl -XPUT "http://localhost:9200/rmncha-index/" -d ' 
+		
+		//put the mapping json from file named 'rmncha-index-mapping-json'  
+		
+		'
+		2018-05-18 18:08:57.445
+		
+INSERT INTO "synchronization_date_master" ("synchronization_date_master_id", "last_modified_date", "last_synchronized", "table_name") VALUES (1, '2018-05-17 13:14:24.248', '2018-05-17 13:14:24.248', 'area');
+INSERT INTO "synchronization_date_master" ("synchronization_date_master_id", "last_modified_date", "last_synchronized", "table_name") VALUES (2, '2018-05-17 13:14:24.248', '2018-05-17 13:14:24.248', 'arealevel');
+INSERT INTO "synchronization_date_master" ("synchronization_date_master_id", "last_modified_date", "last_synchronized", "table_name") VALUES (3, '2018-05-17 13:14:24.248', '2018-05-17 13:14:24.248', 'unit');
+INSERT INTO "synchronization_date_master" ("synchronization_date_master_id", "last_modified_date", "last_synchronized", "table_name") VALUES (4, '2018-05-17 13:14:24.248', '2018-05-17 13:14:24.248', 'indicator');
+INSERT INTO "synchronization_date_master" ("synchronization_date_master_id", "last_modified_date", "last_synchronized", "table_name") VALUES (5, '2018-05-17 13:14:24.248', '2018-05-17 13:14:24.248', 'subgroup');
+INSERT INTO "synchronization_date_master" ("synchronization_date_master_id", "last_modified_date", "last_synchronized", "table_name") VALUES (6, '2018-05-17 13:14:24.248', '2018-05-17 13:14:24.248', 'sector');
+INSERT INTO "synchronization_date_master" ("synchronization_date_master_id", "last_modified_date", "last_synchronized", "table_name") VALUES (7, '2018-05-17 13:14:24.248', '2018-05-17 13:14:24.248', 'source');
+INSERT INTO "synchronization_date_master" ("synchronization_date_master_id", "last_modified_date", "last_synchronized", "table_name") VALUES (8, '2018-05-17 13:14:24.248', '2018-05-17 13:14:24.248', 'data');
+
+
+
+
+		
+		
+		

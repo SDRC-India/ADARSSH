@@ -1,0 +1,290 @@
+<div class="container-fluid">
+  <div class="row question-row">
+    <div class="mob-left-list" (click)="showLists();">Menu</div>
+    <div class="col-md-3 left-list">
+      <rmncha-user-side-menu></rmncha-user-side-menu>
+    </div>
+    
+    <div class="col-md-9 offset-md-3" style="margin-bottom: 30px;">
+          <div class="col-md-12">
+              <mat-form-field>
+                <input matInput [(ngModel)]="userManagementService.searchTexts" placeholder="Filter">
+              </mat-form-field>
+              <mat-tab-group mat-align-tabs="start" (selectedTabChange)="tabChanged($event)">
+                <mat-tab label="Pending ({{userManagementService.pendingUsers?userManagementService.pendingUsers.length:''}})">
+                  <div class="mat-elevation-z8">
+                    <table class="user-table-fetched table-striped table-bordered" *ngIf="userManagementService.pendingUsers">
+                      <thead class="user-table-header">
+                        <tr>
+                          <th class="user-table-column" *ngFor="let col of displayedColumnsForPendingUsers">{{col}}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let row of userManagementService.pendingUsers | searchText : userManagementService.searchTexts | paginate: { itemsPerPage: 8, currentPage: userManagementService.p, id: 'pending' }; ">
+                          <td class="overflow-ellipsis user-table-td">
+                              <mat-checkbox [(ngModel)]="row.checked" (click)="selectUserForRejectiOrApproval(row.checked,row)"></mat-checkbox>
+                          </td>
+                          <td class="overflow-ellipsis user-table-td"> {{row.name}}
+                          </td>
+                          <td class="overflow-ellipsis user-table-td">
+                             {{row.firstName}} {{row.middleName}} {{row.lastName}}
+                          </td>
+                          <td class="overflow-ellipsis user-table-td"> {{row.gender}}
+                          </td>
+                          <td class="overflow-ellipsis user-table-td"> {{row.emailId}}
+                          </td>
+                          <td class="overflow-ellipsis user-table-td"> {{row.dob}}
+                          </td>
+                          <td class="overflow-ellipsis user-table-td"> 
+                            <ul class="areaLists">
+                              <li *ngFor="let area of row.areas">
+                                {{area.areaName}}<span [hidden]="row.areas.length == 1">,</span>&nbsp;
+                            </li></ul>
+                          </td>
+                          <td class="overflow-ellipsis user-table-td"> {{row.desgnName}}
+                          </td>
+                          <td class="overflow-ellipsis user-table-td"> {{row.orgName}}
+                          </td>
+                          <td class="overflow-ellipsis user-table-td"> {{row.mobNo}}
+                          </td>
+                          <td class="overflow-ellipsis user-table-td">
+                            <button [disabled]="row.idProofFile == null || row.idProofFile == ''" (click)="downloadImageFile(row.idProofFile)">
+                                <i class="fa fa-download" aria-hidden="true" title="Download ID Proof file"></i>
+                            </button>
+                          </td>
+                          <td class="overflow-ellipsis user-table-td"> {{row.createdDate}}
+                          </td>
+                        </tr>
+                      </tbody>
+                      <!-- end table  -->
+                    </table>
+                  </div>
+                </mat-tab>
+                <!-- approved users start -->
+                <mat-tab label="Approved ({{userManagementService.approveUsers?userManagementService.approveUsers.length:''}})">
+                  <div class="mat-elevation-z8">
+                      <table class="user-table-fetched table-striped table-bordered" *ngIf="userManagementService.approveUsers">
+                          <thead class="user-table-header">
+                            <tr>
+                              <th class="user-table-column" *ngFor="let col of displayedColumnsForApprovedUsers">{{col}}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let row of userManagementService.approveUsers | searchText : userManagementService.searchTexts| paginate: { itemsPerPage: 8, currentPage: userManagementService.a, id: 'accepted' }; ">
+                              <td class="overflow-ellipsis user-table-td"> {{row.name}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td">
+                                 {{row.firstName}} {{row.middleName}} {{row.lastName}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.gender}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.emailId}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.dob}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> 
+                                  <ul class="areaLists">
+                                      <li *ngFor="let area of row.areas">
+                                        {{area.areaName}}<span [hidden]="row.areas.length == 1">,</span>&nbsp;
+                                    </li></ul>
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.desgnName}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.orgName}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.mobNo}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td">
+                                  <button [disabled]="row.idProofFile == null || row.idProofFile == ''" (click)="downloadImageFile(row.idProofFile)">
+                                      <i class="fa fa-download" aria-hidden="true" title="Download ID Proof file"></i>
+                                  </button>
+                                </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.createdDate}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.aproveRejectDate}}
+                                </td>
+                            </tr>
+                          </tbody>
+                          <!-- end table  -->
+                        </table>
+                  </div>
+                </mat-tab>
+                <!-- end approved users -->
+      
+                <!-- rejected users start -->
+                <mat-tab label="Rejected ({{userManagementService.rejectedUsers?userManagementService.rejectedUsers.length:''}})">
+                  <div class="mat-elevation-z8">
+                      <table class="user-table-fetched table-striped table-bordered" *ngIf="userManagementService.rejectedUsers">
+                          <thead class="user-table-header">
+                            <tr>
+                              <th class="user-table-column" *ngFor="let col of displayedColumnsForRejectedUsers">{{col}}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let row of userManagementService.rejectedUsers  | searchText : userManagementService.searchTexts | paginate: { itemsPerPage: 8, currentPage: userManagementService.r, id: 'rejected' }; ">
+                              <td class="overflow-ellipsis user-table-td"> {{row.name}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td">
+                                 {{row.firstName}} {{row.middleName}} {{row.lastName}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.gender}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.emailId}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.dob}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> 
+                                  <ul class="areaLists">
+                                      <li *ngFor="let area of row.areas">
+                                        {{area.areaName}},&nbsp;
+                                    </li></ul>
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.desgnName}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.orgName}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.mobNo}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td">
+                                  <button [disabled]="row.idProofFile == null || row.idProofFile == ''" (click)="downloadImageFile(row.idProofFile)">
+                                      <i class="fa fa-download" aria-hidden="true" title="Download ID Proof file"></i>
+                                  </button>
+                                </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.createdDate}}
+                              </td>
+                              <td class="overflow-ellipsis user-table-td"> {{row.aproveRejectDate}}
+                                </td>
+                                <td class="overflow-ellipsis user-table-td"> {{row.rejectReason}}
+                                  </td>
+                            </tr>
+                          </tbody>
+                          <!-- end table  -->
+                        </table>
+                  </div>
+                </mat-tab>
+                <!-- end rejected users -->
+              </mat-tab-group>
+              <pagination-controls *ngIf="userManagementService.showpPendingUsersPagination && userManagementService.pendingUsers ? userManagementService.pendingUsers.length > 8: ''"  class="pagination" (pageChange)="userManagementService.p = $event"  id="pending" ></pagination-controls>
+              <pagination-controls *ngIf="userManagementService.showpAcceptedUsersPagination && userManagementService.approveUsers ? userManagementService.approveUsers.length > 8: ''" class="pagination" (pageChange)="userManagementService.a = $event" id="accepted" ></pagination-controls>
+              <pagination-controls *ngIf="userManagementService.showpRejectedUsersPagination && userManagementService.rejectedUsers ? userManagementService.rejectedUsers.length > 8: ''" class="pagination" (pageChange)="userManagementService.r = $event" id="rejected" ></pagination-controls>
+              <div class="form-group edit-btn" *ngIf="userManagementService.hideBtnsIfRejectedusers && userManagementService.pendingUsers ? userManagementService.pendingUsers.length > 0 : ''">
+                <button class="approve-btn" mat-flat-button color="primary" (click)="approveUser(true)" type="button">Approve</button>
+                <button class="reject-btn" (click)="approveUser(false)" mat-flat-button color="warn" type="button">Reject</button>
+              </div>
+            </div>
+      
+      
+      <h4 class="no-data" *ngIf="userManagementService.noData">No data Found</h4>
+    </div>
+  
+  </div>
+</div>
+
+<!-- modal start -->
+<!-- success modal -->
+<div id="successModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-confirm">
+      <div class="modal-content">
+        <div class="modal-header success-header">
+          <h4>Success !</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body text-center">
+          <p>{{userManagementService.successApprovedOrreject}}.</p>
+          <button class="btn btn-success" data-dismiss="modal" (click)="refreshData()"><span>OK</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- errror modal -->
+<div id="errorModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-confirm">
+      <div class="modal-content">
+        <div class="modal-header error-modal-header">
+          <div class="icon-box">
+            <i class="material-icons">error</i>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body text-center">
+          <h4>Error !</h4>
+          <p>{{userManagementService.errorMessage}}</p>
+          <button class="btn btn-success" data-dismiss="modal" ><span>OK</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- info modal -->
+  <div id="infoModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="icon-box">
+              <i class="material-icons info-icon">information</i>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body text-center">
+            <h5>INFO!</h5>
+            <p>Please confirm if you want to approve the selected user(s)</p>
+            <div class="warnbody" *ngFor="let users of userManagementService.selectedUserModelList">
+                <div class="col-md-12" style="margin-left: 120px;">
+                <ul class="selected-users"><li style="text-align: left;">{{users.name}} </li></ul>
+                </div>
+            </div>
+            <button class="btn btn-success" (click)="approveSelected(userManagementService.aprroveVariable)"><span>OK</span></button>
+            <button class="btn btn-success" data-dismiss="modal"><span>Cancel</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- rejection reason modal-->
+    <div id="rejectionInfoMessage" class="modal fade" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-confirm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="icon-box">
+                <i class="material-icons info-icon">information</i>
+              </div>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+              <h5>Rejection Reason</h5>
+              <div class="container-fluid create-user-block">
+                  <form class="all-fields row"  #form="ngForm" (ngSubmit)="form.valid ?approveSelected(userManagementService.aprroveVariable):''">
+                  <mat-card class="mat-card-block" *ngFor="let users of userManagementService.selectedUserModelList; let i =index">
+                    <div class="container-fluid">
+                        <div class="col-md-12 rejection-info">
+                              <div class="selection-fields col-md-12 rejection-reason-block">
+                                  <label style="font-size: 13px" for="usr">User Name<span style="color:red; font-weight:500;">*</span> :</label>
+                                  <span class="user-name-for-rejection">{{users.name}}</span>
+                              </div>
+                              <div class="selection-fields col-md-12 rejection-reason-block">
+                                <label style="font-size: 13px" for="usr">Rejection Reason<span style="color:red; font-weight:500;">*</span> :</label>
+                                <mat-form-field class="rejectionreason-modal">
+                                  <textarea matInput name="users_{{i}}" [(ngModel)]="users.rejectReason" required
+                                    pattern="^[a-zA-Z][a-zA-Z\s\.\./]+$" maxLength="200" (change)="reasonText(users.rejectReason)" required></textarea>
+                                  <mat-error class="padding-bottom ">
+                                    {{form.controls['users_' + i]?.errors?.pattern ? 'Only characters, dot(.) and space can be
+                                    accepted':'Pleas give reason for rejection'}}
+                                  </mat-error>
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-12 characters-left-block"><span><b>{{users.rejectReason?200-users.rejectReason.length: ''}}</b>&nbsp;characters left</span></div>
+                          </div>
+                    </div>
+                  </mat-card>
+                  <div class="col-md-12"> 
+                    <button class="btn btn-success" [disabled]="!form.valid"><span>Submit</span></button>
+                    <button class="btn btn-success" data-dismiss="modal" (click)="form.reset()"><span>Cancel</span></button>
+                  </div>
+                </form>
+                </div>
+          </div>
+        </div>
+      </div>
+
+   

@@ -1,0 +1,651 @@
+
+{
+    "mappings": {
+      "rmncha-area-type": {
+        "properties": {
+          "actAreaLevel": {
+            "type": "nested",
+            "properties": {
+              "areaLevelName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              }
+            }
+          },
+          "areaLevel": {
+            "type": "nested",
+            "properties": {
+              "areaLevelName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              }
+            }
+          },
+          "areaname": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "ccode": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "code": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "createdDate": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "lastModified": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "parentAreaCode": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      },
+      "rmncha-arealevel-type": {
+        "properties": {
+          "areaLevelName": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "createdDate": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "lastModified": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          }
+        }
+      },
+      "rmncha-source-type": {
+        "properties": {
+          "createdDate": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "lastModified": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "sourceName": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      },
+      "rmncha-sector-type": {
+        "properties": {
+          "createdDate": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "lastModified": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "sectorName": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      },
+      "rmncha-subgroup-type": {
+        "properties": {
+          "createdDate": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "lastModified": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "subgroupName": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      },
+      "rmncha-unit-type": {
+        "properties": {
+          "createdDate": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "lastModified": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "unitName": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      },
+      "rmncha-indicator-type": {
+        "properties": {
+          "createdDate": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "district": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "sourceName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "iName": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "lastModified": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "national": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "sourceName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "recSector": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "sectorName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "sc": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "sectorName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "state": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "sourceName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "subgroup": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "subgroupName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "unit": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "unitName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "rmncha-data-type": {
+        "properties": {
+          "area": {
+            "type": "nested",
+            "properties": {
+              "actAreaLevel": {
+                "type": "nested",
+                "properties": {
+                  "areaLevelName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  },
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  }
+                }
+              },
+              "areaLevel": {
+                "type": "nested",
+                "properties": {
+                  "areaLevelName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  },
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  }
+                }
+              },
+              "areaname": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "ccode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "code": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "parentAreaCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "below": {
+            "properties": {
+              "actAreaLevel": {
+                "type": "nested",
+                "properties": {
+                  "areaLevelName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  },
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  }
+                }
+              },
+              "areaLevel": {
+                "type": "nested",
+                "properties": {
+                  "areaLevelName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  },
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  }
+                }
+              },
+              "areaname": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "ccode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "code": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "parentAreaCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "createdDate": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "indicator": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "district": {
+                "type": "nested",
+                "properties": {
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "sourceName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                }
+              },
+              "iName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "national": {
+                "type": "nested",
+                "properties": {
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "sourceName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                }
+              },
+              "recSector": {
+                "type": "nested",
+                "properties": {
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "sectorName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                }
+              },
+              "sc": {
+                "type": "nested",
+                "properties": {
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "sectorName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                }
+              },
+              "state": {
+                "type": "nested",
+                "properties": {
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "sourceName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                }
+              },
+              "subgroup": {
+                "type": "nested",
+                "properties": {
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "subgroupName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                }
+              },
+              "unit": {
+                "type": "nested",
+                "properties": {
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "unitName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  }
+                }
+              }
+            }
+          },
+          "lastModified": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "src": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "sourceName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "subgrp": {
+            "type": "nested",
+            "properties": {
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "subgroupName": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          },
+          "top": {
+            "properties": {
+              "actAreaLevel": {
+                "type": "nested",
+                "properties": {
+                  "areaLevelName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  },
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  }
+                }
+              },
+              "areaLevel": {
+                "type": "nested",
+                "properties": {
+                  "areaLevelName": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                  },
+                  "createdDate": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  },
+                  "lastModified": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                  }
+                }
+              },
+              "areaname": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "ccode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "code": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "createdDate": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "lastModified": {
+                "type": "date",
+                "format": "strict_date_optional_time||epoch_millis"
+              },
+              "parentAreaCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

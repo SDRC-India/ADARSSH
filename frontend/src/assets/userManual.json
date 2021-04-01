@@ -1,0 +1,78 @@
+{
+    "tableColumns": [
+        "Title",
+        "File Name",
+        "Preview",
+        "Download"
+    ],
+    "tableData": [
+        {
+            "q1": "User Manual v0.9",
+            "q2": null,
+            "q3": [
+                {
+                    "filePath": "User Manual v0.pdf1565063126416.9",
+                    "fileSize": "671.36 Kb",
+                    "originalName": "User Manual v0.9.pdf"
+                }
+            ],
+            "index": 0,
+            "Title": "User Manual v0.9",
+            "File Name": "User Manual v0.9.pdf",
+            "Preview": [
+                {
+                    "controlType": "button",
+                    "value": "Preview",
+                    "type": "submit",
+                    "class": "btn btn-submit preview",
+                    "tooltip": "Preview",
+                    "icon": "fa-eye fa-lg"
+                }
+            ],
+            "Download": [
+                {
+                    "controlType": "button",
+                    "value": "File Size 671.36 Kb",
+                    "type": "submit",
+                    "class": "btn btn-submit download",
+                    "tooltip": "Download",
+                    "icon": "fa-download fa-lg"
+                }
+            ]
+        },
+        {
+            "q1": "User Manual v0.9",
+            "q2": null,
+            "q3": [
+                {
+                    "filePath": "User Manual v0.pdf1565063126416.9",
+                    "fileSize": "671.36 Kb",
+                    "originalName": "User Manual v0.9.pdf"
+                }
+            ],
+            "index": 0,
+            "Title": "User Manual v0.9",
+            "File Name": "User Manual v0.9.pdf",
+            "Preview": [
+                {
+                    "controlType": "button",
+                    "value": "Preview",
+                    "type": "submit",
+                    "class": "btn btn-submit preview",
+                    "tooltip": "Preview",
+                    "icon": "fa-eye fa-lg"
+                }
+            ],
+            "Download": [
+                {
+                    "controlType": "button",
+                    "value": "File Size 671.36 Kb",
+                    "type": "submit",
+                    "class": "btn btn-submit download",
+                    "tooltip": "Download",
+                    "icon": "fa-download fa-lg"
+                }
+            ]
+        }
+    ]
+}

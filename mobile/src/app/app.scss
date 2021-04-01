@@ -1,0 +1,180 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+ion-content,ion-title{
+  font-family: 'Questrial', sans-serif;
+}
+
+.custom-font{
+  font-family: 'Questrial', sans-serif;
+}
+
+.toast-md .toast-message {
+  background-color: color($colors, lprimary, base) !important;
+  font-family: 'Questrial', sans-serif;
+}
+
+.toast-container{
+  background-color: color($colors, lprimary, base) !important;
+}
+
+.option {
+  font-family: 'Questrial', sans-serif;
+}
+
+ion-option .list{
+  font-family: 'Questrial', sans-serif;
+}
+.ion-option-items .item{
+  font-family: 'Questrial', sans-serif;
+}
+.select-popover {
+  font-family: 'Questrial', sans-serif;
+}
+.alert-md .alert-radio-label{
+  font-family: 'Questrial', sans-serif;
+}
+.alert-md .alert-title{
+  font-family: 'Questrial', sans-serif;
+}
+.alert-md .alert-button .button-inner{
+  font-family: 'Questrial', sans-serif;
+}
+
+.smenu-custom {
+  background: color($colors, lprimary, base) !important;
+  height: 150px;
+  padding-left: 30px;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.bg-color {
+  background: color($colors, lprimary, base) !important;
+}
+
+.ksp-pointer-side-menu {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.ksp-pointer{
+  cursor: pointer;
+}
+
+.item-md p {
+  color: white;
+}
+
+.login-button {
+  margin-top: 25px;
+  height: 45px;
+  font-size: 20px;
+  background: color($colors, primary, base);
+  text-transform: none;
+}
+
+.alert-ios .alert-radio-label {
+  white-space: pre-line;
+}
+
+.alert-md .alert-radio-label {
+  white-space: pre-line;
+}
+
+.ksp_item_lable {
+  opacity: 1 !important;
+  font-size: 15px !important;
+  color: map-get($colors, dark) !important;
+}
+
+.ksp_heading_lable {
+  padding-left: 15px;
+  font-size: 18px !important;
+  font-weight: bold;
+  color: map-get($colors, dark) !important;
+}
+
+.titleicon div{
+  display:inline-block;
+  margin-bottom:18px;
+  .subtitle {
+    position: absolute;
+    top: 10px;
+    font-size: 80%;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.item-md.item-input.input-has-focus .item-inner {
+  box-shadow: none !important;
+}
+.list-md .item-input.input-has-focus:last-child {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.list-md .item-input.input-has-focus:last-child .item-inner {
+  box-shadow: none;
+}
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+  border-bottom-color: black !important;
+  box-shadow: none !important;
+}
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+  // border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner {
+  box-shadow: none;
+}
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+  // border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+  // border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.ion-select{
+  border-bottom-color: black !important;
+}
+.noRecords{
+  text-align: center;
+  margin-top: 35vh !important;
+  color: color($colors, primary, base) !important;
+}
+.date-picker[_ngcontent-c0] .layout-background[_ngcontent-c0] {
+  background-color: white;
+  height: 500px !important;
+}
+
+.scroll-content{
+  overflow-y: auto;
+}
+.split-pane-md.split-pane-visible > .split-pane-side {
+  min-width: 270px;
+  max-width: 22%;
+  border-right: 1px solid #dedede;
+  border-left: 0;
+}

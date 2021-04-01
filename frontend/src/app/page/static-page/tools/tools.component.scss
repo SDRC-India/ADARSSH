@@ -1,0 +1,76 @@
+.container-fluid{
+    width: 90%;
+  }
+.usermanual-name{
+    margin-top: 80px;
+  }
+.usermanual-head{
+    font-size: 22px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 5px;
+    color: #495769;
+    margin-top: 28px;
+}
+.usermanual-table{
+    margin-top: 20px; 
+}
+
+
+.modal-width {
+    max-width: 80% !important;
+}
+.modal-header{
+    padding: 5px 15px !important;
+}
+.close {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+.cancel-btn{
+    background-color: #00853d  !important;
+    color: #fff;
+    padding: 0.3rem .65rem;
+    font-size: 0.7rem;
+    line-height: 1.20;
+}
+.modal-footer {
+    padding: 0px;
+}
+.preview-file-body {
+    height: 505px!important;
+  }
+  .modal-width-preview {
+    max-width: 100%!important;
+    margin: 0;
+  }
+  input#myInput {
+    padding: 7px 20px 12px 30px;
+    font-style: inherit;
+    border: 1px solid #cccC;
+    border-bottom: 1px solid #cccC;
+    box-sizing: border-box;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .table-btn.search .form-group:before {
+    font-family: 'FontAwesome';
+    top: 0;
+    left: 0;
+    right: 3px;
+    color: #9c9c9c;
+    content: "\f002";
+    position: absolute;
+    padding: 8px;
+    pointer-events: none;
+    color: #007034;
+    font-size: 15px;
+}
+
+  @media(max-width:767px){
+    .usermanual-name {
+        margin-top: 119px;
+    }
+  } 

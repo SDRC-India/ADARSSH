@@ -1,0 +1,306 @@
+
+// slider css
+.main-content {
+  margin-top: 4.5em;
+  margin-bottom: 6em;
+}
+
+.d-block {
+    width: 100%;
+    height: auto;
+    border-top: solid 5px #333a3b;
+    border-bottom: solid 5px #333a3b;
+}
+.slider-block {
+    margin: 0px -15px 22px -15px;
+}
+
+.py-4 { margin-top: 15px;}
+.mdb-color {
+    background-color: white !important;
+}
+.about-para{
+    margin-top: 30px;
+}
+.para-first{
+    text-align: justify;
+}
+.para-second{
+    text-align: justify;
+    padding-top: 15px;
+}
+.card {
+    box-shadow: none !important;
+    border: 0
+}
+// .contact-us-block{ border: 1px solid #ddd !important;}
+// .contact{
+//     width: 100%;
+// }
+// .about-head{
+//     border-bottom: 2px solid #485769;
+//     padding-bottom: 5px !important;
+//     margin-left: 550px;
+//     margin-right: 550px;
+//     color: #485769;
+// }
+// .about-head::after{
+//     margin-top: 33px;
+//     padding: 0;
+//     right: 0;
+//     position: absolute;
+//     content: "";
+//     height: 2px;
+//     width: 8%;
+//     margin-right: 550px;
+// }
+// about us section css
+.about-center {
+    text-align: center;
+    margin-top: 0px;
+    color: #485769 !important;
+    padding: 20px 0 15px 0;
+}
+.about-content {
+    font-size: 17px;
+    letter-spacing: .75px;
+    color: #485769 !important ;
+    text-align: justify;
+    margin-right: 0;
+}
+.about-12{
+    margin: 40px 0 40px 0;
+}
+.abouts-text-block{
+    padding-bottom: 25px
+}
+// contact us section css
+.contactColor {
+    background-color: #E9EEF2;
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
+.contactus-font {
+    color: #485769;
+    text-align: center;
+    padding-top: 30px;
+}
+.contact-head {
+    margin-top: 0;
+}
+.contactus-font1 {
+    font-weight: bold;
+    color: #4a7196;
+    font-size: 20px;
+    /* margin-bottom: 20px; */
+}
+.contactus-font2 {
+    color: #4a7196;
+    font-size: 17px;
+}
+.marginMap {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.contacts-details {
+    padding-bottom: 30px;
+}
+.black-block{
+    height: 40px;
+    background-color: #333a3b;
+    margin: -23px -15px 0px -15px;
+}
+// .contact-head{
+//     border-bottom: 2px solid #485769;
+//     padding-bottom: 5px !important;
+//     margin-left: 550px;
+//     margin-right: 550px;
+//     color: #485769;
+// }
+// .contact-head::after{
+//     margin-top: 33px;
+//     padding: 0;
+//     right: 0;
+//     position: absolute;
+//     content: "";
+//     height: 2px;
+//     width: 8%;
+//     // background: black;
+//     margin-right: 550px;
+// }
+// .contact-para{
+//     margin-top: 30px;
+// }
+// .contact-body{
+//     height: 400px;
+// }
+.address{
+    text-align: justify;
+    color: #212529;
+    font-size: 16px;
+}
+
+.carousel.carousel.slide.carousel-fade {
+  touch-action: auto !important;
+}
+
+@media(max-width:1280px) {
+.main-content{
+  margin-top: 5.2em;
+  margin-bottom: 6em;
+}
+
+}
+@media(max-width:1200px) {
+
+.main-content{
+  margin-top: 4.9em;
+  margin-bottom: 6em;
+}
+}
+
+@media(max-width:1024px){
+    .contact{
+        width: 100%;
+    }
+    .contact-body {
+        height: 305px;
+    }
+    // .contact-head{
+    //     margin-left: 345px;
+    //     margin-right: 345px;
+    // }
+    .contact-head::after{
+        width: 14%;
+        margin-right: 345px;
+    }
+    .about-head{
+        margin-left: 345px;
+        margin-right: 345px;
+    }
+    .about-head::after{
+        width: 14%;
+        margin-right: 345px;
+    }
+    .main-content{
+      margin-top: 4.6em;
+      margin-bottom: 6em;
+    }
+}
+
+@media(max-width:991px) {
+  .main-content{
+    margin-top: 5.4em;
+    margin-bottom: 6em;
+  }
+}
+
+@media(max-width:768px){
+    .about-head{
+        margin-left: 280px;
+        margin-right: 280px;
+    }
+    .about-head::after{
+        width: 14%;
+        margin-right: 280px;
+    }
+    // .contact-head{
+    //     margin-left: 280px;
+    //     margin-right: 280px;
+    // }
+    .contact-head::after{
+        width: 14%;
+        margin-right: 280px;
+    }
+    .main-content{
+      margin-top: 5.4em;
+      margin-bottom: 6em;
+    }
+}
+@media(max-width: 608px){
+    .about-head{
+        margin-left: 180px;
+        margin-right: 180px;
+    }
+    .about-head::after{
+        width: 14%;
+        margin-right: 180px;
+    }
+    // .contact-head{
+    //     margin-left: 180px;
+    //     margin-right: 180px;
+    // }
+    .contact-head::after{
+        width: 14%;
+        margin-right: 180px;
+    }
+}
+
+@media (max-width: 568px) {
+  .main-content {
+    margin-top: 4.9em;
+    margin-bottom: 6em;
+  }
+}
+
+@media (max-width: 560px) {
+  .main-content {
+    margin-top: 4.1em;
+    margin-bottom: 6em;
+  }
+}
+
+@media(max-width: 480px){
+    .about-head{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .about-head::after{
+        width: 25%;
+        margin-right: 100px;
+    }
+    // .contact-head{
+    //     margin-left: 100px;
+    //     margin-right: 100px;
+    // }
+    .contact-head::after{
+        width: 25%;
+        margin-right: 100px;
+    }
+}
+@media(max-width: 415px){
+    .black-block{
+        margin: -30px -15px 0px -15px !important;
+      }
+      .main-content {
+        margin-top: 4.1em !important;
+    }
+}
+
+@media(max-width: 360px){
+    .about-head{
+        margin-left: 65px;
+        margin-right: 65px;
+    }
+    .about-head::after{
+        width: 25%;
+        margin-right: 65px;
+    }
+    // .contact-head{
+    //     margin-left: 65px;
+    //     margin-right: 65px;
+    // }
+    .contact-head::after{
+        width: 25%;
+        margin-right: 65px;
+    }
+    .main-content{
+      margin-top: 4.1em !important;
+    }
+
+    @media(max-width: 320px) {
+      .main-content{
+        margin-top: 6.9em !important;
+      }
+    }
+}

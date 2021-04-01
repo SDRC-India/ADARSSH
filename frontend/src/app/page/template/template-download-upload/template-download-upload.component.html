@@ -1,0 +1,95 @@
+
+<div class="container-fluid main-content analytics">
+<div class="col-md-12 col-sm-12 col-xs-12  text-center " >
+  <img (click)="downloadClicked()" alt="" class="down-up-icon"
+    style="width: 70px; cursor: pointer; margin-top: 40px;"
+    src="./assets/svg/svg_download_doc.svg">
+  <h4 style="text-align:center; margin-top: 12px;"><span style="cursor: pointer; " (click)="downloadClicked()">Download Template</span></h4>
+  <b> Note : </b><span style="color:red; font-weight:500;">*</span><span>{{temlateDownloadDisclamer}}</span>
+  <div style="border-bottom: 1px solid gray; margin-top: 40px;"></div>
+</div>
+
+<div *ngIf="currentFileUpload" class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+    aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+    {{progress.percentage}}%</div>
+</div>
+
+<div class="col-md-12 col-sm-12 col-xs-12  text-center upload-div">
+  <img id="uploadicon" class="down-up-icon" alt=""
+    style="width: 70px; cursor: pointer; margin-top: 40px;"
+    src="./assets/svg/svg_upload_doc_data.svg" (click)="uploadClicked()">
+  <h4 id="uploadBtn" style="cursor: pointer;margin-top: 12px;" (click)="uploadClicked()">Upload Template</h4>
+  <br *ngIf="validateResponse"> <span *ngIf="validateResponse">File : </span> <a *ngIf="validateResponse" [ngClass]="validateResponse.statusCode==200?'hyperlink-accepted':'hyperlink-rejected'" (click)="downloadOutputFile(validateResponse)"><u><b>{{validateResponse.fileName}} </b></u></a>
+  <br *ngIf="!validateResponse && file"> <span *ngIf="!validateResponse && file">File : </span> <a *ngIf="!validateResponse && file" class="hyperlink" (click)="uploadedFile()"><u><b>{{fileName}} </b></u></a>
+  <br> 
+  <b> Note : </b><span style="color:red; font-weight:500;">*</span><span>{{templateUploadDisclamer}}</span>
+</div>
+
+<div class="col-sm-12 col-md-12 col-lg-12 text-center" style="margin-top: 20px;">
+    <button class="btn" [disabled]="!finalUpload" (click)="validateData()">Validate Data</button>
+    <button class="btn" [disabled]="!validated"  (click)="importData()">Publish Data</button>
+</div>
+<span>
+<input type="file" id="fileUpload" (change)="onFileChange($event)" hidden  accept=".xlsx,.XLSX"></span>
+</div>
+
+
+<div id="error" class="confrirmation-modal modal fade" role="dialog" data-backdrop="static" data-keyboard="false"
+  tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body warnbody text-center">
+        <div class="errorhead"> Error </div>
+        <div class="modal-body">
+          <div class="text-center">
+            <i class="fa fa-close fa-4x animated "></i>
+            <p>{{errorMessage}}</p>
+          </div>
+          <button type="button" class="btn btn-default error-button" data-dismiss="modal">Ok</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="sucess" class="confrirmation-modal modal fade" role="dialog" data-backdrop="static" data-keyboard="false"
+  tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body warnbody text-center">
+        <div class="sucesshead"> Success </div>
+        <div class="modal-body">
+          <div class="text-center">
+            <i class="fa fa-check fa-4x animated "></i>
+            <p>{{sucessMessage}}</p>
+          </div>
+          <button type="button" class="btn btn-default sucess-button" data-dismiss="modal">Ok</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="info" class="confrirmation-modal modal fade" role="dialog" data-backdrop="static" data-keyboard="false"
+  tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body warnbody text-center">
+        <div class="infohead"> Info </div>
+        <div class="modal-body">
+          <div class="text-center">
+            <i class="fa fa-info-circle fa-4x "></i>
+            <p>{{infoMessage}}</p>
+          </div>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,71 @@
+.container-fluid{
+    width: 90%;
+}
+.video-name{
+    margin-top: 80px;
+}
+.video-head{
+    font-size: 22px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 5px;
+    color: #495769;
+    margin-top: 28px;
+}
+.video-section{
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+iframe {
+    border: 1px solid #777;
+    padding: 5px;
+    // margin: 10px;
+}
+
+.pagination {
+  float: right;
+}
+.photo-section{
+    margin-top: 80px;
+  }
+.right-addon .fa-search {
+    right: 0;
+}
+.inner-addon .fa-search {
+  position: absolute;
+  padding: 12px;
+  pointer-events: none;
+  color: #495769;
+  font-size: 15px;
+}
+.inner-addon {
+  position: relative;
+}
+.searchData {
+  float: right;
+  margin-top: 20px;
+  padding-right: 0;
+}
+.searchbar{
+    text-align: right;
+}
+.caption{
+    color: #495769;
+    font-weight: 400;
+    font-size: 17px;
+}
+input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search-md], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.md-textarea {
+    border: 1px solid #cccC;
+    border-bottom: 1px solid #cccC;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 0;
+    padding-left: 6px;
+    border-radius: 0;
+  }
+@media(max-width:767px){
+    .video-name {
+        margin-top: 119px;
+    }
+}

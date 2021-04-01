@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: rmncha-gateway
+  jmx:
+    default-domain: si-rmncha-apigateway
+info:
+  component: Gateway Server
+  cloud:
+   loadbalancer:
+     retry:
+       enabled: true
+   inetutils:
+     useOnlySiteLocalInterfaces: true 
+
+endpoints:
+  routes:
+    sensitive: false
+        
+zuul:
+  servletPath: /zuul
+  host:
+    connect-timeout-millis: 30000
+    socket-timeout-millis: 60000
+  prefix: /service
+  routes:
+    collection-service:
+      path: /si-rmncha-collection/**
+      serviceId: collection-service
+      stripPrefix: false
+      sensitiveHeaders: Cookie,Set-Cookie
+#      url: http://localhost:8084/
+    dashboard-service:
+      path: /si-rmncha-dashboard/**
+      serviceId: dashboard-service
+      sensitiveHeaders: Cookie,Set-Cookie
+      stripPrefix: false
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+  ignoreSecurityHeaders: false
+  
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+ribbon:
+  ConnectTimeout: 30000
+  ReadTimeout: 600000
+  
+#spring:
+#  application:
+#    name: rmncha-gateway
+#    
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://eurekaAdmin:eurekaAdmin123@localhost:8084/eureka/
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    registryFetchIntervalSeconds: 5
+#  instance:
+#    preferIpAddress: true
+#
+
+server:
+  context-path: /si-rmncha-gateway

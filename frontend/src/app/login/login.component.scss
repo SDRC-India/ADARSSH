@@ -1,0 +1,129 @@
+.login-form-container{
+    height: auto;
+    background-color: white;
+    box-shadow:  0px -1px 9px -2px grey;
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .login-submit {
+    width: 100%;
+    margin: 30px 0 -10px;
+    padding: 0.65rem 2.13rem;   
+    background-color: #234a7c;
+    color: #FFF;
+  }
+ 
+  .login-header {
+    height: 50px;    
+    padding: 10px;
+    color: #444444;
+    font-family: sans-serif;
+    font-size: x-large;    
+  }
+  .main-content {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+  .container-body {
+    padding: 20px;
+    padding-top: 20px;
+  }
+
+  .error-message{
+    text-align: center;
+    color: rgb(245, 72, 72);
+    // display: none;
+  }  
+  .forgotpass{ 
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1f497b;
+  }
+  .new-signup-forgotPass-section { margin-top: 20px !important;}
+  .forget-pass-block {
+    text-align: right;
+  }
+  .forgot-pass-link, .create-user-link {
+    color: #3F51B5 !important;
+    font-weight: 400;
+    font-family: inherit;
+    border-bottom: 1px solid;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .container-fluid {
+   padding: 250px;
+  }
+  .login-pwd .mat-form-field{
+    width: 100%;
+  }
+  .login-pwd input[type=password]{
+    border: none;
+    height: 18px;
+    width: 92%;
+  }
+  input#password-login {
+    width: 92%;
+}
+  .font-weight-bold {
+    font-weight: 600 !important;
+    color: #3f51b5;
+}
+  .login-header strong {
+  font-weight: bolder;
+  color: #234a7c;
+}
+.mb-5 {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+@media (max-width: 1920px){
+  .new-signup-forgotPass-section {
+    margin-top: 63px !important;
+}
+}
+@media (max-width: 1366px){
+  .new-signup-forgotPass-section {
+    margin-top: 20px !important;
+}
+}
+@media (max-width: 1024px){
+  .login-submit {
+    margin: 0;
+  }
+  .new-signup-forgotPass-section{
+    margin-top: 0 !important;
+}
+}
+@media (max-width: 991px){
+  .login-form-container{
+    position: relative;
+    margin-top: 200px;
+  }
+}
+@media(max-width:768px){
+  .container-fluid {
+    padding: 0px !important;
+}
+.main-content {
+  margin-top: 9em !important;
+}
+.login-form-container {
+  position: absolute !important;
+  margin-top: 0 !important;
+}
+}
+@media (max-width: 608px){
+  label {
+    margin-bottom: 0;
+}
+.login-submit {
+  margin: 0;
+}
+}

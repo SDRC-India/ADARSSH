@@ -1,0 +1,102 @@
+page-login {
+  ::-webkit-input-placeholder {
+    color: black !important;
+  }
+  :-moz-placeholder {
+    color: black !important;
+  }
+  :-ms-input-placeholder {
+    /* IE10+ */
+    color: black !important;
+  }
+  .icon-style {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    margin-top: 50px;
+  }
+  .icon-col-style {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .lp-logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .list-form {
+    margin-top: 80px;
+  }
+  .username-item {
+    padding: 0px !important;
+    font-size: 20px;
+    margin-top: 10px;
+    background: none;
+    border-bottom: 1px solid #717171;
+    box-shadow: none;
+  }
+  .username-input {
+    color: #717171;
+    border-bottom-color: #717171;
+    box-shadow: none;
+  }
+  .text-link-forgotPassword {
+    margin-top: 30px;
+    color: color($colors, primary, base);
+    font-size: 16px;
+  }
+  .text-link-CreatNewAcc {
+    margin-top: 30px;
+    color: #717171;
+    font-size: 25px;
+  }
+  .logodiv {
+    margin: 0px auto;
+    text-align: center;
+  }
+  .logo {
+    margin-top: 35px;
+    background-color: white;
+  }
+  .icon-eye {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .toolbar-title {
+    font-size: 1.8rem !important;
+  }
+  .login_margin {
+    border: 1px solid #ddd;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: white;
+    height: 100%;
+  }
+  .login_item_margin {
+    margin-top: 5%;
+    margin-left: 12%;
+    margin-right: 10%
+  }
+  .login_button_margin {
+    margin-top: 5%;
+    margin-left: 12%;
+    margin-right: 10%
+  }
+  .login_content {
+    background: #f0f0f0
+  }
+  .login-button{
+    margin-top: -50px;
+    background-color: color($colors, primary, base);;
+  }
+  .login_button_mobile_margin {
+    margin-top: 5%;
+    margin-left: 3%;
+  }
+  .loginInputs{
+    border-bottom: 1px solid #495769 !important ;padding-left: 0px !important;
+  }
+
+
+}

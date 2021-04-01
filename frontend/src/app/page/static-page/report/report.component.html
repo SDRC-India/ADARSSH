@@ -1,0 +1,184 @@
+<div class="container-fluid main-content">
+    <div class="content-header">
+        <h3>Report</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3 consolidate-up">
+            <!-- time period from and to section -->
+            <div class="row selection-sec">
+                <form class="all-fields row" #f="ngForm" (ngSubmit)="f.valid ? downloadReport():''" id="rawDataReport">
+                    <div class="selection-fields col-md-6">
+                        <label class="lebel-block" for="fromTimePeriod">From Time Period <span
+                                style="color:red; font-weight:500;">*</span>
+                            :</label>
+                        <mat-form-field class="month-picker">
+                            <input #input name="fromDate" matInput readonly [matDatepicker]="dobPicker" [min]="minDate" [max]="maxDate" [formControl]="date"
+                            [(ngModel)]="timePeriodFrom" required>
+                            <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                            <mat-datepicker #dobPicker 
+                                            startView="multi-year"
+                                            (yearSelected)="chosenYearHandler($event)"
+                                            (monthSelected)="chosenMonthHandler($event, dobPicker)"
+                                            panelClass="example-month-picker">
+                            </mat-datepicker>
+                            <mat-error *ngIf="timePeriodFrom == undefined || showEmptyFromDateError">Please select time period</mat-error>
+                          </mat-form-field>
+                    </div>
+                    <div class="selection-fields col-md-6">
+                        <label class="lebel-block" for="toTimePeriod">To Time Period <span
+                                style="color:red; font-weight:500;">*</span>
+                            :</label>
+                        <mat-form-field class="month-picker">
+                            <input matInput readonly [matDatepicker]="dobPickerTo" [min]="newDate?newDate:maxDateTo" [max]="maxDateTo" [formControl]="dateTo"
+                             [(ngModel)]="timePeriodTo" [disabled]="!newDate" required>
+                            <mat-datepicker-toggle matSuffix [for]="dobPickerTo" id="toTimePeriod"></mat-datepicker-toggle>
+                            <mat-datepicker #dobPickerTo
+                                            startView="multi-year"
+                                            (yearSelected)="chosenYearHandlerTo($event)"
+                                            (monthSelected)="chosenMonthHandlerTo($event, dobPickerTo)"
+                                            panelClass="example-month-picker">
+                            </mat-datepicker>
+                            <mat-error>Please select time period</mat-error>
+                          </mat-form-field> 
+                    </div>
+                    <!-- time period end -->
+                    <!-- checklist block -->
+                    <div class="col-md-6">
+                        <label class="lebel-block" for="checkList">CheckList<span
+                                style="color:red; font-weight:500;">*</span> :</label>
+                        <mat-form-field class="report-block">
+                            <mat-select name="checkLists" [(ngModel)]="checkListModel" 
+                            (valueChange)="facilityTypeModel = undefined" required>
+                                <mat-option *ngFor="let opt of checkList" [value]="opt">
+                                    {{opt.name}}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error class="padding-bottom ">
+                                Please select checklist
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <!-- checklist block end -->
+
+                    <div class="col-md-6" *ngIf="facilityTypes[checkListModel?checkListModel.formId:0] && checkListModel.formId != 2">
+                        <label class="lebel-block" for="facilityType">Facility Type<span
+                                style="color:red; font-weight:500;">*</span>
+                            :</label>
+                        <mat-form-field class="report-block">
+                            <mat-select name="facilityType" required [(ngModel)]="facilityTypeModel"
+                                (selectionChange)="selectFacility(facilityTypeModel)" [disabled]="!checkListModel" required>
+                                <mat-option value="all">All</mat-option>
+                                <mat-option *ngFor="let opt of facilityTypes[checkListModel?checkListModel.formId:0]" [value]="opt">
+                                    {{opt.name}}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error class="padding-bottom ">
+                                Please select facility type
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <!-- state section start -->
+                    <div class="col-md-6">
+                        <label class="lebel-block" for="state">State<span style="color:red; font-weight:500;">*</span>
+                            :</label>
+                        <mat-form-field class="report-block">
+                            <mat-select name="state" [(ngModel)]="stateModel" [disabled]="!app.checkUserAuthorization(['USER_MGMT_ALL_API']) && staticService.getUserDetails.sessionMap.areaLevel != 'NATIONAL'"
+                            (valueChange)="districtModel = undefined;blockModel=undefined" required>
+                            <mat-option value="all">All</mat-option>
+                                <mat-option *ngFor="let opt of areaLists | areaFilter:1:1" [value]="opt.areaId">
+                                    {{opt.areaName}}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error class="padding-bottom ">
+                                Please select state
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                     <!-- district section start -->
+                    <div class="col-md-6" *ngIf="stateModel != 'all'">
+                        <label class="lebel-block" for="district">District<span
+                                style="color:red; font-weight:500;">*</span> :</label>
+                        <mat-form-field class="report-block">
+                            <mat-select name="district" [(ngModel)]="districtModel"
+                            (valueChange)="blockModel=undefined" [disabled]="!stateModel || (!app.checkUserAuthorization(['USER_MGMT_ALL_API']) && (staticService.getUserDetails.sessionMap.areaLevel != 'NATIONAL' && staticService.getUserDetails.sessionMap.areaLevel != 'STATE'))" required>
+                            <mat-option value="all">All</mat-option>
+                                <mat-option *ngFor="let opt of areaLists | areaFilter:2:stateModel"
+                                    [value]="opt.areaId">
+                                    {{opt.areaName}}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error class="padding-bottom ">
+                                Please select district
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+                     <!-- block section start -->
+                     <div class="col-md-6" *ngIf="stateModel != 'all' && districtModel != 'all'">
+                        <label class="lebel-block" for="block">Block<span style="color:red; font-weight:500;">*</span>
+                            :</label>
+                        <mat-form-field class="facilityName">
+                            <mat-select name="reportType" [(ngModel)]="blockModel" [disabled]="!districtModel || (!app.checkUserAuthorization(['USER_MGMT_ALL_API']) && (staticService.getUserDetails.sessionMap.areaLevel != 'NATIONAL' && staticService.getUserDetails.sessionMap.areaLevel != 'STATE' && staticService.getUserDetails.sessionMap.areaLevel != 'DISTRICT'))" required>
+                                <mat-option value="all">All</mat-option>
+                                <mat-option
+                                    *ngFor="let opt of areaLists | areaFilter:3:districtModel"
+                                    [value]="opt.areaId">
+                                    {{opt.areaName}}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error class="padding-bottom ">
+                                Please select block
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                        <button class="download-btn" type="submit" [disabled]="!f.valid">Download Excel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3 consolidate-up">
+            <!-- time period from and to section -->
+            <div class="row selection-sec">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- errror modal -->
+<div id="errorModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-confirm">
+      <div class="modal-content">
+        <div class="modal-header error-modal-header">
+           <span class="error-text">ERROR!</span>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body text-center">
+          <h4>Error !</h4>
+          <p>{{errorMessage}}</p>
+          <button class="btn btn-success" data-dismiss="modal"><span>OK</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- info modal -->
+  <div id="infoModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-confirm">
+      <div class="modal-content">
+        <div class="modal-header">
+            <i class="fa fa-info-circle" aria-h idden="true">&nbsp;<span class="info-text">INFO !</span></i>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body text-center">
+          <!-- <h5></h5> -->
+          <p>{{info}}</p>
+          <button class="btn btn-success" data-dismiss="modal"><span>OK</span></button>
+        </div>
+      </div>
+    </div>
+  </div>

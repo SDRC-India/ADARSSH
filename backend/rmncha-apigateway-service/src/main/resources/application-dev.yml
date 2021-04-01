@@ -1,0 +1,11 @@
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: https://eurekaAdmin:eurekaAdmin123@devserver.sdrc.co.in/eureka
+
+zuul:
+  routes:
+    collection-service:
+      url: https://devserver.sdrc.co.in/
+    dashboard-service:
+      url: https://devserver.sdrc.co.in/

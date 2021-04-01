@@ -1,0 +1,35 @@
+.menu-section{
+    color: white;
+    border-bottom: 1px solid #9fe5c3;
+}
+.data-heads {
+    list-style: none;
+    padding-left: 10px;
+}
+.data-head-list .list-span > a {
+    color: #fff;
+    text-decoration: none;
+}
+.sub-menu{
+    list-style: none;
+    color: #fff;
+    padding-left: 20px !important;
+}
+.sub-menu-list > a .active{
+    color: #fff;
+    background-color: red;
+}
+.icon{
+    padding-right: 10px;
+    margin-left: 10px;
+}
+li.sub-menu-list {
+    line-height: 30px;
+}
+.active{
+    background-color: #fff;
+    color: #485769;
+}
+.margin{
+    margin-top: 28px
+}

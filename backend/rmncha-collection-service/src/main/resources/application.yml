@@ -1,0 +1,25 @@
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#    leaseRenewalIntervalInSeconds: 1
+#    leaseExpirationDurationInSeconds: 2
+#    metadataMap:
+#      instanceId: ${spring.application.name}:${server.port}
+
+spring:
+  application:
+    name: collection-service
+  jmx:
+    default-domain: rmncha-collection-release-1
+    
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://eurekaAdmin:eurekaAdmin123@localhost:8084/eureka/
+#
+#  instance:
+#    prefer-ip-address: true
+
+server:
+  context-path: /si-rmncha-collection
+  

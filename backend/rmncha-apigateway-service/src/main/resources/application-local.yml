@@ -1,0 +1,9 @@
+server:
+  port: 8765
+  
+zuul:
+  routes:
+    collection-service:
+      url: http://localhost:8082/
+    dashboard-service:
+      url: http://localhost:8080/

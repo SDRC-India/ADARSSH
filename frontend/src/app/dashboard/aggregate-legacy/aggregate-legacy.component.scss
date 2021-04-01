@@ -1,0 +1,29 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .all-fields{
+      width: 100%;
+    }
+
+}  @media(max-width: 1024px){
+    .month-picker {
+      width: 253px !important;
+  }
+  .mat-form-field {
+    width: 253px;
+}
+  }
+  @media(max-width: 768px){
+    .month-picker {
+      width: 180px !important;
+  }
+  .mat-form-field {
+    width: 180px;
+}
+  }
+    // media query start
+   /* IE10+ CSS styles go here */
+   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .all-fields{
+      width: 100%;
+    }
+
+} 

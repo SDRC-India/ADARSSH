@@ -1,0 +1,93 @@
+<!-- <mat-card> -->
+
+
+<div class="col-md-12 ">
+  <mat-checkbox [(ngModel)]="checked" (ngModelChange)="fileChecked($event);indicatorSelect2.update.emit([])" *ngIf="discriptiveFileData">Continue
+    using selected file in last step</mat-checkbox>
+  <div class="row" *ngIf="!checked">
+    <div class="col-md-10 selection-container">
+
+      <div *ngIf="currentFileUpload" class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+          aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+          {{progress.percentage}}%</div>
+      </div>
+      <div style="margin: 7px"></div>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Upload Data Sheet" readonly [(ngModel)]="fileName">
+        <input type="file" id="outlayerfileUpload" (change)="onFileChange($event)" hidden  accept=".csv,.CSV" />
+      </mat-form-field>
+    </div>
+    <div class="col-md-2">
+      <button class="btn" (click)="uploadClicked()">Browse</button>
+    </div>
+  </div>
+
+
+  <div class="row" *ngIf="checked">
+    <div style="margin: 27px"></div>
+    <div class="col-md-12 selection-container">
+      <mat-form-field>
+        <input type="text" matInput placeholder="Upload Data Sheet" readonly [(ngModel)]="discriptiveFileData.fileName">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div style="margin: 27px"></div>
+
+
+</div>
+
+<div class="col-md-12" >
+    <div class="col-md-12 selection-container">
+      <div style="margin: 7px"></div>
+      <mat-form-field>
+          <mat-select placeholder="Select Indicator" [(ngModel)]="selectedIndicators" [disabled]="(file==null && !checked) ||!indicators ||( indicators && !indicators.length)"
+            multiple #indicatorSelect2="ngModel">
+            <ngx-mat-select-search  [placeholderLabel]="'Search Indicator'" [noEntriesFoundLabel]="'No Result found'" [(ngModel)]="searchValue" ></ngx-mat-select-search>
+            <mat-option  (click)="selectAll(indicatorSelect2)"  *ngIf=" indicators  && (indicators|columnPipe:1:searchValue) .length>0" [value]="-1" checked="selectAllValue" >
+           Select All
+            </mat-option>
+            <mat-option *ngFor="let indicator  of (indicators|columnPipe:1:searchValue)" (click)="selectOne(indicatorSelect2)" [value]="indicator.id">{{indicator.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="pull-right">
+      <button class="btn" (click)="getOutlier()" [disabled]="(file==null && !checked)  ||  !selectedIndicators || !selectedIndicators.length">Analyze</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="outLayerError" class="confrirmation-modal modal fade" role="dialog" data-backdrop="static" data-keyboard="false"
+  tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body warnbody text-center">
+        <div class="infohead"> Error </div>
+        <div class="modal-body">
+          <div class="text-center">
+            <i class="fa fa-close fa-4x animated rotateIn"></i>
+            <p>{{errorMessage}}</p>
+          </div>
+          <button type="button" class="btn btn-default" (click)="modalClose()">Ok</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </mat-card> -->

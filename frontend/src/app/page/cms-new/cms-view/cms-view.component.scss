@@ -1,0 +1,135 @@
+.left-list {
+    height: 100%;
+    width: 22%;
+    background-color: #3b4654;
+    padding-top: 85px;
+    position: absolute;
+    margin-top: 5px;
+}
+.content-sec{
+  margin-top: 105px;
+  margin-left: 23%;
+  // margin-bottom: 100px;
+}
+.dashboard-head {
+  font-size: 22px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 5px;
+  color: #3b4654;
+}
+.banner-heading{
+  color: #3b4654;
+}
+.upload{
+  margin-left: 25px;
+}
+.send, .reset{
+  background-color: #3b4654;
+  margin-left: 10px;
+  border-radius: 0px ;
+  margin: .375rem;
+  word-wrap: break-word;
+  height: 3.2em;
+  border: none;
+}
+.submit-btn {
+  background-color: #3b4654;
+  border-radius: 0;
+  margin-left: 10px;
+  margin-right: 93px;
+}
+.reset-btn{
+  background-color: #f07258;
+  border-radius: 0;
+  // margin-bottom: 25px;
+  // margin-top: 15px;
+}
+.upload-banner{
+  background-color: #ddd;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  opacity: 0;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  height: 100%;
+
+}
+.content-section{
+  margin-top: 20px;
+}
+.btn-group{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.label-section{
+  margin-left: 70px;
+  text-align: right;
+}
+.file-background{
+  padding:5px 10px;
+  background:#3b4654;
+  border:1px solid #00632e;
+  position:relative;
+  color:#fff;
+  border-radius:2px;
+  text-align:center;
+  float:left;
+  cursor:pointer
+}
+
+.table-div{
+  margin-top: 6.5em;
+}
+
+textarea{
+  min-height: 150px;
+}
+
+
+.example-section{
+  margin-bottom: 10px;
+}
+
+.asterisk-mark {
+  color: red;
+  font-size: 16px;
+}
+.mat-chip-list-wrapper .mat-standard-chip {
+    background-color: #3b4654 !important;
+    color: #fff;
+}
+.arrow-icon{
+  font-size: 23px;
+  vertical-align: middle;
+  color: white;
+}
+.menu-arrow{
+  display: none;
+}
+.mob-left-list {
+  background: #3b4654;
+  color: #fff;
+  padding: 3px;
+  text-align: center;
+  width: 58px;
+  display: none;
+  position: fixed;
+  left: 0;
+  z-index: 3;
+  margin-top: 177px;
+}
+.height{height:150px;}
+@media(max-width: 767px){
+    .left-list{
+      width: 50%;
+      z-index: 100;
+      padding-top: 125px;
+    }
+    .content-sec {
+      margin-top: 140px;
+      margin-left: 0
+    }
+  }
+

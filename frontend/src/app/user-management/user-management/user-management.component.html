@@ -1,0 +1,566 @@
+<div class="container-fluid">
+    <div class="row question-row">
+        <div class="mob-left-list" (click)="showLists();">Menu</div>
+        <div class="col-md-3 left-list">
+            <rmncha-user-side-menu></rmncha-user-side-menu>
+        </div>
+        <div class="right-content">
+            <div class="col-md-9 content-sec offset-md-3">
+                <div class="col-md-12">
+                    <!-- <h2 class="user-heading">Create New User</h2> -->
+                    <div class="container-fluid create-user-block">
+                        <mat-card>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <form class="all-fields row" #f="ngForm" id="newUser" (ngSubmit)="f.valid && userManagementService.checkDuplicateUser == false ? previewForm(): ''">
+                                        <h4 class="heading-info-of-new-user">Personal Information</h4>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">First Name<span style="color:red; font-weight:500;">*</span>
+                                                :</label>
+                                            <mat-form-field>
+                                                <input matInput name="fName" [(ngModel)]="userManagementService.firstName"
+                                                    required pattern="^[a-zA-Z][a-zA-Z\s\.\./]+$">
+                                                <mat-error class="padding-bottom ">
+                                                    {{f.controls['fName']?.errors?.pattern ? 'Only characters, dot(.)
+                                                    and space can be accepted (Minimum 2 characters required)':'Please
+                                                    provide first name'}}
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Middle Name :</label>
+                                            <mat-form-field>
+                                                <input matInput name="mName" [(ngModel)]="userManagementService.middleName"
+                                                    pattern="^[a-zA-Z][a-zA-Z\s\.\./]+$">
+                                                    <mat-error class="padding-bottom ">
+                                                        {{f.controls['mName']?.errors?.pattern ? 'Only characters, dot(.)
+                                                        and space can be accepted (Minimum 2 characters required)':''}}
+                                                    </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Last Name<span style="color:red; font-weight:500;">*</span>
+                                                :</label>
+                                            <mat-form-field>
+                                                <input matInput name="lName" [(ngModel)]="userManagementService.lastName"
+                                                    required pattern="^[a-zA-Z][a-zA-Z\s\.\./]+$" autocomplete="off">
+                                                <mat-error class="padding-bottom ">
+                                                    {{f.controls['lName']?.errors?.pattern ? 'Only characters, dot(.)
+                                                    and space can be accepted (Minimum 2 characters required)':'Please
+                                                    provide last name'}}
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Gender :</label>
+                                            <div class="form-group radio-section">
+                                                <mat-radio-group class="radio-section-gender" name="gender" [(ngModel)]="userManagementService.gender">
+                                                    <mat-radio-button name="gender" *ngFor="let g of userManagementService.genderData"
+                                                        [value]="g.value">{{g.label}}</mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Date of Birth
+                                                :</label>
+                                            <mat-form-field>
+                                                <input matInput [matDatepicker]="dobPicker" [min]="minDate" [max]="maxDate"
+                                                    readonly [(ngModel)]="userManagementService.dob" (dateChange)="onChangeEvent($event)"
+                                                    [ngModelOptions]="{standalone: true}">
+                                                <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                                <mat-datepicker #dobPicker></mat-datepicker>
+                                            </mat-form-field>
+                                        </div>
+
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Mobile No.
+                                                :</label>
+                                            <mat-form-field>
+                                                <input matInput class="nospinner" [(ngModel)]="userManagementService.mobileNumber"
+                                                    type="text" pattern="\d*" maxlength="10" minlength="10" name="mobile">
+                                                <mat-error class="padding-bottom ">
+                                                    {{f.controls['mobile']?.errors?.pattern ? 'Only digits can be
+                                                    accepted':'Please provide 10 digit mobile
+                                                    number'}}
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Email ID
+                                                :</label>
+                                            <mat-form-field>
+                                                <input matInput name="primaryEmailId" [(ngModel)]="userManagementService.emailId"
+                                                    (change)="emailVerify();duplicateEmailVerification(userManagementService.emailId)"
+                                                    (keyup)="userManagementService.checkDuplicateEmail =false" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                                <mat-error class="padding-bottom ">
+                                                    {{f.controls['primaryEmailId']?.errors?.pattern ? 'Please provide
+                                                    correct email ID':'Please provide
+                                                    Email ID'}}
+                                                </mat-error>
+                                            </mat-form-field>
+                                            <div class="user-name-duplicate" *ngIf="userManagementService.checkDuplicateEmail == true">
+                                                <span class="duplicateUser mat-error">Email ID already exists</span>
+                                              </div>
+                                        </div>
+
+
+                                        <h4 class="heading-info-of-new-user">Professional Information</h4>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">User Level<span style="color:red; font-weight:500;">*</span> :</label>
+                                            <mat-form-field>
+                                              <mat-select [(ngModel)]="userManagementService.createNewUserDetails.selectedRoleId" (selectionChange)="selectUserLevel(userManagementService.createNewUserDetails.selectedRoleId)"  name="role"
+                                                  (valueChange)="userManagementService.createNewUserDetails.selectedStateId=undefined;
+                                                  userManagementService.createNewUserDetails.selectedDistrictId = undefined;
+                                                   userManagementService.createNewUserDetails.selectedBlockId=undefined"
+                                                  required>
+                                                  <mat-option *ngFor="let opt of userManagementService.formFieldsAll" [value]="opt.areaLevelId">
+                                                      {{opt.areaLevelName | titlecase}}
+                                                  </mat-option>
+                                              </mat-select>
+                                              <mat-error>Please provide user role</mat-error>
+                                          </mat-form-field>
+                                          </div>
+                                          <div class="selection-fields col-md-6" *ngIf="userManagementService.createNewUserDetails.selectedRoleId == 2 || userManagementService.createNewUserDetails.selectedRoleId == 3 || userManagementService.createNewUserDetails.selectedRoleId == 4">
+                                            <label for="usr">State<span style="color:red; font-weight:500;">*</span> :</label>
+                                            <mat-form-field>
+                                                <mat-select name="state" [(ngModel)]="userManagementService.createNewUserDetails.selectedStateId" (selectionChange)="selectStateLevel(userManagementService.createNewUserDetails.selectedStateId)"
+                                                (valueChange)="userManagementService.createNewUserDetails.selectedDistrictId=undefined;
+                                                 userManagementService.createNewUserDetails.selectedBlockId=undefined"
+                                                    [required]="userManagementService.createNewUserDetails.selectedRoleId == 2 || userManagementService.createNewUserDetails.selectedRoleId == 3 || userManagementService.createNewUserDetails.selectedRoleId == 4">
+                                                    <mat-option *ngFor="let state of userManagementService.areaDetails | areaFilter:1:1"
+                                                        [value]="state.areaId">
+                                                        {{state.areaName}}
+                                                    </mat-option>
+                                                </mat-select>
+                                                <mat-error class="padding-bottom ">
+                                                    Please provide state name
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div> 
+                                        <div class="selection-fields col-md-6" *ngIf="userManagementService.createNewUserDetails.selectedRoleId == 3 || userManagementService.createNewUserDetails.selectedRoleId == 4">
+                                            <label for="usr">District<span style="color:red; font-weight:500;">*</span> :</label>
+                                            <mat-form-field>
+                                                <mat-select name="district" [(ngModel)]="userManagementService.createNewUserDetails.selectedDistrictId" (selectionChange)="selectDistrictLevel(userManagementService.createNewUserDetails.selectedDistrictId)"
+                                                    (valueChange)="userManagementService.createNewUserDetails.selectedBlockId=undefined"
+                                                    [required]="userManagementService.createNewUserDetails.selectedRoleId == 3 || userManagementService.createNewUserDetails.selectedRoleId == 4">
+                                                    <mat-option *ngFor="let dist of userManagementService.areaDetails | areaFilter:2:userManagementService.createNewUserDetails.selectedStateId"
+                                                        [value]="dist.areaId">
+                                                        {{dist.areaName}}
+                                                    </mat-option>
+                                                </mat-select>
+                                                <mat-error>Please provide district name</mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="selection-fields col-md-6" *ngIf="userManagementService.createNewUserDetails.selectedRoleId == 4">
+                                            <label for="usr">Block<span style="color:red; font-weight:500;">*</span> :</label>
+                                            <mat-form-field>
+                                                <mat-select name="block" [(ngModel)]="userManagementService.createNewUserDetails.selectedBlockId" (selectionChange)="selectBlockLevel(userManagementService.createNewUserDetails.selectedBlockId)"
+                                                    [required]="userManagementService.createNewUserDetails.selectedRoleId == 4">
+                                                    <mat-option *ngFor="let block of userManagementService.areaDetails | areaFilter:3:userManagementService.createNewUserDetails.selectedDistrictId"
+                                                        [value]="block.areaId">
+                                                        {{block.areaName}}
+                                                    </mat-option>
+                                                </mat-select>
+                                                <mat-error>Please provide block name</mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Organization<span style="color:red; font-weight:500;">*</span>
+                                                :</label>
+                                            <mat-form-field>
+                                                <mat-select (selectionChange)="selectedOrganization($event.value,userManagementService.organizationLists)"
+                                                    [(ngModel)]="userManagementService.organization" name="organizations" (valueChange)="userManagementService.develelopmentPartners = undefined"
+                                                    required>
+                                                    <mat-option *ngFor="let option of userManagementService.organizationLists"
+                                                        [value]="option">{{
+                                                        option.organizationName }}</mat-option>
+                                                </mat-select>
+                                                <mat-error class="padding-bottom ">
+                                                    Please provide organization
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="selection-fields col-md-6" *ngIf="userManagementService.showDevelopmentField">
+                                            <label class="specify-partner" for="usr">Specify Development Partners<span style="color:red; font-weight:500;">*</span>
+                                                :</label>
+                                            <mat-form-field>
+                                                <mat-select (selectionChange)="selectdevelopmentPartners($event.value,userManagementService.developmentPartnerLists)"
+                                                    [(ngModel)]="userManagementService.develelopmentPartners" (valueChange)="userManagementService.developmentPartnerOthers = undefined" name="developmentPartner"
+                                                    required>
+                                                    <mat-option *ngFor="let option of userManagementService.developmentPartnerLists"
+                                                        [value]="option">{{
+                                                        option.name }}</mat-option>
+                                                </mat-select>
+                                                <mat-error class="padding-bottom ">
+                                                    Please provide development partner name
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+
+                                        <div class="selection-fields col-md-6" *ngIf="userManagementService.showDevelopmentPartnerOthers">
+                                            <label for="usr">Others<span style="color:red; font-weight:500;">*</span> :</label>
+                                            <mat-form-field>
+                                                <input matInput name="developmentPartnerOthers" [(ngModel)]="userManagementService.developmentPartnerOthers"
+                                                    required pattern="^[a-zA-Z][a-zA-Z\s\.\./]+$">
+                                                <mat-error class="padding-bottom ">
+                                                    {{f.controls['developmentPartnerOthers']?.errors?.pattern ? 'Only
+                                                    characters, dot(.) and space can be
+                                                    accepted':'Please
+                                                    specify'}}
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Designation<span style="color:red; font-weight:500;">*</span>
+                                                :</label>
+                                            <div class="row">
+                                                <div class="col-md-11 designation-add">
+                                                    <mat-form-field>
+                                                        <mat-select (selectionChange)="selectedDesignation()"
+                                                            [(ngModel)]="userManagementService.designation" name="designation"
+                                                            required>
+                                                            <mat-option *ngFor="let option of userManagementService.designationLists"
+                                                                [value]="option">{{
+                                                                option.name }}</mat-option>
+                                                        </mat-select>
+                                                        <mat-error class="padding-bottom ">
+                                                            Please provide designation
+                                                        </mat-error>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-1" (click)="addDesignation()">
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Access Level <span style="color:red; font-weight:500;">*</span>:</label>
+                                            <div class="form-group">
+                                                <mat-form-field>
+                                                    <mat-select multiple name="villages" (selectionChange)="selectAccessLevels()"
+                                                        [(ngModel)]="userManagementService.accessLevel" required>
+                                                        <!-- <div class="form-group">
+                                        <input class="form-control" type="text" id="myInput" [(ngModel)]="userManagementService.levelSearch" [ngModelOptions]="{standalone: true}" 
+                                            placeholder="search...">
+                                    </div> -->
+                                                        <!-- <mat-option [disabled]="true" class="selectAllOption" >
+                                        <mat-checkbox >select all</mat-checkbox>
+                                    </mat-option> -->
+                                                        <mat-option *ngFor="let levels of userManagementService.accessLevelLists"
+                                                            [value]="levels">
+                                                            {{levels.authority}}
+                                                        </mat-option>
+                                                    </mat-select>
+                                                    <mat-error class="padding-bottom ">
+                                                        Please select access level
+                                                    </mat-error>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <h4 class="heading-info-of-new-user">Identification Information</h4>
+
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">User Name<span style="color:red; font-weight:500;">*</span>
+                                                :</label>
+                                            <mat-form-field>
+                                                <input matInput name="username" minlength="5" maxlength=15 [(ngModel)]="userManagementService.userName" autocomplete="off"
+                                                    required pattern="^[a-zA-Z0-9_-]{3,15}$" (change)="(userManagementService.userName != '' && userManagementService.userName != undefined) ?checkDuplicateUserName(userManagementService.userName): ''">
+                                                <mat-error class="padding-bottom">
+                                                    {{f.controls['username']?.errors?.pattern ? 'Only 5-15
+                                                    characters,hyphen(-) and underscore(_) can be
+                                                    accepted':'Please provide username (Minimum 5 characters required)'}}
+                                                </mat-error>
+                                            </mat-form-field>
+                                            <div class="user-name-duplicate" *ngIf="userManagementService.checkDuplicateUser == true">
+                                                <span class="duplicateUser mat-error">User name already exists</span>
+                                            </div>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Password<span style="color:red; font-weight:500;">*</span>
+                                                :</label>
+                                            <mat-form-field>
+                                                <input matInput type="password" id="password-field" name="password"
+                                                    [(ngModel)]="userManagementService.password" required pattern="^\S*$">
+                                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                                <mat-error class="padding-bottom ">
+                                                    {{f.controls['password']?.errors?.pattern ? 'Spaces are not
+                                                    accepted':'Please provide password'}}
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">Re-enter Password<span style="color:red; font-weight:500;">*</span>
+                                                :</label>
+                                            <mat-form-field>
+                                                <input type="password" matInput name="resetPass" [(ngModel)]="userManagementService.reEnterPassword"
+                                                    (change)="confirmPassValidate(userManagementService.password,userManagementService.reEnterPassword)"
+                                                    required pattern="^\S*$">
+                                                <mat-error class="padding-bottom">
+                                                    {{f.controls['resetPass']?.errors?.pattern ? 'Spaces are not
+                                                    accepted':'Please re-enter password'}}
+                                                </mat-error>
+                                            </mat-form-field>
+                                            <div id="do-not-matched" *ngIf="userManagementService.reEnterPassword && userManagementService.reEnterPassword != userManagementService.password"
+                                                class="mat-error password-matched-error">The passwords do not match.</div>
+                                        </div>
+                                        <div class="selection-fields col-md-6">
+                                            <label for="usr">ID Proof
+                                                :</label>
+                                            <mat-form-field>
+                                                <mat-select 
+                                                    [(ngModel)]="userManagementService.idProof" 
+                                                    (valueChange)="userManagementService.idProofother = undefined;userManagementService.uploadIdentityProof = undefined" name="idProof">
+                                                    <mat-option (onSelectionChange)="uncheckIDProof($event)" >None</mat-option>
+                                                    <mat-option (onSelectionChange)="selectIDProof(option,$event)" *ngFor="let option of userManagementService.idProofLists"
+                                                        [value]="option.id">{{ option.name
+                                                        }}</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="selection-fields col-md-6" *ngIf="userManagementService.showIDProofOtherBlock">
+                                            <label for="usr">Others<span style="color:red; font-weight:500;">*</span> :</label>
+                                            <mat-form-field>
+                                                <input matInput name="otherID" [(ngModel)]="userManagementService.idProofother"
+                                                    required pattern="^[a-zA-Z][a-zA-Z\s\.\./]+$">
+                                                <mat-error class="padding-bottom ">
+                                                    {{f.controls['otherID']?.errors?.pattern ? 'Only characters, dot(.) and space can be accepted (Minimum 2 characters required)':'Please specify'}}
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <!-- <div class="selection-fields col-md-6" *ngIf="userManagementService.showUploadIdProofBlock">
+                                            <label for="usr">Upload Identity Proof
+                                                :</label>
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                        <input type="file" id="fileUpload" [(ngModel)]="userManagementService.uploadIdentityProof"
+                                                        [ngModelOptions]="{standalone: true}" (change)="onFileChange($event)" accept="image/*,.pdf" />
+                                                        <mat-error class="padding-bottom" id="uplaodError" *ngIf="currentFileUpload">
+                                                            Please upload ID proof file
+                                                     </mat-error>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="selection-fields col-md-6" *ngIf="userManagementService.showUploadIdProofBlock">
+                                            <label for="usr">Upload Identity Proof<span style="color:red; font-weight:500;">*</span> :</label>
+                                            <div class="row">
+                                              <div class="col-md-10">
+                                                <mat-form-field>
+                                                  <input type="text" [(ngModel)]="userManagementService.uploadIdentityProof"
+                                                    [ngModelOptions]="{standalone: true}" matInput readonly />
+                                                  <input type="file" id="fileUpload" (change)="onFileChange($event)" hidden accept="image/*,.pdf" />
+                                                </mat-form-field>
+                                              </div>
+                                              <div class="col-md-2 upload-btn">
+                                                <button name="uploadFile" type="button" class="btn file-upload-btn" (click)="uploadClicked()">Browse</button>
+                                              </div>
+                                            </div>
+                                            <mat-error class="padding-bottom" id="uplaodError" *ngIf="currentFileUpload">
+                                                Please upload file
+                                         </mat-error>
+                                          </div>
+
+
+                                        <div class="selection-fields col-md-12 preview-btn">
+                                            <!-- <label for="usr">Disclaimer<span style="color:red; font-weight:500;"></span> :</label> -->
+                                            <div class="form-group">
+                                                <button class="btn" type="submit" (click)="submitVal()" [disabled]="!f.valid">Preview & Submit</button>
+                                                <button class="btn reset-btn" (click)="f.reset();resetAllField()">Reset</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- modals start -->
+    <div class="modal" id="previewModal" role="dialog" data-backdrop="static" data-keyboard="false" tabindex="-1">
+        <div class="modal-dialog previewForm-modal">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">User Registration</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <mat-card class="preview-modal-view">
+                                <!-- Personal Information -->
+
+                                <h4 class="heading-info-of-new-user">Personal Information</h4>
+                                <div class="form-group">
+                                    <label>First Name : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.firstName}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.middleName != undefined">
+                                    <label>Middle Name : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.middleName}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.lastName}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.gender != undefined">
+                                    <label>Gender : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.gender}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.dob != undefined">
+                                    <label>Date of Birth : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.dateOfBirth}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.mobileNumber != undefined">
+                                    <label>Mobile Number : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.mobileNumber}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.emailId != undefined">
+                                    <label>Email ID : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.emailId}}</span>
+                                </div>
+
+                                <!-- Professional Information -->
+                                <h4 class="heading-info-of-new-user">Professional Information</h4>
+                                <div class="form-group">
+                                    <label>User Level : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.userLevelName}}</span>
+                                  </div>
+                                  <div class="form-group" *ngIf="(userManagementService.createNewUserDetails.selectedRoleId == 2 || userManagementService.createNewUserDetails.selectedRoleId == 3 || userManagementService.createNewUserDetails.selectedRoleId == 4)">
+                                    <label>State : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.selectedStateName}}</span>
+                                  </div>
+                                  <div class="form-group" *ngIf="userManagementService.createNewUserDetails.selectedRoleId == 3 || userManagementService.createNewUserDetails.selectedRoleId == 4">
+                                    <label>District : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.selectedDistrictName}}</span>
+                                  </div>
+                                  <div class="form-group" *ngIf="userManagementService.createNewUserDetails.selectedRoleId == 4">
+                                    <label>Block : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.selectedBlockName}}</span>
+                                  </div>
+                                <div class="form-group">
+                                    <label>Organization : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.organization?userManagementService.organization.organizationName:''}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.organization?userManagementService.organization.organizationName == 'Development Partners':''">
+                                    <label>Specify Development Partners : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.develelopmentPartners?userManagementService.develelopmentPartners.name:''}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.develelopmentPartners?userManagementService.develelopmentPartners.name == 'Others (specify)': ''">
+                                    <label>Specify if others : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.developmentPartnerOthers}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Designation : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.designation?userManagementService.designation.name:''}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Access Level : &nbsp;</label> <span class="font-weight-five-hundred">
+                                        <ul class="access-level-names"><li *ngFor="let accessName of userManagementService.selectedAccessLevelName">
+                                            {{accessName}},&nbsp;
+                                        </li></ul>
+                                    </span>
+                                </div>
+
+                                <!-- Identification  Information -->
+                                <h4 class="heading-info-of-new-user">Identification Information</h4>
+
+                                <div class="form-group">
+                                    <label>User Name : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.userName}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.idProofTypeName != undefined">
+                                    <label>ID Proof : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.idProofTypeName?userManagementService.idProofTypeName:
+                                        ''}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.idProofTypeName == 'Others (specify)'">
+                                    <label>Other : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.idProofother}}</span>
+                                </div>
+                                <div class="form-group" *ngIf="userManagementService.uploadIdentityProof != undefined">
+                                    <label>Upload Identity Proof : &nbsp;</label> <span class="font-weight-five-hundred">{{userManagementService.uploadIdentityProof}}</span>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <p class="font-weight-five-hundred">Do you want to submit this details ?</p>
+                    <button type="button" class="btn btn-danger" (click)="submitDetails()">Submit</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="addNew" data-backdrop="static" data-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <!-- <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div> -->
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid create-user-block">
+                            <div class="col-md-12">
+                                <form class="all-fields row" #form="ngForm" (ngSubmit)="form.valid ? addNewDesignation(userManagementService.designationAdd): ''">
+                                    <h4 class="heading-info-of-new-user">Add New Designation</h4>
+                                    <div class="selection-fields col-md-12">
+                                        <label for="usr">Designation Name<span style="color:red; font-weight:500;">*</span>
+                                            :</label>
+                                        <mat-form-field>
+                                            <input matInput name="designationAdd" [(ngModel)]="userManagementService.designationAdd"  
+                                                required  pattern="^[a-zA-Z][a-zA-Z\s\.\./]+$" [matAutocomplete]="auto"  />
+                                                <mat-autocomplete #auto="matAutocomplete">
+                                                    <mat-option *ngFor="let option of (filteredOptions|filterOption:userManagementService.designationAdd:'name')"
+                                                                [value]="option.name">{{
+                                                                option.name }}</mat-option>
+                                                  </mat-autocomplete>
+                                                  <mat-error class="padding-bottom ">
+                                                    {{form.controls['designationAdd']?.errors?.pattern ? 'Only characters,
+                                                    dot(.) and space can be
+                                                    accepted':'Pleas enter designation'}}
+                                                </mat-error>
+                                               
+                                        </mat-form-field>
+                                        <div class="modal-footer col-md-12 text-center">
+                                            <button type="submit" class="btn btn-danger">Add</button>
+                                            <button type="button" (click)="form.reset()" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- success modal -->
+    <div id="successModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header success-header">
+                    <h4>SUCCESS!</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>{{userManagementService.submitSuccessMsg}}.</p>
+                    <button class="btn btn-success" data-dismiss="modal" (click)="f.reset(); resetAllField() "><span>OK</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="errorModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-confirm">
+              <div class="modal-content">
+                <div class="modal-header error-modal-header">
+                    <h4>Error !</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                  <p>{{userManagementService.errorMessage}}</p>
+                  <button class="btn btn-success" data-dismiss="modal"><span>OK</span></button>
+                </div>
+              </div>
+            </div>
+          </div>

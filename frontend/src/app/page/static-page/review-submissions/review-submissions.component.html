@@ -1,0 +1,196 @@
+<div class="container-fluid">
+    <div class="row question-row">
+        
+        <div class="mob-left-list" (click)="showLists()">Click here to select checklist</div>
+        <div class="col-md-3 left-list">
+            <div>
+                <ul class="data-heads">
+                    <li class="data-head-list" *ngFor="let tab of staticService.reviewDetails" [ngClass]="{'active': tab.formId == selectedFormId}">
+                        <span class="list-span" (click)="formTabChanged(tab.formId,tab.formName)"
+                            *ngIf="tableData"><a>{{(tab.formName)}}</a></span>
+                        <span class="list-span" (click)="formTabChanged(tab.formId,tab.formName)" *ngIf="!tableData"
+                            matBadgeOverlap="false" matBadgeColor="warn"><a>{{(tab.formName)}}</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-9 offset-md-3">
+            <div class="col-md-12">
+                    <div class="btnTabs">
+                    <mat-tab-group class="review-block" animationDuration="0ms" (selectedTabChange)="tabChanged($event)"
+                    *ngIf="tableData && tableData.length">
+                    <!-- <mat-tab label="Pending ({{(tableData | tableAreasFilter: 'PENDING').length}})">
+                        <div *ngIf="tableData" style="background:#fff; padding: 10px 10px 0 0;">
+                            <sdrc-table [id]="'tab1'" [rowData]="tableData | tableAreasFilter: 'PENDING'"
+                                [columnData]="tableColumns | removeArray:'[formId,time,extraKeys,username,formData,uniqueId,uniqueName,updatedDate,createdDate,rejected,submissionId,formDataHead,Rejected on,Remarks,Approved on,rejectedDate]'"
+                                [maxTableHeight]="'500px'" [isPaginate]="true" [headerFixed]="true" [sorting]="true" [searchBox]="true"
+                                [downloadExcelByServer]="true"  [isAction] =true
+                                (onDownloadExcelByServerClicked)="downloadTableAsExcel($event)"
+                                (onViewDetailsClicked)="staticService.setviewMoreData($event)"
+                                (onApproveSubmissionClicked)="staticService.submissionIdsForApprove($event)"
+                                (onRejectSubmissionClicked)="staticService.submissionIdsForReject($event)"
+                                (onSupervisorSubmissionClicked)="staticService.setSupervisorDetails($event)"
+                                (onPaginationButtonClicked)="getPaginatedData($event)">
+                            </sdrc-table>
+                        </div>
+                    </mat-tab> -->
+                    <mat-tab label="Auto-Approved ({{(tableData | tableAreasFilter: 'APPROVED').length}})">
+                        <div *ngIf="tableData" style="background:#fff; padding: 10px 10px 0 0;">
+                            <sdrc-table [id]="'tab2'" [rowData]="tableData | tableAreasFilter: 'APPROVED'"
+                                [columnData]="tableColumns | removeArray:'[formId,time,extraKeys,username,formData,uniqueId,uniqueName,updatedDate,createdDate,rejected,submissionId,formDataHead,Rejected on,Remarks,rejectedDate]'"
+                                [maxTableHeight]="'500px'" [isPaginate]="true" [headerFixed]="true" [sorting]="true" [searchBox]="true"
+                                [downloadExcelByServer]="true" [isAction] =true
+                                (onDownloadExcelByServerClicked)="downloadTableAsExcel($event)"
+                                (onViewDetailsClicked)="staticService.setviewMoreData($event)"
+                                (onApproveSubmissionClicked)="staticService.submissionIdsForApprove($event)"
+                                (onRejectSubmissionClicked)="staticService.submissionIdsForReject($event)"
+                                (onSupervisorSubmissionClicked)="staticService.setSupervisorDetails($event)"
+                                (onPaginationButtonClicked)="getPaginatedData($event)">
+                            </sdrc-table>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Rejected ({{(tableData | tableAreasFilter: 'REJECTED').length}})">
+                        <div *ngIf="tableData" style="background:#fff; padding: 10px 10px 0 0;">
+                            <sdrc-table [id]="'tab3'" [rowData]="tableData | tableAreasFilter: 'REJECTED'"
+                                [columnData]="tableColumns | removeArray:'[formId,time,extraKeys,username,formData,uniqueId,uniqueName,updatedDate,createdDate,rejected,submissionId,formDataHead,Approved on,rejectedDate]'"
+                                [maxTableHeight]="'500px'" [isPaginate]="true" [headerFixed]="true" [sorting]="true" [searchBox]="true"
+                                [downloadExcelByServer]="true"  [isAction] =true
+                                (onDownloadExcelByServerClicked)="downloadTableAsExcel($event)"
+                                (onViewDetailsClicked)="staticService.setviewMoreData($event)"
+                                (onPaginationButtonClicked)="getPaginatedData($event)">
+                            </sdrc-table>
+                        </div>
+                    </mat-tab>
+                    <!-- <mat-tab label="Default ({{(tableData | tableAreasFilter: 'DEFAULT').length}})">
+                        <div *ngIf="tableData" style="background:#fff; padding: 10px 10px 0 0;">
+                            <sdrc-table [id]="'tab4'" [rowData]="tableData | tableAreasFilter: 'DEFAULT'"
+                                [columnData]="tableColumns | removeArray:'[formId,time,extraKeys,username,formData,uniqueId,uniqueName,updatedDate,createdDate,rejected,submissionId,formDataHead,Rejected on,Remarks,Approved on,rejectedDate]'"
+                                [maxTableHeight]="'500px'" [isPaginate]="true" [headerFixed]="true" [sorting]="true" [searchBox]="true"
+                                [downloadExcelByServer]="true"  [isAction] =true
+                                (onDownloadExcelByServerClicked)="downloadTableAsExcel($event)"
+                                (onViewDetailsClicked)="staticService.setviewMoreData($event)"
+                                (onApproveSubmissionClicked)="staticService.submissionIdsForApprove($event)"
+                                (onRejectSubmissionClicked)="staticService.submissionIdsForReject($event)"
+                                (onSupervisorSubmissionClicked)="staticService.setSupervisorDetails($event)"
+                                (onPaginationButtonClicked)="getPaginatedData($event)">
+                            </sdrc-table>
+                        </div>
+                    </mat-tab> -->
+                </mat-tab-group>
+                    </div>
+                <div *ngIf="!tableData || !tableData.length" class="noData text-center">No Data Found</div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+<div id="submissionDetailsModal" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="myModalLabel"
+    aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-notify modal-error modal-xl submission-modal" role="document">
+        <div class="modal-content submission-data">
+            <!-- <div class="modal-header">
+              <p class="heading lead">Submission Details</p>
+          </div> -->
+            <div class="modal-body" >
+                <button type="button" class="close modal-close"
+                    (click)="staticService.destroyModalData()">&times;</button>
+                <div class="col-md-12 padding-zero" style="margin-top: -24px;" *ngIf="staticService.viewMoreClicked">
+                    <rmncha-submission-details></rmncha-submission-details>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="successMatch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+    data-backdrop="static">
+    <div class="modal-dialog modal-notify modal-error" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header col-md-12">
+                <h4 class="heading lead text-center  col-md-12">Success</h4>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                <div class="text-center">
+                    <p> {{staticService.validationMsg}}</p>
+                    <button type="button" class="btn modal-btn text-center" (click)="rejectSuccess()">Ok</button>
+                </div>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<div id="confirmApproveModal" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+    data-backdrop="static">
+    <div class="modal-dialog modal-notify modal-error" role="document">
+        <div class="modal-content">
+            <div class="modal-header col-md-12">
+                <h4 class="heading lead text-center  col-md-12">INFO</h4>
+            </div>
+            <p style="padding: 15px 0 0 33px; margin-bottom: 8px;">Are you sure you want to approve the selected
+                submission?</p>
+            <div class="modal-body" style="padding: 0 1rem">
+                <div class="col-md-12">
+                    <div class="select-container ">
+                        <div class="form-group row">
+                            <div class="text-center col">
+                                <button type="submit" class="btn modal-btn" style="margin-right: 10px;"
+                                    (click)="staticService.rejectSubmissionApprove(staticService.rejectDetails.tableRow.formId, [staticService.rejectDetails.tableRow.extraKeys.submissionId], remarksforReject?remarksforReject:null,staticService.isRejected)">Submit</button>
+                                <button type="button" class="btn modal-btn" data-dismiss="modal"
+                                    (click)="newF.resetForm()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="confirmRejectModal" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+    data-backdrop="static">
+    <div class="modal-dialog modal-notify modal-error" role="document">
+        <div class="modal-content">
+            <div class="modal-header col-md-12">
+                <h4 class="heading lead text-center  col-md-12">INFO</h4>
+            </div>
+            <p style="padding: 15px 0 0 33px; margin-bottom: 8px;">Are you sure you want to reject the selected
+                submission?</p>
+            <div class="modal-body" style="padding: 0 1rem">
+                <div class="col-md-12">
+                    <div class="select-container ">
+                        <div class="leave-remark-area">
+                            <div class="leave-remark-heading">Rejection Remark<span style="color: red">*</span></div>
+                        </div>
+                        <form [noValidate]="false" #newF="ngForm"
+                            (ngSubmit)="newF.valid ? staticService.rejectSubmission(staticService.rejectDetails.tableRow.formId, [staticService.rejectDetails.tableRow.extraKeys.submissionId], remarksforReject,staticService.isRejected, newF): ''">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <textarea placeholder="Leave remark for rejection" [(ngModel)]="remarksforReject"
+                                        rows="3" type="text" id="remark" maxlength="250"
+                                        class="form-control not-visible-input remarks-box" name="remark"
+                                        required> </textarea>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <!-- <p id="errorMsg" class="remarkErr"></p> -->
+                            <div class="form-group row">
+                                <div class="text-center col">
+                                    <button type="submit" class="btn modal-btn"
+                                        style="margin-right: 10px;">Submit</button>
+                                    <button type="button" class="btn modal-btn" data-dismiss="modal"
+                                        (click)="newF.resetForm()">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
